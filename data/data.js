@@ -1,5 +1,4 @@
-var $notes = ["A", "B", "C", "D", "E", "F", "G"];
-var $accidentals = ["", "#", "b"];
+var $chromatic = ["A", "Ab", "A#", "B", "Bb", "B#", "C", "Cb", "C#", "D", "Db", "D#", "E", "Eb", "E#", "F", "Fb", "F#", "G", "Gb", "G#"];
 var $quality_beginner = ["", "m", "m7", "7"];
 var $quality_intermediate = $quality_beginner.concat(["+", "dim", "maj7", "m7b5", "6", "m6", "sus2", "sus4", "9", "m9", "11", "13", "6/9"]);
 var $quality_advanced = $quality_intermediate.concat(["7alt"]);

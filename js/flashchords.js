@@ -5,7 +5,7 @@ $(document).ready(function(){
     // slider setup
     $(function() {
         $("#slider").slider({
-          value: 2,
+          value: 4,
           min: 2,
           max: 60,
           step: 2,
@@ -30,6 +30,8 @@ $(document).ready(function(){
     // chord change
     var changeChord = function() {
       var $difficulty = $('input[name="difficulty"]:checked').val();
+      var $notes = getKey();
+      console.log($notes);
       var $quality;
       var $ext;
 
@@ -43,7 +45,7 @@ $(document).ready(function(){
         $quality = getRandom($quality_advanced);
         $ext = getRandom($extension)
       }
-      $("#chord_name").text(getRandom($notes) + getRandom($accidentals) + $quality + $ext);
+      $("#chord_name").text(getRandom($notes) + $quality + $ext);
     }
 
     function chordTimer() {
@@ -63,4 +65,21 @@ function getDelay() {
 
 function getRandom ($array) {
     return $array[Math.floor(Math.random() * $array.length)];
+}
+
+function getKey() {
+  var $key = $("#keys").val();
+  var $key_notes;
+  console.log("Selected: " + $key);
+
+  if (!$key) {
+    $key_notes = $chromatic;
+    console.log("Any key");
+  }
+  else {
+    $key_notes = $keys[$key];
+  }
+  console.log($key_notes);
+
+  return $key_notes;
 }
