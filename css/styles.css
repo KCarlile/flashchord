@@ -2,3 +2,10 @@
     margin: 1em;
     width: 30%;
 }
+
+#chord_name {
+    font-size: 12em;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    text-align: center;
+}
