@@ -3,7 +3,7 @@ var $DELAY = 1000 * 4; // 1000ms * SECONDS
 var $chord;
 var $next_chord;
 
-$(document).ready(function(){
+$(document).ready(function() {
     // slider setup
     $(function() {
         $("#slider").slider({
@@ -22,20 +22,13 @@ $(document).ready(function(){
         chordTimer();
       });
 
-    // setup keys dropdown
-    var option = '';
-    for (var $key in $keys) {
-       option += '<option value="'+ $key + '">' + $key + '</option>';
-    }
-    $("#keys").append(option);
-
     // chord change
     var changeChord = function() {
       $chord = $next_chord ? $next_chord : getChord();
       $next_chord = getChord();
 
-      $("#chord_name").text($chord);
-      $("#next_chord_name").text($next_chord);
+      $("#chord_name").html($chord);
+      $("#next_chord_name").html($next_chord);
     }
 
     function chordTimer() {
@@ -81,7 +74,7 @@ function getChord() {
     // major
     $chord_quality = getHarmonicQualityMinor($key.indexOf($note));
   }
-  else { $chord_quality = "BLEH!"; }
+  else { $chord_quality = "None"; }
 
   console.log("Harmonic Quality: " + $chord_quality);
 
@@ -96,10 +89,20 @@ function getChord() {
     $ext = "";
   } else if ($difficulty == "advanced") {
     $quality = getRandom($quality_advanced);
-    $ext = getRandom($extension)
   }
 
-  return $note + $quality + $ext;
+  return $note + $quality + getExtension();
+}
+
+function getExtension() {
+  var $ext = "";
+
+  if ($('input[name="extensions"]').is(":checked")) {
+    console.log('CHECKED!');
+    $ext = '<sup>' + getRandom($extension) + '</sup>';
+  }
+
+  return $ext;
 }
 
 function getHarmonicQualityMajor($scale_tone) {

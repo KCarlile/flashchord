@@ -1,8 +1,8 @@
 var $chromatic = ["A", "A♭", "A♯", "B", "B♭", "B♯", "C", "C♭", "C♯", "D", "D♭", "D♯", "E", "E♭", "E♯", "F", "F♭", "F♯", "G", "G♭", "G♯"];
 var $quality_beginner = ["", "m", "m7", "7"];
-var $quality_intermediate = $quality_beginner.concat(["+", "°", "maj7", "m7♭5", "6", "m6", "sus2", "sus4", "9", "m9", "11", "13", "6/9"]);
-var $quality_advanced = $quality_intermediate.concat(["7alt"]);
-var $extension = ["", "(♯9)", "(♭9)", "(♯5)", "(♭5)"];
+var $quality_intermediate = $quality_beginner.concat(["maj7", "6", "m6", "sus2", "sus4", "9", "m9"]);
+var $quality_advanced = $quality_intermediate.concat(["+", "°", "m7♭5", "7alt", "6/9", "6", "m6", "11", "13"]);
+var $extension = ["", "(♯5)", "(♭5)", "(♯9)", "(♭9)", "(♯11)", "(♯13)", "(♭13)"];
 
 var $keys = {
   "G♭ Major":   ["G♯", "A♭", "B♭", "C♭", "D♭", "E♭", "F"],
