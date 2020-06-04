@@ -1,49 +1,13 @@
-var $notes = ["A", "B", "C", "D", "E", "F", "G"];
-var $accidentals = ["", "#", "b"];
-var $quality_beginner = ["", "m", "m7", "7"];
-var $quality_intermediate = $quality_beginner.concat(["+", "dim", "maj7", "m7b5", "6", "m6", "sus2", "sus4", "9", "m9", "11", "13", "6/9"]);
-var $quality_advanced = $quality_intermediate.concat(["7alt"]);
-var $extension = ["", "(#9)", "(b9)", "(#5)", "(b5)"];
-
-var $keys = {
-  "Gb Major":   ["Gb", "Ab", "Bb", "Cb", "Db", "Eb", "F"],
-  "Db Major":   ["Db", "Eb", "F", "Gb", "Ab", "Bb", "C"],
-  "Ab Major":   ["Ab", "Bb", "C", "Db", "Eb", "F", "G"],
-  "Eb Major":   ["Eb", "F", "G", "Ab", "Bb", "C", "D"],
-  "Bb Major":   ["Bb", "C", "D", "Eb", "F", "G", "A"],
-  "F Major":    ["F", "G", "A", "Bb", "C", "D", "E"],
-  "C Major":    ["C", "D", "E", "F", "G", "A", "B"],
-  "G Major":    ["G", "A", "B", "C", "D", "E", "F#"],
-  "D Major":    ["D", "E", "F#", "G", "A", "B", "C#"],
-  "A Major":    ["A", "B", "C#", "D", "E", "F#", "G#"],
-  "E Major":    ["E", "F#", "G#", "A", "B", "C#", "D#"],
-  "B Major":    ["B", "C#", "D#", "E", "F#", "G#", "A#"],
-  "F# Major":   ["F#", "G#", "A#", "B", "C#", "D#", "E#"],
-
-  "Eb Minor":   ["Eb", "F", "Gb", "Ab", "Bb", "Cb", "Db"],
-  "Bb Minor":   ["Bb", "C", "Db", "Eb", "F", "Gb", "Ab"],
-  "F Minor":    ["F", "G", "Ab", "Bb", "C", "Db", "Eb"],
-  "C Minor":    ["C", "D", "Eb", "F", "G", "Ab", "Bb"],
-  "G Minor":    ["G", "A", "Bb", "C", "D", "Eb", "F"],
-  "D Minor":    ["D", "E", "F", "G", "A", "Bb", "C"],
-  "A Minor":    ["A", "B", "C", "D", "E", "F", "G"],
-  "E Minor":    ["E", "F#", "G", "A", "B", "C", "D"],
-  "B Minor":    ["B", "C#", "D", "E", "F#", "G", "A"],
-  "F# Minor":   ["F#", "G#", "A", "B", "C#", "D", "E"],
-  "C# Minor":   ["C#", "D#", "E", "F#", "G#", "A", "B"],
-  "G# Minor":   ["G#", "A#", "B", "C#", "D#", "E", "F#"],
-  "D# Minor":   ["D#", "E#", "F#", "G#", "A#", "B", "C#"],
-};
-
-
 var $intervalId;
 var $DELAY = 1000 * 4; // 1000ms * SECONDS
+var $chord;
+var $next_chord;
 
-$(document).ready(function(){
+$(document).ready(function() {
     // slider setup
     $(function() {
         $("#slider").slider({
-          value: 2,
+          value: 4,
           min: 2,
           max: 60,
           step: 2,
@@ -58,30 +22,13 @@ $(document).ready(function(){
         chordTimer();
       });
 
-    // setup keys dropdown
-    var option = '';
-    for (var $key in $keys) {
-       option += '<option value="'+ $key + '">' + $key + '</option>';
-    }
-    $("#keys").append(option);
-
     // chord change
     var changeChord = function() {
-      var $difficulty = $('input[name="difficulty"]:checked').val();
-      var $quality;
-      var $ext;
+      $chord = $next_chord ? $next_chord : getChord();
+      $next_chord = getChord();
 
-      if ($difficulty == "beginner") {
-        $quality = getRandom($quality_beginner);
-        $ext = "";
-      } else if ($difficulty == "intermediate") {
-        $quality = getRandom($quality_intermediate);
-        $ext = "";
-      } else if ($difficulty == "advanced") {
-        $quality = getRandom($quality_advanced);
-        $ext = getRandom($extension)
-      }
-      $("#chord_name").text(getRandom($notes) + getRandom($accidentals) + $quality + $ext);
+      $("#chord_name").html($chord);
+      $("#next_chord_name").html($next_chord);
     }
 
     function chordTimer() {
@@ -92,13 +39,120 @@ $(document).ready(function(){
     }
 });
 
-/*
-function getDelay() {
-    $DELAY = $("#slider").slider("value") * 1000;
-    return $DELAY;
-}
-*/
-
 function getRandom ($array) {
     return $array[Math.floor(Math.random() * $array.length)];
+}
+
+function getKey() {
+  var $key = $("#keys").val();
+  var $key_notes;
+  console.log("Selected: " + $key);
+
+  if (!$key) {
+    $key_notes = $chromatic;
+    console.log("Any key");
+  }
+  else {
+    $key_notes = $keys[$key];
+  }
+  console.log($key_notes);
+
+  return $key_notes;
+}
+
+function getChord() {
+  var $difficulty = $('input[name="difficulty"]:checked').val();
+  var $key = getKey();
+  var $note = getRandom($key);
+
+  console.log($key + " :: " + $note + " (" + $key.indexOf($note) + ")");
+
+  if ($("#keys").val().indexOf("Major") >= 0) {
+    // major
+    $chord_quality = getHarmonicQualityMajor($key.indexOf($note));
+  } else if ($("#keys").val().indexOf("Minor") >= 0) {
+    // major
+    $chord_quality = getHarmonicQualityMinor($key.indexOf($note));
+  }
+  else { $chord_quality = "None"; }
+
+  console.log("Harmonic Quality: " + $chord_quality);
+
+  var $quality;
+  var $ext;
+
+  if ($difficulty == "beginner") {
+    $quality = getRandom($quality_beginner);
+    $ext = "";
+  } else if ($difficulty == "intermediate") {
+    $quality = getRandom($quality_intermediate);
+    $ext = "";
+  } else if ($difficulty == "advanced") {
+    $quality = getRandom($quality_advanced);
+  }
+
+  return $note + $quality + getExtension();
+}
+
+function getExtension() {
+  var $ext = "";
+
+  if ($('input[name="extensions"]').is(":checked")) {
+    console.log('CHECKED!');
+    $ext = '<sup>' + getRandom($extension) + '</sup>';
+  }
+
+  return $ext;
+}
+
+function getHarmonicQualityMajor($scale_tone) {
+  var $quality;
+  switch($scale_tone) {
+    case 0:
+    case 3:
+    case 4:
+      // major
+      $quality = "";
+      break;
+    case 1:
+    case 2:
+    case 5:
+      // minor
+      $quality = "m";
+      break;
+    case 6:
+      // diminished
+      $quality = "dim";
+      break;
+    default:
+      $quality = "";
+  }
+
+  return $quality;
+}
+
+function getHarmonicQualityMinor($scale_tone) {
+  var $quality;
+  switch($scale_tone) {
+    case 2:
+    case 5:
+    case 6:
+      // major
+      $quality = "";
+      break;
+    case 0:
+    case 3:
+    case 4:
+      // minor
+      $quality = "m";
+      break;
+    case 1:
+      // diminished
+      $quality = "dim";
+      break;
+    default:
+      $quality = "";
+  }
+
+  return $quality;
 }
