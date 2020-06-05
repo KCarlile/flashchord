@@ -51,6 +51,9 @@
               </div>
             </div>
             <div class="row">
+              <?php require 'components/ad_footer.php'; ?>
+            </div>
+            <div class="row">
               <div class="col-12 col-md">
                 <?php require 'components/copyright.php'; ?>
               </div>
