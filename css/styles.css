@@ -16,3 +16,7 @@
     margin-top: 0em;
     text-align: center;
 }
+
+.ui-state-active {
+    background-color: #999999;
+}

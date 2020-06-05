@@ -4,6 +4,9 @@ var $chord;
 var $next_chord;
 
 $(document).ready(function() {
+  // make sure we're on the home page
+  if(document.getElementById("chord_name") !== null)
+  {
     // slider setup
     $(function() {
         $("#slider").slider({
@@ -31,26 +34,28 @@ $(document).ready(function() {
       $("#next_chord_name").html($next_chord);
     }
 
+    // do the delayed chord change thing :)
     function chordTimer() {
         changeChord();
         $intervalId = setTimeout(function() {
             chordTimer();
         }, $DELAY);
     }
+  }
 });
 
+// get a random value from an array
 function getRandom ($array) {
     return $array[Math.floor(Math.random() * $array.length)];
 }
 
+// get the available notes based on the selected key
 function getKey() {
   var $key = $("#keys").val();
   var $key_notes;
-  console.log("Selected: " + $key);
 
   if (!$key) {
     $key_notes = $chromatic;
-    console.log("Any key");
   }
   else {
     $key_notes = $keys[$key];
@@ -60,12 +65,11 @@ function getKey() {
   return $key_notes;
 }
 
+// build up a chord based on the selected options
 function getChord() {
   var $difficulty = $('input[name="difficulty"]:checked').val();
   var $key = getKey();
   var $note = getRandom($key);
-
-  console.log($key + " :: " + $note + " (" + $key.indexOf($note) + ")");
 
   if ($("#keys").val().indexOf("Major") >= 0) {
     // major
@@ -75,8 +79,6 @@ function getChord() {
     $chord_quality = getHarmonicQualityMinor($key.indexOf($note));
   }
   else { $chord_quality = "None"; }
-
-  console.log("Harmonic Quality: " + $chord_quality);
 
   var $quality;
   var $ext;
@@ -94,17 +96,18 @@ function getChord() {
   return $note + $quality + getExtension();
 }
 
+// if extensions are selected, return one
 function getExtension() {
   var $ext = "";
 
   if ($('input[name="extensions"]').is(":checked")) {
-    console.log('CHECKED!');
     $ext = '<sup>' + getRandom($extension) + '</sup>';
   }
 
   return $ext;
 }
 
+// get the correct type of chord for the scale tone in a major key
 function getHarmonicQualityMajor($scale_tone) {
   var $quality;
   switch($scale_tone) {
@@ -131,6 +134,7 @@ function getHarmonicQualityMajor($scale_tone) {
   return $quality;
 }
 
+// get the correct type of chord for the scale tone in a minor key
 function getHarmonicQualityMinor($scale_tone) {
   var $quality;
   switch($scale_tone) {
