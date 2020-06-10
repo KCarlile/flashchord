@@ -11,6 +11,10 @@
     </div>
     <div class="container">
       <div id="accordion">
+        <h3>Why doesn't Flash Chord work for me?</h3>
+        <div>
+          <p>Flash Chord requires a modern JavaScript-enabled browser, so make sure that your browser is updated and that you have JavaScript enabled.</p>
+        </div>
         <h3>Why doesn't Flash Chord provide a chord shape or the notes?</h3>
         <div>
           <p>Flash Chord is intended to be used by all instruments, so it wouldn't make sense to provide a guitar or piano chord shape to trumpet players or saxophone players. Also, Flash Chord is a practicing tool, not a teaching tool.</p>
