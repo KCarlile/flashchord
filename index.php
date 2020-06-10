@@ -16,37 +16,43 @@
           <h2 id="next_chord_name">Next Chord</h2>
         </div>
     </div>
-    <div class="container border-top mt-5 pt-5">
+    <div class="container border-top mt-5">
         <div class="row">
-          <div class="col-md">
+          <div class="col-md mt-5">
             <h4>Speed</h4>
             <div id="slider"></div>
             <label for="seconds">Delay:</label>
             <input type="text" id="seconds" readonly style="border:0; font-weight:bold;">
-          </div>
-          <div class="col-md">
-            <h4>Key</h4>
+
+            <h4 class="mt-5">Key</h4>
             <label for="keys">Select a key:</label>
-            <select id="keys">
+            <select id="keys" class="custom-select w-25">
                 <option value="">Any</option>
             </select>
           </div>
-          <div class="col-md">
+          <div class="col-md mt-5">
             <h4>Difficulty</h4>
-            <input type="radio" id="beginner" name="difficulty" value="beginner" checked>
-            <label for="beginner">Beginner <small>(major, minor, 7, minor 7)</small></label><br>
-            <input type="radio" id="intermediate" name="difficulty" value="intermediate">
-            <label for="intermediate">Intermediate <small>(maj7, 6, m6, sus2, sus4, 9, m9)</small></label><br>
-            <input type="radio" id="advanced" name="difficulty" value="advanced">
-            <label for="advanced">Advanced <small>(+, °, m7♭5, 7alt, 6/9, 11, 13)</small></label>
-            <p>
-                <input type="checkbox" name="extensions" />
-                <label for="extensions">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
-            </p>
-            <p>
-                <input type="checkbox" name="hide_next_chord" />
-                <label for="hide_next_chord">Hide next chord</label>
-            </p>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="beginner" class="custom-control-input" name="difficulty" value="beginner" checked>
+              <label for="beginner" class="custom-control-label">Beginner <small>(major, minor, 7, minor 7)</small></label>
+            </div>
+            <div class="custom-control custom-radio mt-1">
+            <input type="radio" id="intermediate" class="custom-control-input" name="difficulty" value="intermediate">
+            <label for="intermediate" class="custom-control-label">Intermediate <small>(maj7, 6, m6, sus2, sus4, 9, m9)</small></label>
+            </div>
+            <div class="custom-control custom-radio mt-1">
+            <input type="radio" id="advanced" class="custom-control-input" name="difficulty" value="advanced">
+            <label for="advanced" class="custom-control-label">Advanced <small>(+, °, m7♭5, 7alt, 6/9, 11, 13)</small></label>
+            </div>
+
+            <div class="custom-control custom-checkbox mt-3">
+                <input type="checkbox" class="custom-control-input" id="extensions" name="extensions" />
+                <label for="extensions" class="custom-control-label">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
+            </div>
+            <div class="custom-control custom-checkbox mt-3">
+                <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
+                <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
+            </div>
           </div>
         </div>
         <div class="row border-top mt-5 pt-5">
