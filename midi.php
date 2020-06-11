@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="js/metronome.js"></script>
     <?php require 'components/head.php'; ?>
     <title>MIDI Test | Flash Chord</title>
-    <script src="js/metronome.js"></script>
   </head>
   <body>
     <?php require 'components/header.php'; ?>

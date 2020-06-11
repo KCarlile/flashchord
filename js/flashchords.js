@@ -3,7 +3,12 @@ var $DELAY = 1000 * 4; // 1000ms * SECONDS
 var $chord;
 var $next_chord;
 
+ var Off_Beep = new Audio("https://www.freesound.org/data/previews/250/250551_4570971-lq.mp3");
+ var On_Beep = new Audio("https://www.freesound.org/data/previews/243/243749_1038806-lq.mp3");
+ var first_Beep = new Audio("https://www.freesound.org/data/previews/243/243748_1038806-lq.mp3");
+
 $(document).ready(function() {
+
   // make sure we're on the home page
   if(document.getElementById("chord_name") !== null)
   {
@@ -32,6 +37,7 @@ $(document).ready(function() {
 
       $("#chord_name").html($chord);
       $("#next_chord_name").html($next_chord);
+      On_Beep.play();
     }
 
     // do the delayed chord change thing :)
