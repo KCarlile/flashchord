@@ -87,7 +87,7 @@
         <div class="row">
           <div class="col">
             <p>Once you've configured Flash Chord for your desired settings, grab your axe (instrument) and get busy comping chords, improvizing around scales, or running arpeggios against the chords being presented. Think of Flash Chord like a backing track or chord progression that is never the same! That randomized pattern is what is going to help make you a better musician by challenging you with the unexpected and taking you out of those same old, tired patterns.</p>
-            <p>Do you want to know more about Flash Chord? Check out the <a href="faq.php">Frequently Asked Questions (FAQ)</a> and <a href="about.php">About</a> pages for more information about Flash Chord.</p>
+            <p>Check out the <a href="faq.php">Frequently Asked Questions (FAQ)</a> and <a href="about.php">About</a> pages for more information about Flash Chord and find out how you can help contribute!</p>
           </div>
         </div>
     </div>
