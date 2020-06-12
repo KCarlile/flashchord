@@ -27,9 +27,9 @@
           </div>
         </div>
     </div>
-    <div class="container border-top mt-5 pt-5">
+    <div class="container border-top mt-5">
         <div class="row">
-          <div class="col-md">
+          <div class="col-md mt-5">
             <h4>Tempo</h4>
             <div id="tempo"></div>
             <label for="bpm">Beats per minute:</label>
@@ -44,29 +44,34 @@
             <label for="time_24">2/4</label><br>
             <input type="radio" id="time_68" name="time_signature" value="time_68">
             <label for="time_68">6/8</label><br>
-          </div>
-          <div class="col-md">
-            <h4>Key</h4>
+
+            <h4 class="mt-5">Key</h4>
             <label for="keys">Select a key:</label>
-            <select id="keys">
+            <select id="keys" class="custom-select w-25">
                 <option value="">Any</option>
             </select>
           </div>
-          <div class="col-md">
+          <div class="col-md mt-5">
             <h4>Difficulty</h4>
-            <input type="radio" id="beginner" name="difficulty" value="beginner" checked>
-            <label for="beginner">Beginner <small>(major, minor, 7, minor 7)</small></label><br>
-            <input type="radio" id="intermediate" name="difficulty" value="intermediate">
-            <label for="intermediate">Intermediate <small>(maj7, 6, m6, sus2, sus4, 9, m9)</small></label><br>
-            <input type="radio" id="advanced" name="difficulty" value="advanced">
-            <label for="advanced">Advanced <small>(+, °, m7♭5, 7alt, 6/9, 11, 13)</small></label>
-            <div class="mt-1">
-                <input type="checkbox" name="extensions" />
-                <label for="extensions">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="beginner" class="custom-control-input" name="difficulty" value="beginner" checked>
+              <label for="beginner" class="custom-control-label">Beginner <small>(major, minor, 7, minor 7)</small></label>
             </div>
-            <div class="mt-1">
-                <input type="checkbox" name="hide_next_chord" />
-                <label for="hide_next_chord">Hide next chord</label>
+            <div class="custom-control custom-radio mt-1">
+              <input type="radio" id="intermediate" class="custom-control-input" name="difficulty" value="intermediate">
+              <label for="intermediate" class="custom-control-label">Intermediate <small>(maj7, 6, m6, sus2, sus4, 9, m9)</small></label>
+            </div>
+            <div class="custom-control custom-radio mt-1">
+              <input type="radio" id="advanced" class="custom-control-input" name="difficulty" value="advanced">
+              <label for="advanced" class="custom-control-label">Advanced <small>(+, °, m7♭5, 7alt, 6/9, 11, 13)</small></label>
+            </div>
+            <div class="custom-control custom-checkbox mt-3">
+                <input type="checkbox" class="custom-control-input" id="extensions" name="extensions" />
+                <label for="extensions" class="custom-control-label">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
+            </div>
+            <div class="custom-control custom-checkbox mt-3">
+                <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
+                <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
             </div>
           </div>
         </div>
@@ -102,7 +107,7 @@
         <div class="row">
           <div class="col">
             <p>Once you've configured Flash Chord for your desired settings, grab your axe (instrument) and get busy comping chords, improvizing around scales, or running arpeggios against the chords being presented. Think of Flash Chord like a backing track or chord progression that is never the same! That randomized pattern is what is going to help make you a better musician by challenging you with the unexpected and taking you out of those same old, tired patterns.</p>
-            <p>Do you want to know more about Flash Chord? Check out the <a href="faq.php">Frequently Asked Questions (FAQ)</a> and <a href="about.php">About</a> pages for more information about Flash Chord.</p>
+            <p>Check out the <a href="faq.php">Frequently Asked Questions (FAQ)</a> and <a href="about.php">About</a> pages for more information about Flash Chord and find out how you can help contribute!</p>
           </div>
         </div>
     </div>
