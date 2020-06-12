@@ -14,20 +14,20 @@ $(document).ready(function() {
   {
     // slider setup
     $(function() {
-        $("#slider").slider({
-          value: 4,
-          min: 2,
-          max: 60,
+        $("#tempo").slider({
+          value: 100,
+          min: 60,
+          max: 220,
           step: 2,
           slide: function(event, ui) {
-            clearInterval($intervalId);
-            $("#seconds").val(ui.value + " seconds");
-            $DELAY = ui.value * 1000;
-            chordTimer(); // start new
+            //clearInterval($intervalId);
+            $("#bpm").val(ui.value);
+            $DELAY = ui.value;
+            //chordTimer(); // start new
           }
         });
-        $("#seconds").val($("#slider").slider("value") + " seconds");
-        chordTimer();
+        $("#bpm").val($("#tempo").slider("value"));
+        //chordTimer();
       });
 
     // chord change
@@ -37,7 +37,13 @@ $(document).ready(function() {
 
       $("#chord_name").html($chord);
       $("#next_chord_name").html($next_chord);
-      On_Beep.play();
+
+      /*
+      if (!$('input[name="disable_metronome"]').is(":checked")) {
+        On_Beep.play();
+        console.log('BEEP!');
+      }
+      */
     }
 
     // do the delayed chord change thing :)

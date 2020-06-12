@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <?php require 'components/head.php'; ?>
+    <script src="js/metronome.js"></script>
     <title>Practice chords, scales, or arpeggios against an endless stream of randomized chords | Flash Chord</title>
   </head>
   <body>
@@ -15,14 +16,34 @@
           <h3 class="text-center">Up next...</h3>
           <h2 id="next_chord_name">Next Chord</h2>
         </div>
+        <div class="btn-group-lg text-center mt-4" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-success" id="start">Start</button>
+          <button type="button" class="btn btn-danger" id="stop">Stop</button>
+        </div>
+        <div class="text-center mt-4">
+          <div class="mt-1">
+            <input type="checkbox" name="disable_metronome" />
+            <label for="disable_metronome">Disable metronome</label>
+          </div>
+        </div>
     </div>
     <div class="container border-top mt-5 pt-5">
         <div class="row">
           <div class="col-md">
-            <h4>Speed</h4>
-            <div id="slider"></div>
-            <label for="seconds">Delay:</label>
-            <input type="text" id="seconds" readonly style="border:0; font-weight:bold;">
+            <h4>Tempo</h4>
+            <div id="tempo"></div>
+            <label for="bpm">Beats per minute:</label>
+            <input type="text" id="bpm" readonly style="border:0; font-weight:bold;">
+
+            <h4>Time Signature</h4>
+            <input type="radio" id="time_44" name="time_signature" value="time_44" checked>
+            <label for="time_44">4/4</label><br>
+            <input type="radio" id="time_34" name="time_signature" value="time_34">
+            <label for="time_34">3/4</label><br>
+            <input type="radio" id="time_24" name="time_signature" value="time_24">
+            <label for="time_24">2/4</label><br>
+            <input type="radio" id="time_68" name="time_signature" value="time_68">
+            <label for="time_68">6/8</label><br>
           </div>
           <div class="col-md">
             <h4>Key</h4>
@@ -39,14 +60,14 @@
             <label for="intermediate">Intermediate <small>(maj7, 6, m6, sus2, sus4, 9, m9)</small></label><br>
             <input type="radio" id="advanced" name="difficulty" value="advanced">
             <label for="advanced">Advanced <small>(+, °, m7♭5, 7alt, 6/9, 11, 13)</small></label>
-            <p>
+            <div class="mt-1">
                 <input type="checkbox" name="extensions" />
                 <label for="extensions">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
-            </p>
-            <p>
+            </div>
+            <div class="mt-1">
                 <input type="checkbox" name="hide_next_chord" />
                 <label for="hide_next_chord">Hide next chord</label>
-            </p>
+            </div>
           </div>
         </div>
         <div class="row border-top mt-5 pt-5">
