@@ -50,6 +50,7 @@
                 <select id="keys" class="custom-select w-25">
                     <option value="">Any</option>
                 </select>
+                <p class="small mt-1"><em>Currently, specifying a key will override the Difficulty settings below.</em></p>
                 <h4 class="mt-5">Difficulty</h4>
                 <div class="custom-control custom-radio">
                     <input type="radio" id="beginner" class="custom-control-input" name="difficulty" value="beginner" checked>
@@ -96,9 +97,16 @@
             <div class="col-md">
                 <h4>How do I use Flash Chord?</h4>
                 <ol>
-                    <li><strong>Set a speed:</strong> longer delay means slower speed, so slow it down if you're just starting out</li>
-                    <li><strong>Select a key:</strong> restrict the chords to a specific key or leave it on <em>Any</em> to challenge yourself even more</li>
+                    <li><strong>Set a tempo:</strong> set the speed of chord changes; start slow if you're a beginner</li>
+                    <li><strong>Set the time signature:</strong> choose the time signature for your the metronome</li>
+                    <li><strong>Select a key:</strong> restrict the chords to a specific key or leave it on <em>Any</em> to challenge yourself even more<br /><span class="small">Note: in the current version, specifying a key will override the difficulty settings.</span></li>
                     <li><strong>Set a difficulty:</strong> pick a level that matches your abilities including beginner, intermediate, or advanced; if advanced is still too easy for you, you can also add chord extensions or hide the upcoming chord for the ultimate challenge!</li>
+                    <li><strong>Click Start:</strong> click Start when you're ready to begin
+                        <ul>
+                            <li><strong>Silent practice:</strong> if you'd like to practice silently with out the audio cues, click Disable metronome</li>
+                        </ul>
+                    </li>
+                    <li><strong>Click Stop:</strong> click Stop when you're done</li>
                 </ol>
             </div>
         </div>
