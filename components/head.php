@@ -1,11 +1,11 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2437704-21"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'UA-2437704-21');
+        gtag('config', 'UA-2437704-21');
     </script>
 
     <!-- Required meta tags -->
@@ -22,6 +22,7 @@
     <!-- Flash Chord -->
     <script src="js/ui.js"></script>
     <script src="js/flashchords.js"></script>
+    <script src="js/metronome.js"></script>
     <script src="data/data.js"></script>
 
     <!-- jQuery UI CSS -->
