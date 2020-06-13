@@ -1,3 +1,6 @@
+// ------------------------------------------------------------
+// UI setup functions
+// ------------------------------------------------------------
 $(document).ready(function() {
     // setup keys dropdown
     var option = '';
@@ -14,6 +17,22 @@ $(document).ready(function() {
     // FAQ accordion
     $("#accordion").accordion({
       collapsible: true
+    });
+
+    // slider setup
+    $(function() {
+        $("#tempo").slider({
+          value: $tempo,
+          min: 60,
+          max: 220,
+          step: 2,
+          slide: function(event, ui) {
+            //clearInterval($intervalId);
+            $("#bpm").val(ui.value);
+            $tempo = ui.value;
+          }
+        });
+        $("#bpm").val($("#tempo").slider("value"));
     });
 });
 
