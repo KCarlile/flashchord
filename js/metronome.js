@@ -1,8 +1,8 @@
 // ------------------------------------------------------------
 // Metronome functionality
 // ------------------------------------------------------------
-var $downbeat_beep = new Audio("https://www.freesound.org/data/previews/243/243748_1038806-lq.mp3");
-var $beat_beep = new Audio("https://www.freesound.org/data/previews/243/243749_1038806-lq.mp3");
+var $downbeat_beep = new Audio("audio/metronome/downbeat_beep.mp3");
+var $beat_beep = new Audio("audio/metronome/beat_beep.mp3");
 
 var $beats_per_measure = 4;
 var $current_beat = 0;
