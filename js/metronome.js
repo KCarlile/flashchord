@@ -6,28 +6,6 @@ var $beat_beep = new Audio("https://www.freesound.org/data/previews/243/243749_1
 
 var $beats_per_measure = 4;
 var $current_beat = 0;
-var $tempo_delay;
-
-$(document).ready(function() {
-    // setup chords
-    $chord = $next_chord ? $next_chord : getChord();
-    $next_chord = getChord();
-    $("#chord_name").html($chord);
-    $("#next_chord_name").html($next_chord);
-
-    // ------------------------------------------------------------
-    // Event handling
-    // ------------------------------------------------------------
-    // handle start click
-    $("#start").click(function() {
-        startFlashChord();
-    });
-
-    // handle stop click
-    $("#stop").click(function() {
-        stopFlashChord();
-    });
-});
 
 // ------------------------------------------------------------
 // Metronome utility functions
@@ -44,32 +22,13 @@ function increment_beat() {
 
 // get the tempo
 function getTempo() {
+    // factor = 1 for all x/4 time signatures
     $factor = 1;
 
+    // factor = 3 for 6/8 time signature, makes it feel like it's in 2 (3+3)
     if ($beats_per_measure == 6) {
         $factor = 3;
     }
 
     return (60 / $tempo) * 1000 / $factor;
-}
-
-// set beats per measure based on time signature
-function setupBeatsPerMeasure() {
-    $time_signature = $('input[name="time_signature"]:checked').val();
-
-    if ($time_signature == "time_44") {
-        $beats_per_measure = 4;
-    }
-    else if ($time_signature == "time_34") {
-        $beats_per_measure = 3;
-    }
-    else if ($time_signature == "time_24") {
-        $beats_per_measure = 2;
-    }
-    else if ($time_signature == "time_68") {
-        $beats_per_measure = 6;
-    }
-    else {
-        $beats_per_measure = 4;
-    }
 }

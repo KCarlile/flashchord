@@ -36,4 +36,26 @@ $(document).ready(function() {
     });
 });
 
+// ------------------------------------------------------------
+// UI functions
+// ------------------------------------------------------------
+// converts dropdown setting to beats per measure for time signature
+function setupBeatsPerMeasure() {
+    $time_signature = $('input[name="time_signature"]:checked').val();
 
+    if ($time_signature == "time_44") {
+        $beats_per_measure = 4;
+    }
+    else if ($time_signature == "time_34") {
+        $beats_per_measure = 3;
+    }
+    else if ($time_signature == "time_24") {
+        $beats_per_measure = 2;
+    }
+    else if ($time_signature == "time_68") {
+        $beats_per_measure = 6;
+    }
+    else {
+        $beats_per_measure = 4;
+    }
+}

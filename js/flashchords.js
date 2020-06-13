@@ -6,8 +6,26 @@ var $flash_chord_running = false;
 
 $(document).ready(function() {
     // ------------------------------------------------------------
+    // Init
+    // ------------------------------------------------------------
+    $chord = $next_chord ? $next_chord : getChord();
+    $next_chord = getChord();
+    $("#chord_name").html($chord);
+    $("#next_chord_name").html($next_chord);
+
+    // ------------------------------------------------------------
     // Event handling
     // ------------------------------------------------------------
+    // handle start click
+    $("#start").click(function() {
+        startFlashChord();
+    });
+
+    // handle stop click
+    $("#stop").click(function() {
+        stopFlashChord();
+    });
+
     // time signature radio button change
     $('input[type=radio][name=time_signature]').change(function() {
         if ($flash_chord_running) {
@@ -88,7 +106,7 @@ function getKey() {
     else {
         $key_notes = $keys[$key];
     }
-    console.log($key_notes);
+    //console.log($key_notes);
 
     return $key_notes;
 }
@@ -98,21 +116,20 @@ function getChord() {
     var $difficulty = $('input[name="difficulty"]:checked').val();
     var $key = getKey();
     var $note = getRandom($key);
-
-    if ($("#keys").val().indexOf("Major") >= 0) {
-        // major
-        $chord_quality = getHarmonicQualityMajor($key.indexOf($note));
-        console.log("Major");
-    } else if ($("#keys").val().indexOf("Minor") >= 0) {
-        // major
-        $chord_quality = getHarmonicQualityMinor($key.indexOf($note));
-        console.log("Minor");
-    }
-    else { $chord_quality = "None"; }
-
+    var $key_quality = "any";
     var $quality;
     var $ext;
 
+    // restrict to key
+    if ($("#keys").val().indexOf("Major") >= 0) {
+        // major
+        $key_quality = getHarmonicQualityMajor($key.indexOf($note));
+    } else if ($("#keys").val().indexOf("Minor") >= 0) {
+        // major
+        $key_quality = getHarmonicQualityMinor($key.indexOf($note));
+    }
+
+    // get quality
     if ($difficulty == "beginner") {
         $quality = getRandom($quality_beginner);
         $ext = "";
@@ -121,6 +138,11 @@ function getChord() {
         $ext = "";
     } else if ($difficulty == "advanced") {
         $quality = getRandom($quality_advanced);
+    }
+
+    // restrict to key if set
+    if ($key_quality != "any") {
+        $quality = $key_quality;
     }
 
     return $note + $quality + getExtension();
@@ -161,7 +183,6 @@ function getHarmonicQualityMajor($scale_tone) {
             $quality = "";
     }
 
-    console.log("Scale tone: " + $scale_tone + "      Quality: " + $quality);
     return $quality;
 }
 
