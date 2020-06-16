@@ -1,3 +1,7 @@
+// Safari audio lag fix
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
+
 var $intervalId;
 var $tempo = 100;
 var $chord;
