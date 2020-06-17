@@ -19,10 +19,23 @@
             <button type="button" class="btn btn-success" id="start">Start</button>
             <button type="button" class="btn btn-danger" id="stop">Stop</button>
         </div>
-        <div class="text-center mt-4">
-            <div class="mt-1">
-                <input type="checkbox" name="disable_metronome" />
-                <label for="disable_metronome">Disable metronome</label>
+        <div class="text-center mt-3">
+            <div id="visual_metronome">
+                <span id="beat1" class="text-primary">&bull;</span>
+                <span id="beat2" class="text-secondary">&bull;</span>
+                <span id="beat3" class="text-secondary">&bull;</span>
+                <span id="beat4" class="text-secondary">&bull;</span>
+                <span id="beat5" class="text-secondary">&bull;</span>
+                <span id="beat6" class="text-secondary">&bull;</span>
+            </div>
+            <div class="row justify-content-center">
+                <div class="text-left">
+                    <input type="checkbox" name="disable_metronome" />
+                    <label for="disable_metronome">Disable metronome</label>
+                    <br />
+                    <input type="checkbox" name="disable_visual_metronome" />
+                    <label for="disable_visual_metronome">Disable visual metronome</label>
+                </div>
             </div>
         </div>
     </div>

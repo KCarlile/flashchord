@@ -24,13 +24,13 @@
                 <p>We have plans to try to use <a href="https://www.w3.org/TR/webmidi/">web-midi-api</a> to add some audio cues like a click track or chords, but it may not be supported by all browsers.</p>
                 <p>If you'd like to help us develop this functionality, check out how you can contribute on the <a href="about.php">About</a> page.</p>
             </div>
-            <h3>Why is the speed listed as seconds and not beats-per-minute like traditional tempo?</h3>
-            <div>
-                <p>We have plans to try to implement a metronome, so it will likely switch to BPM at that point, but that will also require a selection of how many beats per chord (i.e. should the chord change every measure or more/less frequently).</p>
-            </div>
             <h3>I saw a weird chord that no one would ever play in real life. Why is that in Flash Chord?</h3>
             <div>
                 <p>If you see an invalid chord, please report it on the <a href="https://github.com/KCarlile/flashchord/issues">issues page of the GitHub project</a>.</p>
+            </div>
+            <h3>The metronome hangs for a split second when I start it on iOS (any browesr) or Safari on Mac. What's up with that?</h3>
+            <div>
+                <p>I think it's related to resource caching for the audio file. I've added some tweaks to make it better, but I haven't yet figured out how to make it work perfectly.</p>
             </div>
             <h3>How can I report a bug?</h3>
             <div>

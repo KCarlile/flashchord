@@ -1,4 +1,5 @@
 // Safari audio lag fix
+// No idea why this works, but someone online said this fixed the problem and it did! :)
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
@@ -12,10 +13,15 @@ $(document).ready(function() {
     // ------------------------------------------------------------
     // Init
     // ------------------------------------------------------------
-    $chord = $next_chord ? $next_chord : getChord();
-    $next_chord = getChord();
-    $("#chord_name").html($chord);
-    $("#next_chord_name").html($next_chord);
+    // first, make sure we're on the home page before doing any of the chord stuff
+    if ($("#chord_name").length) {
+        $chord = $next_chord ? $next_chord : getChord();
+        $next_chord = getChord();
+        $("#chord_name").html($chord);
+        $("#next_chord_name").html($next_chord);
+
+        setupBeatsPerMeasure();
+    }
 
     // ------------------------------------------------------------
     // Event handling

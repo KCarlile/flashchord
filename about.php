@@ -15,9 +15,10 @@
         <h2>Ch-ch-ch-changes</h2>
         <p>Now that you've got the idea, let's setup your Flash Chord practice session for success!</p>
         <ol>
-            <li>Speed - Use the slider to adjust the speed of the incoming chords. Slower time delays between chords means faster chord changes.</li>
-            <li>Key - Select the key in which you'd like to practice your chords or, for a real challenge, leave the key set to <em>Any</em> to see chords from <em>any key</em>.</li>
-            <li>Difficulty - Select the complexity of the chords being generated:
+            <li><strong>Tempo</strong> - Use the slider to adjust the speed of the incoming chords. Slower tempos mean slower chord changes.</li>
+            <li><strong>Time Signature</strong> - Set the time signature to specify the beats per measure.</li>
+            <li><strong>Key</strong> - Select the key in which you'd like to practice your chords or, for a real challenge, leave the key set to <em>Any</em> to see chords from <em>any key</em>.</li>
+            <li><strong>Difficulty</strong> - Select the complexity of the chords being generated:
                 <ol>
                     <li>Beginner: major, minor, 7, minor 7</li>
                     <li>Intermediate: maj7, 6, m6, sus2, sus4, 9, m9</li>
@@ -26,7 +27,7 @@
                 You can also specify if you want additional extensions (♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13) added to the chords by checking the <em>Add extensions</em> checkbox.<br />If you really want to kick it up a notch, check the <em>Hide next chord</em> checkbox to get the next chord without any warning!
             </li>
         </ol>
-        <h2>Heroes</h2>
+        <h2>We Can Be Heroes</h2>
         <p>So you like Flash Chord, but you wanna help make it even better? Great! Flash Chord is an <a href="https://github.com/KCarlile/flashchord">open source project hosted on GitHub</a>. If you want to help contribute, please reach out to the maintainer through the GitHub project page.</p>
         <h3>Technical</h3>
         <p>Flash Chord uses the following technologies:</p>
