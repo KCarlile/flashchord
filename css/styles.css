@@ -17,6 +17,14 @@
     text-align: center;
 }
 
+#visual_metronome {
+    font-size: 5em;
+}
+
+#visual_metronome span {
+    margin-top: .2em;
+}
+
 .ui-state-active {
     background-color: #999999;
 }

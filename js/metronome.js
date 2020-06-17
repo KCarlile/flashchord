@@ -18,6 +18,13 @@ function increment_beat() {
     else {
         $current_beat = $current_beat + 1;
     }
+
+    // reset classes for beats
+    $("#visual_metronome").children().removeClass();
+    $("#visual_metronome").children().addClass("text-secondary");
+    // set correct beat
+    $("#beat" + $current_beat).removeClass("text-secondary");
+    $("#beat" + $current_beat).addClass("text-primary");
 }
 
 // get the tempo
