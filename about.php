@@ -7,7 +7,7 @@
 <body>
     <?php require 'components/header.php'; ?>
     <div class="container">
-        <p class="lead">About</p>
+        <h2>About</h2>
     </div>
     <div class="container">
         <div class="row bg-light mb-2">

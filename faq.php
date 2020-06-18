@@ -7,7 +7,7 @@
 <body>
     <?php require 'components/header.php'; ?>
     <div class="container">
-        <p class="lead">Frequently Asked Questions (FAQ)</p>
+        <h2>Frequently Asked Questions (FAQ)</h2>
     </div>
     <div class="container">
         <div id="accordion">
