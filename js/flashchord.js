@@ -22,37 +22,6 @@ $(document).ready(function() {
 
         setupBeatsPerMeasure();
     }
-
-    // ------------------------------------------------------------
-    // Event handling
-    // ------------------------------------------------------------
-    // handle start click
-    $("#start").click(function() {
-        startFlashChord();
-    });
-
-    // handle stop click
-    $("#stop").click(function() {
-        stopFlashChord();
-    });
-
-    // time signature radio button change
-    $('input[type=radio][name=time_signature]').change(function() {
-        if ($flash_chord_running) {
-            stopFlashChord();
-            startFlashChord();
-        }
-    });
-
-    // tempo slider change
-    $("#tempo").slider({
-        change: function( event, ui ) {
-            if ($flash_chord_running) {
-                stopFlashChord();
-                startFlashChord();
-            }
-        }
-    });
 });
 
 // ------------------------------------------------------------
@@ -76,7 +45,7 @@ function startFlashChord() {
             }
 
             // metronome beep
-            if (!$('input[name="disable_metronome"]').is(":checked")) {
+            if ($('input[name="metronome_audio"]').is(":checked")) {
                 if ($current_beat == 1) {
                     $downbeat_beep.play();
                 }

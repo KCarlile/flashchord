@@ -10,9 +10,17 @@
         <p class="lead">About</p>
     </div>
     <div class="container">
-        <h2>Let's Dance</h2>
-        <p>Flash Chord is a free online tool for musicians who want to practice chords, scales, or arpeggios against an endless stream of randomized chords being presented. Learning a song or practicing to a backing track is great, but if you really want to learn your instrument, you need to be ready for the unexpected. With Flash Chord, you can specify the speed and complexity of the chords being presented and you'll never know more than one chord in advance.</p>
-        <h2>Ch-ch-ch-changes</h2>
+        <div class="row bg-light mb-2">
+            <div class="col border-top border-bottom">
+                <h4 class="text-secondary mt-1 mb-2">Overview</h4>
+            </div>
+        </div>
+        <p>Flash Chord is a free online tool for musicians who want to practice chords, scales, or arpeggios against an endless stream of randomized chords. Learning a song or practicing to a backing track is great, but if you really want to learn your instrument, you need to be ready for the unexpected. With Flash Chord, you can specify the speed and complexity of the chords being presented and you'll never know more than one chord in advance.</p>
+        <div class="row bg-light mb-2">
+            <div class="col border-top border-bottom">
+                <h4 class="text-secondary mt-1 mb-2">Details</h4>
+            </div>
+        </div>
         <p>Now that you've got the idea, let's setup your Flash Chord practice session for success!</p>
         <ol>
             <li><strong>Tempo</strong> - Use the slider to adjust the speed of the incoming chords. Slower tempos mean slower chord changes.</li>
@@ -27,9 +35,13 @@
                 You can also specify if you want additional extensions (♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13) added to the chords by checking the <em>Add extensions</em> checkbox.<br />If you really want to kick it up a notch, check the <em>Hide next chord</em> checkbox to get the next chord without any warning!
             </li>
         </ol>
-        <h2>We Can Be Heroes</h2>
+        <div class="row bg-light mb-2">
+            <div class="col border-top border-bottom">
+                <h4 class="text-secondary mt-1 mb-2">How you can help</h4>
+            </div>
+        </div>
         <p>So you like Flash Chord, but you wanna help make it even better? Great! Flash Chord is an <a href="https://github.com/KCarlile/flashchord">open source project hosted on GitHub</a>. If you want to help contribute, please reach out to the maintainer through the GitHub project page.</p>
-        <h3>Technical</h3>
+        <h5>Technical</h5>
         <p>Flash Chord uses the following technologies:</p>
         <ul>
             <li><a href="https://html.spec.whatwg.org/multipage/">HTML5</a></li>
@@ -41,6 +53,12 @@
             <li><a href="https://git-scm.com/">Git</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
         </ul>
+        <div class="row bg-light mb-2">
+            <div class="col border-top border-bottom">
+                <h4 class="text-secondary mt-1 mb-2">Donate</h4>
+            </div>
+        </div>
+        <p>If helping with code or testing isn't your thing, that's okay. You can always show your appreciate and support Flash Chord by making a donation to offset hosting and domain costs or fuel further development for bug fixes and enhancements. To learn more about making a <a href="donate.php">donation in support Flash Chord, check out the Donate page</a>.</p>
     </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
