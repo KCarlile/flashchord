@@ -2,11 +2,6 @@
 <html lang="en">
 <head>
     <?php require 'components/head.php'; ?>
-    <!-- Flash Chord -->
-    <script src="/js/ui.js"></script>
-    <script src="/js/flashchord.js"></script>
-    <script src="/js/metronome.js"></script>
-    <script src="/data/data.js"></script>
     <title>Practice chords, scales, or arpeggios with an endless stream of randomized chords | Flash Chord</title>
 </head>
 <body>
