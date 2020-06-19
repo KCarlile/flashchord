@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <?php require 'components/head.php'; ?>
-    <title>Practice chords, scales, or arpeggios against an endless stream of randomized chords | Flash Chord</title>
+    <title>Practice chords, scales, or arpeggios with an endless stream of randomized chords | Flash Chord</title>
 </head>
 <body>
     <?php require 'components/header.php'; ?>
     <div class="container">
-        <p class="lead text-muted">Practice chords, scales, or arpeggios against an endless stream of randomized chords!</p>
+        <p class="lead text-muted">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
     </div>
     <div class="container">
         <h2 id="chord_name">Chord</h2>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="text-center alert alert-info mt-2" role="alert">
-            <a href="donate.php">&hearts; Click here if you love Flash Chord and want to know how you can help support it? &hearts;</a>
+            <a href="/donate">&hearts; Click here if you love Flash Chord and want to know how you can help support it? &hearts;</a>
         </div>
     </div>
     <div class="container mt-3 pb-5">
@@ -148,7 +148,7 @@
         <div class="row">
             <div class="col">
                 <p>Once you've configured Flash Chord for your desired settings, grab your axe (instrument) and get busy comping chords, improvizing around scales, or running arpeggios against the chords being presented. Think of Flash Chord like a backing track or chord progression that is never the same! That randomized pattern is what is going to help make you a better musician by challenging you with the unexpected and taking you out of those same old, tired patterns.</p>
-                <p>Check out the <a href="faq.php">Frequently Asked Questions (FAQ)</a> and <a href="about.php">About</a> pages for more information about Flash Chord and find out how you can help contribute!</p>
+                <p>Check out the <a href="/faq">Frequently Asked Questions (FAQ)</a> and <a href="/about">About</a> pages for more information about Flash Chord and find out how you can help contribute!</p>
             </div>
         </div>
     </div>

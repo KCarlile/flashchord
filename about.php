@@ -7,7 +7,7 @@
 <body>
     <?php require 'components/header.php'; ?>
     <div class="container">
-        <p class="lead">About</p>
+        <h2>About</h2>
     </div>
     <div class="container">
         <div class="row bg-light mb-2">
@@ -15,7 +15,7 @@
                 <h4 class="text-secondary mt-1 mb-2">Overview</h4>
             </div>
         </div>
-        <p>Flash Chord is a free online tool for musicians who want to practice chords, scales, or arpeggios against an endless stream of randomized chords. Learning a song or practicing to a backing track is great, but if you really want to learn your instrument, you need to be ready for the unexpected. With Flash Chord, you can specify the speed and complexity of the chords being presented and you'll never know more than one chord in advance.</p>
+        <p>Flash Chord is a free online tool for musicians who want to practice chords, scales, or arpeggios with an endless stream of randomized chords. Learning a song or practicing to a backing track is great, but if you really want to learn your instrument, you need to be ready for the unexpected. With Flash Chord, you can specify the speed and complexity of the chords being presented and you'll never know more than one chord in advance.</p>
         <div class="row bg-light mb-2">
             <div class="col border-top border-bottom">
                 <h4 class="text-secondary mt-1 mb-2">Details</h4>

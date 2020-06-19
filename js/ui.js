@@ -5,27 +5,28 @@ $(document).ready(function() {
     // setup keys dropdown
     var option = '';
     for (var $key in $keys) {
-       option += '<option value="'+ $key + '">' + $key + '</option>';
+        option += '<option value="'+ $key + '">' + $key + '</option>';
     }
     $("#keys").append(option);
 
     // FAQ accordion
     $("#accordion").accordion({
-      collapsible: true
+        active: false,
+        collapsible: true
     });
 
     // slider setup
     $(function() {
         $("#tempo").slider({
-          value: $tempo,
-          min: 60,
-          max: 220,
-          step: 2,
-          slide: function(event, ui) {
-            //clearInterval($intervalId);
-            $("#bpm").val(ui.value);
-            $tempo = ui.value;
-          }
+            value: $tempo,
+            min: 60,
+            max: 220,
+            step: 2,
+            slide: function(event, ui) {
+                //clearInterval($intervalId);
+                $("#bpm").val(ui.value);
+                $tempo = ui.value;
+            }
         });
         $("#bpm").val($("#tempo").slider("value"));
     });
