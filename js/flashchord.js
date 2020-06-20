@@ -35,6 +35,7 @@ function startFlashChord() {
         $flash_chord_running = true;
         setupBeatsPerMeasure();
         setupBarsPerChord();
+        update_bars_progress();
 
         $intervalId = setInterval(function () {
             increment_beat();
@@ -66,7 +67,7 @@ function stopFlashChord() {
         $flash_chord_running = false;
         clearInterval($intervalId);
         $current_beat = 0;
-        $current_bar = 0;
+        $current_bar = 1;
     }
 }
 

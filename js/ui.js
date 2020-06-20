@@ -88,16 +88,23 @@ $(document).ready(function() {
     // bars slider change
     $("#bars").slider({
         change: function(event, ui) {
+            $bars_per_chord = ui.value;
+
             if ($flash_chord_running) {
                 stopFlashChord();
                 startFlashChord();
             }
+            else {
+                update_bars_progress();
+            }
 
             if(ui.value == 1) {
                 $("#bars_progress").hide();
+                $("#bars_progress_text").hide();
             }
             else {
                 $("#bars_progress").show();
+                $("#bars_progress_text").show();
             }
         }
     });
@@ -151,6 +158,7 @@ function setupBeatsPerMeasure() {
     }
 }
 
+// prepares UI elements for bars per chord
 function setupBarsPerChord() {
     $bars_per_chord = $("#bars").slider("value");
     $("#bars_progress").progressbar({

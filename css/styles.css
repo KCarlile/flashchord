@@ -12,6 +12,10 @@
     background-color: #007BFF;
 }
 
+#bars_progress .ui-progressbar {
+    background-color: #FF0000;
+}
+
 #bars_progress {
     width: 10em;
 }
@@ -40,4 +44,9 @@
 
 .ui-state-active {
     background-color: #999999;
+}
+
+#tempo .ui-slider-handle, #bars .ui-slider-handle {
+    margin-left: -2em;
+    width: 4em;
 }

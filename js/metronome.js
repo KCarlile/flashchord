@@ -40,9 +40,17 @@ function increment_bar() {
         $current_bar = $current_bar + 1;
     }
 
+    update_bars_progress();
+}
+
+// updat the UI with the current status of the bar count
+function update_bars_progress() {
     $("#bars_progress").progressbar({
         value: (100 / $bars_per_chord) * $current_bar
     });
+
+    $("#current_bar_text").text($current_bar);
+    $("#bar_count_text").text($bars_per_chord);
 }
 
 // get the tempo

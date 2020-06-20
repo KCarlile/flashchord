@@ -31,6 +31,7 @@
         </div>
         <div class="text-center">
             <div id="bars_progress" class="mx-auto"></div>
+            <div id="bars_progress_text"><span id="current_bar_text">1</span> of <span id="bar_count_text">1</span></div>
         </div>
         <div class="text-center mt-4">
             <div class="d-inline-block text-left">
