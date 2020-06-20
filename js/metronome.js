@@ -7,6 +7,9 @@ var $beat_beep = new Audio("audio/metronome/beat_beep.mp3");
 var $beats_per_measure = 4;
 var $current_beat = 0;
 
+var $bars_per_chord = 0;
+var $current_bar = 1;
+
 // ------------------------------------------------------------
 // Metronome utility functions
 // ------------------------------------------------------------
@@ -14,6 +17,7 @@ var $current_beat = 0;
 function increment_beat() {
     if ($current_beat >= $beats_per_measure) {
         $current_beat = 1;
+        increment_bar();
     }
     else {
         $current_beat = $current_beat + 1;
@@ -25,6 +29,20 @@ function increment_beat() {
     // set correct beat
     $("#beat" + $current_beat).removeClass("text-secondary");
     $("#beat" + $current_beat).addClass("text-primary");
+}
+
+// increment to the next bar
+function increment_bar() {
+    if ($current_bar >= $bars_per_chord) {
+        $current_bar = 1;
+    }
+    else {
+        $current_bar = $current_bar + 1;
+    }
+
+    $("#bars_progress").progressbar({
+        value: (100 / $bars_per_chord) * $current_bar
+    });
 }
 
 // get the tempo

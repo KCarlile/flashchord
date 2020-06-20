@@ -3,6 +3,19 @@
     width: 80%;
 }
 
+#bars {
+    margin: 1em;
+    width: 80%;
+}
+
+#bars_progress .ui-widget-header {
+    background-color: #007BFF;
+}
+
+#bars_progress {
+    width: 10em;
+}
+
 #chord_name {
     font-size: 12em;
     margin-bottom: 0em;

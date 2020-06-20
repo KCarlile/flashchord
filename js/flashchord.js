@@ -5,6 +5,7 @@ const audioCtx = new AudioContext();
 
 var $intervalId;
 var $tempo = 100;
+var $bars = 1;
 var $chord;
 var $next_chord;
 var $flash_chord_running = false;
@@ -21,6 +22,7 @@ $(document).ready(function() {
         $("#next_chord_name").html($next_chord);
 
         setupBeatsPerMeasure();
+        setupBarsPerChord();
     }
 });
 
@@ -32,11 +34,12 @@ function startFlashChord() {
     if (!$flash_chord_running) {
         $flash_chord_running = true;
         setupBeatsPerMeasure();
+        setupBarsPerChord();
 
         $intervalId = setInterval(function () {
             increment_beat();
 
-            if ($current_beat == 1) {
+            if (($current_beat == 1) && ($current_bar == 1)) {
                 // change chords
                 $chord = $next_chord ? $next_chord : getChord();
                 $next_chord = getChord();
@@ -63,6 +66,7 @@ function stopFlashChord() {
         $flash_chord_running = false;
         clearInterval($intervalId);
         $current_beat = 0;
+        $current_bar = 0;
     }
 }
 

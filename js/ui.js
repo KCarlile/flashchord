@@ -15,7 +15,7 @@ $(document).ready(function() {
         collapsible: true
     });
 
-    // slider setup
+    // tempo slider setup
     $(function() {
         $("#tempo").slider({
             value: $tempo,
@@ -23,12 +23,33 @@ $(document).ready(function() {
             max: 220,
             step: 2,
             slide: function(event, ui) {
-                //clearInterval($intervalId);
                 $("#bpm").val(ui.value);
                 $tempo = ui.value;
             }
         });
         $("#bpm").val($("#tempo").slider("value"));
+    });
+
+    // bars per chord slider setup
+    $(function() {
+        $("#bars").slider({
+            value: $bars,
+            min: 1,
+            max: 16,
+            step: 1,
+            slide: function(event, ui) {
+                $("#bars_per_chord").val(ui.value);
+                $bars = ui.value;
+            }
+        });
+        $("#bars_per_chord").val($("#bars").slider("value"));
+    });
+
+    // bars progress
+    $(function() {
+        $("#bars_progress").progressbar({
+            value: (100 / $bars_per_chord) * $current_bar
+        });
     });
 
     // ------------------------------------------------------------
@@ -56,10 +77,27 @@ $(document).ready(function() {
 
     // tempo slider change
     $("#tempo").slider({
-        change: function( event, ui ) {
+        change: function(event, ui) {
             if ($flash_chord_running) {
                 stopFlashChord();
                 startFlashChord();
+            }
+        }
+    });
+
+    // bars slider change
+    $("#bars").slider({
+        change: function(event, ui) {
+            if ($flash_chord_running) {
+                stopFlashChord();
+                startFlashChord();
+            }
+
+            if(ui.value == 1) {
+                $("#bars_progress").hide();
+            }
+            else {
+                $("#bars_progress").show();
             }
         }
     });
@@ -111,4 +149,11 @@ function setupBeatsPerMeasure() {
         $("#beat5").hide();
         $("#beat6").hide();
     }
+}
+
+function setupBarsPerChord() {
+    $bars_per_chord = $("#bars").slider("value");
+    $("#bars_progress").progressbar({
+        value: (100 / $bars_per_chord) * $current_bar
+    });
 }
