@@ -30,6 +30,10 @@
             </div>
         </div>
         <div class="text-center">
+            <div id="bars_progress" class="mx-auto"></div>
+            <div id="bars_progress_text"><span id="current_bar_text">1</span> of <span id="bar_count_text">1</span></div>
+        </div>
+        <div class="text-center mt-4">
             <div class="d-inline-block text-left">
                 <input type="checkbox" name="metronome_audio" checked />
                 <label for="metronome_audio">Metronome audio</label>
@@ -55,6 +59,12 @@
                     <div id="tempo"></div>
                     <label for="bpm">Beats per minute:</label>
                     <input type="text" id="bpm" readonly style="border:0; font-weight:bold;">
+                </div>
+                <div class="mb-5">
+                    <h4>Bars per chord</h4>
+                    <div id="bars"></div>
+                    <label for="bars_per_chord">Bars:</label>
+                    <input type="text" id="bars_per_chord" readonly style="border:0; font-weight:bold;">
                 </div>
                 <div class="mb-5">
                     <h4 class="mt-5">Time Signature</h4>
