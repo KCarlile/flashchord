@@ -128,6 +128,27 @@ function getChord() {
     if ($key_quality != "any") {
         $quality = $key_quality;
     }
+    else {
+        // check for rare enharmonics
+        if (!$('input[name="rare_enharmonics"]').is(":checked")) {
+            if ($note == "C♭") {
+                $note = "B";
+                console.log("Replacing Cb with B");
+            }
+            else if ($note == "B♯") {
+                $note = "C";
+                console.log("Replacing B# with C");
+            }
+            else if ($note == "F♭") {
+                $note = "E";
+                console.log("Replacing Fb with E");
+            }
+            else if ($note == "E♯") {
+                $note = "F";
+                console.log("Replacing E# with F");
+            }
+        }
+    }
 
     return $note + $quality + getExtension();
 }
