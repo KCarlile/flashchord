@@ -107,7 +107,7 @@
                     </div>
                     <div class="custom-control custom-checkbox mt-3">
                         <input type="checkbox" class="custom-control-input" id="rare_enharmonics" name="rare_enharmonics" />
-                        <label for="rare_enharmonics" class="custom-control-label">Enable rare enharmonic chrods <small>(C♭, B♯, F♭, E♯)</small></label>
+                        <label for="rare_enharmonics" class="custom-control-label">Enable rare enharmonic chords <small>(C♭, B♯, F♭, E♯)</small></label>
                     </div>
                     <div class="custom-control custom-checkbox mt-3">
                         <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
