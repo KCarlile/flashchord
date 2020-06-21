@@ -114,6 +114,91 @@
                         <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
                     </div>
                 </div>
+
+                <h4 class="mt-5">Difficulty v2</h4>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" id="beginner_preset" class="btn btn-success mb-3">Beginner</button>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_beginner" id="chord_type_major" name="chord_type_major" checked />
+                            <label for="chord_type_major" class="custom-control-label">Major</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_beginner" id="chord_type_minor" name="chord_type_minor" checked />
+                            <label for="chord_type_minor" class="custom-control-label">minor</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_beginner" id="chord_type_7" name="chord_type_7" checked />
+                            <label for="chord_type_7" class="custom-control-label">7</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_beginner" id="chord_type_m7" name="chord_type_m7" checked />
+                            <label for="chord_type_m7" class="custom-control-label">m7</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="intermediate_preset" class="btn btn-warning mb-3">Intermediate</button>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_maj7" name="chord_type_maj7" />
+                            <label for="chord_type_maj7" class="custom-control-label">Maj7</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_6" name="chord_type_6" />
+                            <label for="chord_type_6" class="custom-control-label">6</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_sus2" name="chord_type_sus2" />
+                            <label for="chord_type_sus2" class="custom-control-label">sus2</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_sus4" name="chord_type_sus4" />
+                            <label for="chord_type_sus4" class="custom-control-label">sus4</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_9" name="chord_type_9" />
+                            <label for="chord_type_9" class="custom-control-label">9</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_m9" name="chord_type_m9" />
+                            <label for="chord_type_m9" class="custom-control-label">m9</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="advanced_preset" class="btn btn-danger mb-3">Advanced</button>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_aug" name="chord_type_aug" />
+                            <label for="chord_type_aug" class="custom-control-label">+ (aug)</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_7alt" name="chord_type_7alt" />
+                            <label for="chord_type_7alt" class="custom-control-label">7alt (7♯5)</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_dim" name="chord_type_dim" />
+                            <label for="chord_type_dim" class="custom-control-label">° (dim)</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_dim7" name="chord_type_dim7" />
+                            <label for="chord_type_dim7" class="custom-control-label">°7 (dim 7)</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_m7b5" name="chord_type_m7b5" />
+                            <label for="chord_type_m7b5" class="custom-control-label">m7♭5 (ø, half-dim)</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_11" name="chord_type_11" />
+                            <label for="chord_type_11" class="custom-control-label">11</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_13" name="chord_type_13" />
+                            <label for="chord_type_13" class="custom-control-label">13</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_69" name="chord_type_69" />
+                            <label for="chord_type_69" class="custom-control-label">6/9</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

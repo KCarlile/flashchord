@@ -1,3 +1,7 @@
+var $beginner_preset = true;
+var $intermediate_preset = false;
+var $advanced_preset = false;
+
 // ------------------------------------------------------------
 // UI setup functions
 // ------------------------------------------------------------
@@ -107,6 +111,51 @@ $(document).ready(function() {
                 $("#bars_progress_text").show();
             }
         }
+    });
+
+    // difficulty:beginner preset button
+    $("#beginner_preset").click(function() {
+        $(".difficulty_beginner").each(function() {
+            //if($(this).is(":checked")) {
+            if($beginner_preset) {
+                $(this).prop("checked", false);
+            }
+            else {
+                $(this).prop("checked", true);
+            }
+        })
+
+        $beginner_preset = !$beginner_preset;
+    });
+
+    // difficulty:intermediate preset button
+    $("#intermediate_preset").click(function() {
+        $(".difficulty_intermediate").each(function() {
+            //if($(this).is(":checked")) {
+            if($intermediate_preset) {
+                $(this).prop("checked", false);
+            }
+            else {
+                $(this).prop("checked", true);
+            }
+        })
+
+        $intermediate_preset = !$intermediate_preset;
+    });
+
+    // difficulty:advanced preset button
+    $("#advanced_preset").click(function() {
+        $(".difficulty_advanced").each(function() {
+            //if($(this).is(":checked")) {
+            if($advanced_preset) {
+                $(this).prop("checked", false);
+            }
+            else {
+                $(this).prop("checked", true);
+            }
+        })
+
+        $advanced_preset = !$advanced_preset;
     });
 
     // hide/show next chord
