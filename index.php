@@ -118,7 +118,7 @@
                 <h4 class="mt-5">Difficulty v2</h4>
                 <div class="row">
                     <div class="col">
-                        <button type="button" id="beginner_preset" class="btn btn-success mb-3">Beginner</button>
+                        <button type="button" id="beginner_preset" class="btn btn-outline-success btn-sm mb-3">Beginner</button>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_beginner" id="chord_type_major" name="chord_type_major" checked />
                             <label for="chord_type_major" class="custom-control-label">Major</label>
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <button type="button" id="intermediate_preset" class="btn btn-warning mb-3">Intermediate</button>
+                        <button type="button" id="intermediate_preset" class="btn btn-outline-warning btn-sm mb-3">Intermediate</button>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_intermediate" id="chord_type_maj7" name="chord_type_maj7" />
                             <label for="chord_type_maj7" class="custom-control-label">Maj7</label>
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <button type="button" id="advanced_preset" class="btn btn-danger mb-3">Advanced</button>
+                        <button type="button" id="advanced_preset" class="btn btn-outline-danger btn-sm mb-3">Advanced</button>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_aug" name="chord_type_aug" />
                             <label for="chord_type_aug" class="custom-control-label">+ (aug)</label>
