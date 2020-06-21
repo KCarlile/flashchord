@@ -116,12 +116,15 @@ $(document).ready(function() {
     // difficulty:beginner preset button
     $("#beginner_preset").click(function() {
         $(".difficulty_beginner").each(function() {
-            //if($(this).is(":checked")) {
             if($beginner_preset) {
                 $(this).prop("checked", false);
+                $("#beginner_preset").removeClass("btn-success");
+                $("#beginner_preset").addClass("btn-outline-success");
             }
             else {
                 $(this).prop("checked", true);
+                $("#beginner_preset").removeClass("btn-outline-success");
+                $("#beginner_preset").addClass("btn-success");
             }
         })
 
@@ -131,12 +134,15 @@ $(document).ready(function() {
     // difficulty:intermediate preset button
     $("#intermediate_preset").click(function() {
         $(".difficulty_intermediate").each(function() {
-            //if($(this).is(":checked")) {
             if($intermediate_preset) {
                 $(this).prop("checked", false);
+                $("#intermediate_preset").removeClass("btn-warning");
+                $("#intermediate_preset").addClass("btn-outline-warning");
             }
             else {
                 $(this).prop("checked", true);
+                $("#intermediate_preset").removeClass("btn-outline-warning");
+                $("#intermediate_preset").addClass("btn-warning");
             }
         })
 
@@ -146,12 +152,15 @@ $(document).ready(function() {
     // difficulty:advanced preset button
     $("#advanced_preset").click(function() {
         $(".difficulty_advanced").each(function() {
-            //if($(this).is(":checked")) {
             if($advanced_preset) {
                 $(this).prop("checked", false);
+                $("#advanced_preset").removeClass("btn-danger");
+                $("#advanced_preset").addClass("btn-outline-danger");
             }
             else {
                 $(this).prop("checked", true);
+                $("#advanced_preset").removeClass("btn-outline-danger");
+                $("#advanced_preset").addClass("btn-danger");
             }
         })
 

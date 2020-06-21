@@ -118,7 +118,7 @@
                 <h4 class="mt-5">Difficulty v2</h4>
                 <div class="row">
                     <div class="col">
-                        <button type="button" id="beginner_preset" class="btn btn-outline-success btn-sm mb-3">Beginner</button>
+                        <button type="button" id="beginner_preset" class="btn btn-success btn-sm mb-3">Beginner</button>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_beginner" id="chord_type_major" name="chord_type_major" checked />
                             <label for="chord_type_major" class="custom-control-label">Major</label>
