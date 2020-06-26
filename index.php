@@ -101,20 +101,7 @@
                         <input type="radio" id="advanced" class="custom-control-input" name="difficulty" value="advanced">
                         <label for="advanced" class="custom-control-label">Advanced <small>(+, °, m7♭5, 7alt, 6/9, 11, 13)</small></label>
                     </div>
-                    <div class="custom-control custom-checkbox mt-3">
-                        <input type="checkbox" class="custom-control-input" id="extensions" name="extensions" />
-                        <label for="extensions" class="custom-control-label">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
-                    </div>
-                    <div class="custom-control custom-checkbox mt-3">
-                        <input type="checkbox" class="custom-control-input" id="rare_enharmonics" name="rare_enharmonics" />
-                        <label for="rare_enharmonics" class="custom-control-label">Enable rare enharmonic chords <small>(C♭, B♯, F♭, E♯)</small></label>
-                    </div>
-                    <div class="custom-control custom-checkbox mt-3">
-                        <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
-                        <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
-                    </div>
                 </div>
-
                 <h4 class="mt-5">Difficulty v2</h4>
                 <div class="row">
                     <div class="col">
@@ -196,6 +183,22 @@
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_advanced" id="chord_type_69" name="chord_type_69" />
                             <label for="chord_type_69" class="custom-control-label">6/9</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="custom-control custom-checkbox mt-3">
+                            <input type="checkbox" class="custom-control-input" id="extensions" name="extensions" />
+                            <label for="extensions" class="custom-control-label">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-3">
+                            <input type="checkbox" class="custom-control-input" id="rare_enharmonics" name="rare_enharmonics" />
+                            <label for="rare_enharmonics" class="custom-control-label">Enable rare enharmonic chords <small>(C♭, B♯, F♭, E♯)</small></label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-3">
+                            <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
+                            <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
                         </div>
                     </div>
                 </div>
