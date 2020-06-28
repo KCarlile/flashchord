@@ -7,6 +7,7 @@ Date: TBD<br />
 URL: TBD<br />
 Commit: TBD<br />
 
+- Adding Twitter link to copyright footer and about page.
 - Added .gitattributes file to associate .php files with PHP so GitHub doesn't identify them as Hacklang.
 - Added CHANGELOG.md and release history.
 - Complete rework of the difficulty settings and how random chord type generation is handled.

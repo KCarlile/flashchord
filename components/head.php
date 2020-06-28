@@ -35,3 +35,6 @@
 
     <!-- Flash Chord CSS -->
     <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a744f5988e.js" crossorigin="anonymous"></script>
