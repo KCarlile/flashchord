@@ -7,7 +7,8 @@ Date: TBD<br />
 URL: TBD<br />
 Commit: TBD<br />
 
-- Added CHANGELOG.md and release history
+- Added .gitattributes file to associate .php files with PHP so GitHub doesn't identify them as Hacklang.
+- Added CHANGELOG.md and release history.
 - Complete rework of the difficulty settings and how random chord type generation is handled.
 - Create issue templates for feature request and bug.
 - Add CONTRIBUTING.md file.
