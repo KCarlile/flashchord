@@ -12,6 +12,7 @@ $(document).ready(function() {
         option += '<option value="'+ $key + '">' + $key + '</option>';
     }
     $("#keys").append(option);
+    $("#keys").val("C Major"); // set C Major as the default
 
     // FAQ accordion
     $("#accordion").accordion({
@@ -165,6 +166,22 @@ $(document).ready(function() {
         })
 
         $advanced_preset = !$advanced_preset;
+    });
+
+    // chord type change
+    $('.chord-type-selection').click(function() {
+        if ($flash_chord_running) {
+            stopFlashChord();
+            startFlashChord();
+        }
+    });
+
+    // chord type change
+    $('.chord-type-preset').click(function() {
+        if ($flash_chord_running) {
+            stopFlashChord();
+            startFlashChord();
+        }
     });
 
     // hide/show next chord

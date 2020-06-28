@@ -1,7 +1,12 @@
 var $chromatic = ["A", "A♭", "A♯", "B", "B♭", "B♯", "C", "C♭", "C♯", "D", "D♭", "D♯", "E", "E♭", "E♯", "F", "F♭", "F♯", "G", "G♭", "G♯"];
-var $quality_beginner = ["", "m", "m7", "7"];
-var $quality_intermediate = $quality_beginner.concat(["maj7", "6", "m6", "sus2", "sus4", "9", "m9"]);
-var $quality_advanced = $quality_intermediate.concat(["+", "°", "m7♭5", "7alt", "6/9", "6", "m6", "11", "13"]);
+
+var $major_chords = ["Δ", "maj7", "6", "sus2", "sus4", "6/9"];
+var $minor_chords = ["m", "m7", "m9", "m11"];
+var $diminished_chords = ["°", "°7", "m7♭5"];
+var $augmented_chords = ["+", "7alt"];
+var $dominant_chords = ["7", "9", "11", "13"];
+var $all_chords = [].concat($major_chords, $minor_chords, $diminished_chords, $augmented_chords, $dominant_chords);
+
 var $extension = ["", "(♯5)", "(♭5)", "(♯9)", "(♭9)", "(♯11)", "(♯13)", "(♭13)"];
 
 var $keys = {
