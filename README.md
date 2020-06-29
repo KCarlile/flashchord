@@ -5,10 +5,15 @@ Musical chord randomizer with configurable complexity for various skill levels. 
 
 Visit [http://www.flashchord.com/](http://www.flashchord.com/) to see it in action!
 
+Preview new features and test new development at [http://dev.flashchord.com](http://dev.flashchord.com).
+
+[Follow @Flash_Chord on Twitter](https://twitter.com/flash_chord) for news and updates.
+
 ## Technical
 - Twitter Bootstrap HTML/CSS theme
 - Javascript
 - jQuery
+- PHP
 
 ## Creator
 Kenny Carlile
