@@ -142,7 +142,7 @@ function getChordQuality() {
     // if the type returned is undefined because the user has eliminated the type...
     // just default to major
     if (!$quality) {
-        $quality = "Δ"
+        $quality = ""
     }
 
     return $quality;
