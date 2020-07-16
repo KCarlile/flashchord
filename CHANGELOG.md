@@ -1,9 +1,9 @@
 # Flash Chord Changelog
 ---
 
-## Release 1.5 (PENDING)
+## Release 1.5
 Tag: v1.5<br />
-Date: TBD<br />
+Date: July 15, 2020<br />
 URL: TBD<br />
 Commit: TBD<br />
 
