@@ -1,0 +1,2 @@
+# Classify `.php` files as PHP to fix GitHub from identifying PHP includes as Hacklang:
+*.php linguist-language=PHP

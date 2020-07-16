@@ -1,3 +1,7 @@
+var $beginner_preset = true;
+var $intermediate_preset = false;
+var $advanced_preset = false;
+
 // ------------------------------------------------------------
 // UI setup functions
 // ------------------------------------------------------------
@@ -8,6 +12,7 @@ $(document).ready(function() {
         option += '<option value="'+ $key + '">' + $key + '</option>';
     }
     $("#keys").append(option);
+    $("#keys").val("C Major"); // set C Major as the default
 
     // FAQ accordion
     $("#accordion").accordion({
@@ -15,7 +20,7 @@ $(document).ready(function() {
         collapsible: true
     });
 
-    // slider setup
+    // tempo slider setup
     $(function() {
         $("#tempo").slider({
             value: $tempo,
@@ -23,12 +28,33 @@ $(document).ready(function() {
             max: 220,
             step: 2,
             slide: function(event, ui) {
-                //clearInterval($intervalId);
                 $("#bpm").val(ui.value);
                 $tempo = ui.value;
             }
         });
         $("#bpm").val($("#tempo").slider("value"));
+    });
+
+    // bars per chord slider setup
+    $(function() {
+        $("#bars").slider({
+            value: $bars,
+            min: 1,
+            max: 16,
+            step: 1,
+            slide: function(event, ui) {
+                $("#bars_per_chord").val(ui.value);
+                $bars = ui.value;
+            }
+        });
+        $("#bars_per_chord").val($("#bars").slider("value"));
+    });
+
+    // bars progress
+    $(function() {
+        $("#bars_progress").progressbar({
+            value: (100 / $bars_per_chord) * $current_bar
+        });
     });
 
     // ------------------------------------------------------------
@@ -56,11 +82,105 @@ $(document).ready(function() {
 
     // tempo slider change
     $("#tempo").slider({
-        change: function( event, ui ) {
+        change: function(event, ui) {
             if ($flash_chord_running) {
                 stopFlashChord();
                 startFlashChord();
             }
+        }
+    });
+
+    // bars slider change
+    $("#bars").slider({
+        change: function(event, ui) {
+            $bars_per_chord = ui.value;
+
+            if ($flash_chord_running) {
+                stopFlashChord();
+                startFlashChord();
+            }
+            else {
+                update_bars_progress();
+            }
+
+            if(ui.value == 1) {
+                $("#bars_progress").hide();
+                $("#bars_progress_text").hide();
+            }
+            else {
+                $("#bars_progress").show();
+                $("#bars_progress_text").show();
+            }
+        }
+    });
+
+    // difficulty:beginner preset button
+    $("#beginner_preset").click(function() {
+        $(".difficulty_beginner").each(function() {
+            if($beginner_preset) {
+                $(this).prop("checked", false);
+                $("#beginner_preset").removeClass("btn-success");
+                $("#beginner_preset").addClass("btn-outline-success");
+            }
+            else {
+                $(this).prop("checked", true);
+                $("#beginner_preset").removeClass("btn-outline-success");
+                $("#beginner_preset").addClass("btn-success");
+            }
+        })
+
+        $beginner_preset = !$beginner_preset;
+    });
+
+    // difficulty:intermediate preset button
+    $("#intermediate_preset").click(function() {
+        $(".difficulty_intermediate").each(function() {
+            if($intermediate_preset) {
+                $(this).prop("checked", false);
+                $("#intermediate_preset").removeClass("btn-warning");
+                $("#intermediate_preset").addClass("btn-outline-warning");
+            }
+            else {
+                $(this).prop("checked", true);
+                $("#intermediate_preset").removeClass("btn-outline-warning");
+                $("#intermediate_preset").addClass("btn-warning");
+            }
+        })
+
+        $intermediate_preset = !$intermediate_preset;
+    });
+
+    // difficulty:advanced preset button
+    $("#advanced_preset").click(function() {
+        $(".difficulty_advanced").each(function() {
+            if($advanced_preset) {
+                $(this).prop("checked", false);
+                $("#advanced_preset").removeClass("btn-danger");
+                $("#advanced_preset").addClass("btn-outline-danger");
+            }
+            else {
+                $(this).prop("checked", true);
+                $("#advanced_preset").removeClass("btn-outline-danger");
+                $("#advanced_preset").addClass("btn-danger");
+            }
+        })
+
+        $advanced_preset = !$advanced_preset;
+    });
+
+    // chord type change
+    $('.chord-type-selection').click(function() {
+        if ($flash_chord_running) {
+            stopFlashChord();
+            startFlashChord();
+        }
+    });
+
+    // chord type change
+    $('.chord-type-preset').click(function() {
+        if ($flash_chord_running) {
+            stopFlashChord();
+            startFlashChord();
         }
     });
 
@@ -111,4 +231,12 @@ function setupBeatsPerMeasure() {
         $("#beat5").hide();
         $("#beat6").hide();
     }
+}
+
+// prepares UI elements for bars per chord
+function setupBarsPerChord() {
+    $bars_per_chord = $("#bars").slider("value");
+    $("#bars_progress").progressbar({
+        value: (100 / $bars_per_chord) * $current_bar
+    });
 }

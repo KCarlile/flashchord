@@ -1,6 +1,25 @@
 #tempo {
-    margin: 1em;
+    margin: 1em 2em 1em 2em;
     width: 80%;
+}
+
+#bars {
+    margin: 1em 2em 1em 2em;
+    width: 80%;
+}
+
+#bars_progress {
+    width: 10em;
+    padding-right: 2px;
+}
+
+#bars_progress .ui-widget-header {
+    background-color: #007BFF;
+    margin: 0 -2px 0 0;
+}
+
+#bars_progress .ui-progressbar {
+    background-color: #FF0000;
 }
 
 #chord_name {
@@ -27,4 +46,9 @@
 
 .ui-state-active {
     background-color: #999999;
+}
+
+#tempo .ui-slider-handle, #bars .ui-slider-handle {
+    margin-left: -2em;
+    width: 4em;
 }
