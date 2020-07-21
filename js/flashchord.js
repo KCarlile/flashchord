@@ -10,7 +10,7 @@ let $chord;
 let $next_chord;
 let $flash_chord_running = false;
 
-$(document).ready(function() {
+$(document).ready(() => {
     // ------------------------------------------------------------
     // Init
     // ------------------------------------------------------------
@@ -30,14 +30,14 @@ $(document).ready(function() {
 // Main Flash Chord functions
 // ------------------------------------------------------------
 // start Flash Chord functionality
-function startFlashChord() {
+const startFlashChord = () => {
     if (!$flash_chord_running) {
         $flash_chord_running = true;
         setupBeatsPerMeasure();
         setupBarsPerChord();
         update_bars_progress();
 
-        $intervalId = setInterval(function () {
+        $intervalId = setInterval(() => {
             increment_beat();
 
             if (($current_beat == 1) && ($current_bar == 1)) {
@@ -62,7 +62,7 @@ function startFlashChord() {
 }
 
 // stop Flash Chord functionality
-function stopFlashChord() {
+const stopFlashChord = () => {
     if ($flash_chord_running) {
         $flash_chord_running = false;
         clearInterval($intervalId);
@@ -76,12 +76,12 @@ function stopFlashChord() {
 // ------------------------------------------------------------
 
 // build up a chord based on the selected options
-function getChord() {
+const getChord = () => {
     return getRoot() + getChordQuality() + getExtension();
 }
 
 // get root of the chord based on selected settings
-function getRoot() {
+const getRoot = () => {
     // get selected key
     $key = getKey();
 
@@ -97,7 +97,7 @@ function getRoot() {
 }
 
 // get the available notes based on the selected key
-function getKey() {
+const getKey = () => {
     let $key = $("#keys").val();
     let $key_notes;
 
@@ -112,7 +112,7 @@ function getKey() {
 }
 
 // get the chord quality
-function getChordQuality() {
+const getChordQuality = () => {
     let $quality;
     let $chord_types;
 
@@ -132,7 +132,7 @@ function getChordQuality() {
     }
 
     // filter out chord types disabled by user
-    $chord_types = $chord_types.filter(function(chord) {
+    $chord_types = $chord_types.filter((chord) => {
         return $selected_chord_types.includes(chord);
     });
 
@@ -149,7 +149,7 @@ function getChordQuality() {
 }
 
 // replace rare enharmonic (e.g. Fb) with a common one (e.g. E)z
-function replaceRareEnharmonic($root) {
+const replaceRareEnharmonic = ($root)=> {
     if ($root === "C♭") {
         $root = "B";
         console.log("Replacing Cb with B");
@@ -170,7 +170,7 @@ function replaceRareEnharmonic($root) {
 }
 
 // if extensions are selected, return one
-function getExtension() {
+const getExtension = () => {
     let $ext = "";
 
     if ($('input[name="extensions"]').is(":checked")) {
@@ -181,11 +181,11 @@ function getExtension() {
 }
 
 // get array of specified chord types
-function getSelectedChordTypes() {
+const getSelectedChordTypes = () => {
     let $selected_chord_types = [];
 
     // get the values of each selected checkbox
-    $(".chord-type-selection").each(function() {
+    $(".chord-type-selection").each(()=> {
         if ($(this).is(":checked")) {
             $selected_chord_types.push($(this).attr("value"));
         }
@@ -195,7 +195,7 @@ function getSelectedChordTypes() {
 }
 
 // get the correct type of chords for the scale tone in a major key
-function getHarmonicQualityMajor($scale_tone) {
+const getHarmonicQualityMajor = ($scale_tone) => {
     let $chord_types;
 
     switch($scale_tone) {
@@ -237,7 +237,7 @@ function getHarmonicQualityMajor($scale_tone) {
 }
 
 // get the correct type of chords for the scale tone in a minor key
-function getHarmonicQualityMinor($scale_tone) {
+const getHarmonicQualityMinor = ($scale_tone) => {
    let $quality;
     switch($scale_tone) {
         case 0:
@@ -276,6 +276,6 @@ function getHarmonicQualityMinor($scale_tone) {
 }
 
 // get a random value from an array
-function getRandom ($array) {
+const getRandom = ($array) => {
     return $array[Math.floor(Math.random() * $array.length)];
 }
