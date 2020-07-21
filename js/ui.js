@@ -1,14 +1,14 @@
-var $beginner_preset = true;
-var $intermediate_preset = false;
-var $advanced_preset = false;
+let $beginner_preset = true;
+let $intermediate_preset = false;
+let $advanced_preset = false;
 
 // ------------------------------------------------------------
 // UI setup functions
 // ------------------------------------------------------------
 $(document).ready(function() {
     // setup keys dropdown
-    var option = '';
-    for (var $key in $keys) {
+    let option = '';
+    for (const $key in $keys) {
         option += '<option value="'+ $key + '">' + $key + '</option>';
     }
     $("#keys").append(option);
