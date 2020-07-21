@@ -1,3 +1,5 @@
+// musical assets for the site to use 
+
 const $chromatic = ["A", "A♭", "A♯", "B", "B♭", "B♯", "C", "C♭", "C♯", "D", "D♭", "D♯", "E", "E♭", "E♯", "F", "F♭", "F♯", "G", "G♭", "G♯"];
 
 const $major_chords = ["", "maj7", "6", "sus2", "sus4", "6/9"];
