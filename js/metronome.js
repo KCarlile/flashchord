@@ -1,14 +1,14 @@
 // ------------------------------------------------------------
 // Metronome functionality
 // ------------------------------------------------------------
-var $downbeat_beep = new Audio("audio/metronome/downbeat_beep.mp3");
-var $beat_beep = new Audio("audio/metronome/beat_beep.mp3");
+const $downbeat_beep = new Audio("audio/metronome/downbeat_beep.mp3");
+const $beat_beep = new Audio("audio/metronome/beat_beep.mp3");
 
-var $beats_per_measure = 4;
-var $current_beat = 0;
+let $beats_per_measure = 4;
+let $current_beat = 0;
 
-var $bars_per_chord = 0;
-var $current_bar = 1;
+let $bars_per_chord = 0;
+let $current_bar = 1;
 
 // ------------------------------------------------------------
 // Metronome utility functions
