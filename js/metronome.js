@@ -59,7 +59,7 @@ function getTempo() {
     $factor = 1;
 
     // factor = 3 for 6/8 time signature, makes it feel like it's in 2 (3+3)
-    if ($beats_per_measure == 6) {
+    if ($beats_per_measure === 6) {
         $factor = 3;
     }
 

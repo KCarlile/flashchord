@@ -3,12 +3,12 @@
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
-var $intervalId;
-var $tempo = 100;
-var $bars = 1;
-var $chord;
-var $next_chord;
-var $flash_chord_running = false;
+let $intervalId;
+let $tempo = 100;
+let $bars = 1;
+let $chord;
+let $next_chord;
+let $flash_chord_running = false;
 
 $(document).ready(function() {
     // ------------------------------------------------------------
@@ -98,8 +98,8 @@ function getRoot() {
 
 // get the available notes based on the selected key
 function getKey() {
-    var $key = $("#keys").val();
-    var $key_notes;
+    let $key = $("#keys").val();
+    let $key_notes;
 
     if (!$key || $key == "any") {
         $key_notes = $chromatic;
@@ -113,11 +113,11 @@ function getKey() {
 
 // get the chord quality
 function getChordQuality() {
-    var $quality;
-    var $chord_types;
+    let $quality;
+    let $chord_types;
 
     // get selected chord types
-    var $selected_chord_types = getSelectedChordTypes();
+    let $selected_chord_types = getSelectedChordTypes();
 
     // restrict to key
     if ($("#keys").val().indexOf("Major") >= 0) {
@@ -150,29 +150,28 @@ function getChordQuality() {
 
 // replace rare enharmonic (e.g. Fb) with a common one (e.g. E)z
 function replaceRareEnharmonic($root) {
-    if ($root == "C♭") {
+    if ($root === "C♭") {
         $root = "B";
         console.log("Replacing Cb with B");
     }
-    else if ($root == "B♯") {
+    else if ($root === "B♯") {
         $root = "C";
         console.log("Replacing B# with C");
     }
-    else if ($root == "F♭") {
+    else if ($root === "F♭") {
         $root = "E";
         console.log("Replacing Fb with E");
     }
-    else if ($root == "E♯") {
+    else if ($root === "E♯") {
         $root = "F";
         console.log("Replacing E# with F");
     }
-
     return $root;
 }
 
 // if extensions are selected, return one
 function getExtension() {
-    var $ext = "";
+    let $ext = "";
 
     if ($('input[name="extensions"]').is(":checked")) {
         $ext = '<sup>' + getRandom($extension) + '</sup>';
@@ -183,7 +182,7 @@ function getExtension() {
 
 // get array of specified chord types
 function getSelectedChordTypes() {
-    var $selected_chord_types = [];
+    let $selected_chord_types = [];
 
     // get the values of each selected checkbox
     $(".chord-type-selection").each(function() {
@@ -197,7 +196,7 @@ function getSelectedChordTypes() {
 
 // get the correct type of chords for the scale tone in a major key
 function getHarmonicQualityMajor($scale_tone) {
-    var $chord_types;
+    let $chord_types;
 
     switch($scale_tone) {
         case 0:
@@ -239,7 +238,7 @@ function getHarmonicQualityMajor($scale_tone) {
 
 // get the correct type of chords for the scale tone in a minor key
 function getHarmonicQualityMinor($scale_tone) {
-    var $quality;
+   let $quality;
     switch($scale_tone) {
         case 0:
             // minor
