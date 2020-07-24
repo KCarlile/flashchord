@@ -7,7 +7,7 @@ Date: TBD<br />
 URL: TBD<br />
 Commit: TBD<br />
 
-- ...
+- Removing #13 as a chord extension because it's invalid/redundant.
 
 ## Release 1.5
 Tag: v1.5<br />
