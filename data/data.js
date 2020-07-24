@@ -7,7 +7,7 @@ var $augmented_chords = ["+", "7alt"];
 var $dominant_chords = ["7", "9", "11", "13"];
 var $all_chords = [].concat($major_chords, $minor_chords, $diminished_chords, $augmented_chords, $dominant_chords);
 
-var $extension = ["", "(♯5)", "(♭5)", "(♯9)", "(♭9)", "(♯11)", "(♯13)", "(♭13)"];
+var $extension = ["", "(♯5)", "(♭5)", "(♯9)", "(♭9)", "(♯11)", "(♭13)"];
 
 var $keys = {
     "G♭ Major":   ["G♯", "A♭", "B♭", "C♭", "D♭", "E♭", "F"],
