@@ -8,6 +8,7 @@ URL: TBD<br />
 Commit: TBD<br />
 
 - Removing #13 as a chord extension because it's invalid/redundant.
+- Updating typo in support message on homepage.
 
 ## Release 1.5
 Tag: v1.5<br />
