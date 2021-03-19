@@ -3,12 +3,13 @@
 
 ## Release 1.6
 Tag: v1.6<br />
-Date: TBD<br />
-URL: TBD<br />
-Commit: TBD<br />
+Date: March 18, 2021<br />
+URL: https://github.com/KCarlile/flashchord/releases/tag/v1.6<br />
+Commit: https://github.com/KCarlile/flashchord/commit/530a068eeebed75405fed6ffff5946cfc6dd549f<br />
 
 - Removing #13 as a chord extension because it's invalid/redundant.
 - Updating typo in support message on homepage.
+
 
 ## Release 1.5
 Tag: v1.5<br />
