@@ -1,11 +1,20 @@
 # Flash Chord Changelog
 ---
 
+## Release 1.6
+Tag: v1.6<br />
+Date: TBD<br />
+URL: TBD<br />
+Commit: TBD<br />
+
+- Removing #13 as a chord extension because it's invalid/redundant.
+- Updating typo in support message on homepage.
+
 ## Release 1.5
 Tag: v1.5<br />
 Date: July 15, 2020<br />
-URL: TBD<br />
-Commit: TBD<br />
+URL: https://github.com/KCarlile/flashchord/releases/tag/v1.5<br />
+Commit: https://github.com/KCarlile/flashchord/commit/a429e91931ff06f56a3585b4b91b3364dda08fc8<br />
 
 - Adding Twitter link to copyright footer and about page.
 - Added .gitattributes file to associate .php files with PHP so GitHub doesn't identify them as Hacklang.

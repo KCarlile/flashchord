@@ -33,7 +33,7 @@
                     <li>Intermediate: maj7, 6, m6, sus2, sus4, 9, m9</li>
                     <li>Advanced: +, °, m7♭5, 7alt, 6/9, 11, 13</li>
                 </ol>
-                You can also specify if you want additional extensions (♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13) added to the chords by checking the <em>Add extensions</em> checkbox.<br />If you really want to kick it up a notch, check the <em>Hide next chord</em> checkbox to get the next chord without any warning!
+                You can also specify if you want additional extensions (♯5, ♭5, ♯9, ♭9, ♯11, ♭13) added to the chords by checking the <em>Add extensions</em> checkbox.<br />If you really want to kick it up a notch, check the <em>Hide next chord</em> checkbox to get the next chord without any warning!
             </li>
         </ol>
         <div class="row bg-light mb-2">

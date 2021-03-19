@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="text-center alert alert-info mt-2" role="alert">
-            <a href="/donate">&hearts; Click here if you love Flash Chord and want to know how you can help support it? &hearts;</a>
+            <a href="/donate">&hearts; Click here if you love Flash Chord and want to know how you can help support it! &hearts;</a>
         </div>
     </div>
     <div class="container mt-3 pb-5">
@@ -179,7 +179,7 @@
                     <div class="col">
                         <div class="custom-control custom-checkbox mt-3">
                             <input type="checkbox" class="custom-control-input" id="extensions" name="extensions" />
-                            <label for="extensions" class="custom-control-label">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♯13, ♭13)</small></label>
+                            <label for="extensions" class="custom-control-label">Add extensions <small>(♯5, ♭5, ♯9, ♭9, ♯11, ♭13)</small></label>
                         </div>
                         <div class="custom-control custom-checkbox mt-3">
                             <input type="checkbox" class="custom-control-input" id="rare_enharmonics" name="rare_enharmonics" />
