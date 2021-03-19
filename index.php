@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="text-center alert alert-info mt-2" role="alert">
-            <a href="/donate">&hearts; Click here if you love Flash Chord and want to know how you can help support it? &hearts;</a>
+            <a href="/donate">&hearts; Click here if you love Flash Chord and want to know how you can help support it! &hearts;</a>
         </div>
     </div>
     <div class="container mt-3 pb-5">
