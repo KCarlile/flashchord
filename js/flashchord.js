@@ -77,7 +77,48 @@ function stopFlashChord() {
 
 // build up a chord based on the selected options
 function getChord() {
-    return getRoot() + getChordQuality() + getExtension();
+    $root = getRoot();
+    $quality = getChordQuality();
+    $extension = getExtension();
+    $slash = getSlash($root, $quality);
+
+    return $root + $quality + $extension + $slash;
+}
+
+// get slash chord (bass note, inversion) if enabled
+function getSlash($root, $quality) {
+    $slash = "";
+    // check for slash chords
+    if ($('input[name="slash_chords"]').is(":checked")) {
+        $slash_degree = getRandom($slash_degrees);
+        $slash_note = $root;
+
+        // add theoretical keys to real keys for chord tones
+        $chord_keys = Object.assign({}, $keys, $theoretical_keys);
+        
+        // if not 1 (root), then determine the note and append it
+        if ($slash_degree != 0) {
+            if (($quality == "m") || ($quality == "°")) {
+                // use minor
+                $slash_note = $chord_keys[$root + " Minor"][$slash_degree];
+
+                // if diminished and 5 (second inversion)
+                if (($quality == "°") && ($slash_degree == 4)) {
+                    $slash_note = flatten($slash_note);
+                }
+            } else if (($quality == "+") && ($slash_degree == 4)) {
+                // if augmented and 5 (second inversion)
+                $slash_note = $chord_keys[$root + " Major"][$slash_degree];
+                $slash_note = sharpen($slash_note);
+            } else {
+                $slash_note = $chord_keys[$root + " Major"][$slash_degree];
+            }
+
+            $slash = "/" + $slash_note;
+        }
+    }
+
+    return $slash;
 }
 
 // get root of the chord based on selected settings
