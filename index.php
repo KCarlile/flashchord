@@ -186,6 +186,10 @@
                             <label for="rare_enharmonics" class="custom-control-label">Enable rare enharmonic chords <small>(C♭, B♯, F♭, E♯)</small></label>
                         </div>
                         <div class="custom-control custom-checkbox mt-3">
+                            <input type="checkbox" class="custom-control-input" id="slash_chords" name="slash_chords" />
+                            <label for="slash_chords" class="custom-control-label">Enable inversions via slash chords <small>(C/E, Am/C, G/B, D/F#, etc.)</small></label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-3">
                             <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
                             <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
                         </div>
