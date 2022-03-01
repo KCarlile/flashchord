@@ -24,6 +24,7 @@
     <!-- Flash Chord -->
     <script src="/js/ui.js"></script>
     <script src="/js/flashchord.js"></script>
+    <script src="/js/theory-utils.js"></script>
     <script src="/js/metronome.js"></script>
     <script src="/data/data.js"></script>
 
