@@ -77,7 +77,56 @@ function stopFlashChord() {
 
 // build up a chord based on the selected options
 function getChord() {
-    return getRoot() + getChordQuality() + getExtension();
+    logger_new();
+
+    $root = getRoot();
+    $quality = getChordQuality();
+    $extension = getExtension();
+    $slash = getSlash($root, $quality);
+
+    logger_break();
+    logger("Root: " + $root);
+    logger("Quality: " + $quality);
+    logger("Extension: " + $extension);
+    logger("Slash: " + $slash);
+
+    return $root + $quality + $extension + $slash;
+}
+
+// get slash chord (bass note, inversion) if enabled
+function getSlash($root, $quality) {
+    $slash = "";
+    // check for slash chords
+    if ($('input[name="slash_chords"]').is(":checked")) {
+        $slash_degree = getRandom($slash_degrees);
+        $slash_note = $root;
+
+        // add theoretical keys to real keys for chord tones
+        $chord_keys = Object.assign({}, $keys, $theoretical_keys);
+        
+        // if not 1 (root), then determine the note and append it
+        if ($slash_degree != 0) {
+            if (($quality == "m") || ($quality == "°")) {
+                // use minor
+                $slash_note = $chord_keys[$root + " Minor"][$slash_degree];
+
+                // if diminished and 5 (second inversion)
+                if (($quality == "°") && ($slash_degree == 4)) {
+                    $slash_note = flatten($slash_note);
+                }
+            } else if (($quality == "+") && ($slash_degree == 4)) {
+                // if augmented and 5 (second inversion)
+                $slash_note = $chord_keys[$root + " Major"][$slash_degree];
+                $slash_note = sharpen($slash_note);
+            } else {
+                $slash_note = $chord_keys[$root + " Major"][$slash_degree];
+            }
+
+            $slash = "<sub>/" + $slash_note + "</sub>";
+        }
+    }
+
+    return $slash;
 }
 
 // get root of the chord based on selected settings
@@ -93,6 +142,8 @@ function getRoot() {
         $root = replaceRareEnharmonic($root);
     }
 
+    logger("Root (random): " + $root);
+
     return $root;
 }
 
@@ -107,6 +158,8 @@ function getKey() {
     else {
         $key_notes = $keys[$key];
     }
+
+    logger("Key: " + $key_notes);
 
     return $key_notes;
 }
@@ -131,10 +184,17 @@ function getChordQuality() {
         $chord_types = $all_chords;
     }
 
+    // remove empty elements
+    $chord_types = $chord_types.filter(String);
+
+    logger("Chord types: " + $chord_types);
+
     // filter out chord types disabled by user
     $chord_types = $chord_types.filter(function(chord) {
         return $selected_chord_types.includes(chord);
     });
+
+    logger("Filtered chord types: " + $chord_types);
 
     // get chord quality
     $quality = getRandom($chord_types);
@@ -145,6 +205,8 @@ function getChordQuality() {
         $quality = ""
     }
 
+    logger("Quality (random): " + $quality);
+
     return $quality;
 }
 
@@ -152,19 +214,19 @@ function getChordQuality() {
 function replaceRareEnharmonic($root) {
     if ($root == "C♭") {
         $root = "B";
-        console.log("Replacing Cb with B");
+        logger("Replacing Cb with B");
     }
     else if ($root == "B♯") {
         $root = "C";
-        console.log("Replacing B# with C");
+        logger("Replacing B# with C");
     }
     else if ($root == "F♭") {
         $root = "E";
-        console.log("Replacing Fb with E");
+        logger("Replacing Fb with E");
     }
     else if ($root == "E♯") {
         $root = "F";
-        console.log("Replacing E# with F");
+        logger("Replacing E# with F");
     }
 
     return $root;
@@ -175,8 +237,14 @@ function getExtension() {
     var $ext = "";
 
     if ($('input[name="extensions"]').is(":checked")) {
-        $ext = '<sup>' + getRandom($extension) + '</sup>';
+        $ext = getRandom($extensions);
+
+        if ($ext.length > 0) {
+            $ext = '<sup>' + $ext + '</sup>';
+        }
     }
+
+    logger("Extension (random): " + $ext);
 
     return $ext;
 }
@@ -192,7 +260,12 @@ function getSelectedChordTypes() {
         }
     });
 
-    return $selected_chord_types;
+    // remove empty elements
+    $selected_chord_types = $selected_chord_types.filter(String);
+
+    logger("Selected chord types: " + $selected_chord_types);
+
+    return $selected_chord_types.filter(String);
 }
 
 // get the correct type of chords for the scale tone in a major key
@@ -274,9 +347,4 @@ function getHarmonicQualityMinor($scale_tone) {
     }
 
     return $chord_types;
-}
-
-// get a random value from an array
-function getRandom ($array) {
-    return $array[Math.floor(Math.random() * $array.length)];
 }
