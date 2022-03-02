@@ -17,7 +17,9 @@ $(document).ready(function() {
     // first, make sure we're on the home page before doing any of the chord stuff
     if ($("#chord_name").length) {
         $chord = $next_chord ? $next_chord : getChord();
+
         $next_chord = getChord();
+        
         $("#chord_name").html($chord);
         $("#next_chord_name").html($next_chord);
 
@@ -78,11 +80,17 @@ function stopFlashChord() {
 // build up a chord based on the selected options
 function getChord() {
     logger_new();
+    $new_chord = "";
 
-    $root = getRoot();
-    $quality = getChordQuality();
-    $extension = getExtension();
-    $slash = getSlash($root, $quality);
+    // loop to ensure we get a new chord (no repeated chords)
+    do {
+        $root = getRoot();
+        $quality = getChordQuality();
+        $extension = getExtension();
+        $slash = getSlash($root, $quality);
+
+        $new_chord = $root + $quality + $extension + $slash;
+    } while($next_chord == $new_chord);
 
     logger_break();
     logger("Root: " + $root);
@@ -90,7 +98,7 @@ function getChord() {
     logger("Extension: " + $extension);
     logger("Slash: " + $slash);
 
-    return $root + $quality + $extension + $slash;
+    return $new_chord;
 }
 
 // get slash chord (bass note, inversion) if enabled
