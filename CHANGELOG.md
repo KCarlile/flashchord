@@ -1,6 +1,15 @@
 # Flash Chord Changelog
 ---
 
+## Release 1.7
+Tag: v1.7<br />
+Date: Month ##, 2022<br />
+URL: https://github.com/KCarlile/flashchord/releases/tag/v1.7<br />
+Commit: <br />
+
+- Add the option to display inversions/slash chords with bass notes.
+
+
 ## Release 1.6
 Tag: v1.6<br />
 Date: March 18, 2021<br />
