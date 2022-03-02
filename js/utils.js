@@ -5,10 +5,17 @@ function logger($message) {
     }
 }
 
-// start a new block of logging with a line if debugging is enabled
+// start a new block of logging with a heavy line if debugging is enabled
 function logger_new() {
     if (DEBUG) {
-        console.log("------");
+        console.log("==========");
+    }
+}
+
+// start a new sub-block of logging with a light line if debugging is enabled
+function logger_break() {
+    if (DEBUG) {
+        console.log("----------");
     }
 }
 

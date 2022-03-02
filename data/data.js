@@ -5,7 +5,7 @@ var $minor_chords = ["m", "m7", "m9", "m11"];
 var $diminished_chords = ["°", "°7", "m7♭5"];
 var $augmented_chords = ["+", "7alt"];
 var $dominant_chords = ["7", "9", "11", "13"];
-var $all_chords = [].concat($major_chords, $minor_chords, $diminished_chords, $augmented_chords, $dominant_chords);
+var $all_chords = [].concat($major_chords, $minor_chords, $diminished_chords, $augmented_chords, $dominant_chords).filter(String);
 
 var $extensions = ["", "(♯5)", "(♭5)", "(♯9)", "(♭9)", "(♯11)", "(♭13)"];
 
