@@ -8,6 +8,8 @@ URL: https://github.com/KCarlile/flashchord/releases/tag/v1.7<br />
 Commit: <br />
 
 - Add the option to display inversions/slash chords with bass notes.
+- Added debug mode and logging.
+- Data cleanup for fewer bugs/glitches in rendering chords.
 
 
 ## Release 1.6
