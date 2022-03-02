@@ -10,6 +10,7 @@ Commit: <br />
 - Add the option to display inversions/slash chords with bass notes.
 - Added debug mode and logging.
 - Data cleanup for fewer bugs/glitches in rendering chords.
+- Prevented repeated chords (repeated chords of different types/extensions still okay).
 
 
 ## Release 1.6
