@@ -77,10 +77,17 @@ function stopFlashChord() {
 
 // build up a chord based on the selected options
 function getChord() {
+    logger_new();
+
     $root = getRoot();
     $quality = getChordQuality();
     $extension = getExtension();
     $slash = getSlash($root, $quality);
+
+    logger("Root: " + $root);
+    logger("Quality: " + $quality);
+    logger("Extension: " + $extension);
+    logger("Slash: " + $slash);
 
     return $root + $quality + $extension + $slash;
 }
@@ -114,7 +121,7 @@ function getSlash($root, $quality) {
                 $slash_note = $chord_keys[$root + " Major"][$slash_degree];
             }
 
-            $slash = "/" + $slash_note;
+            $slash = "<sub>/" + $slash_note + "</sub>";
         }
     }
 
@@ -180,6 +187,8 @@ function getChordQuality() {
     // get chord quality
     $quality = getRandom($chord_types);
 
+    logger("Quality (random): " + $quality);
+
     // if the type returned is undefined because the user has eliminated the type...
     // just default to major
     if (!$quality) {
@@ -216,7 +225,13 @@ function getExtension() {
     var $ext = "";
 
     if ($('input[name="extensions"]').is(":checked")) {
-        $ext = '<sup>' + getRandom($extension) + '</sup>';
+        $ext = getRandom($extensions);
+
+        logger("Extension (random): " + $ext);
+
+        if ($ext.length > 0) {
+            $ext = '<sup>' + $ext + '</sup>';
+        }
     }
 
     return $ext;
