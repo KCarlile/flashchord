@@ -331,8 +331,3 @@ function getHarmonicQualityMinor($scale_tone) {
 
     return $chord_types;
 }
-
-// get a random value from an array
-function getRandom ($array) {
-    return $array[Math.floor(Math.random() * $array.length)];
-}
