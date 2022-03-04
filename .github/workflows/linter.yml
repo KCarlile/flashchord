@@ -54,7 +54,7 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #VALIDATE_CSS: true
-          VALIDATE_HTML: true
+          #VALIDATE_HTML: true
           #VALIDATE_JAVASCRIPT_ES
-          #VALIDATE_PHP: true
+          VALIDATE_PHP: true
           #VALIDATE_GITHUB_ACTIONS: true
