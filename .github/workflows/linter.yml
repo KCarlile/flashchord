@@ -19,7 +19,7 @@ on:
     branches-ignore: [master, main]
     # Remove the line above to run when pushing to master
   pull_request:
-    branches: [master, main]
+    branches: [master, main, develop]
 
 ###############
 # Set the Job #
@@ -50,12 +50,12 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
-          VALIDATE_ALL_CODEBASE: true
+          #VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_CSS: true
-          VALIDATE_GITHUB_ACTIONS: true
-          VALIDATE_HTML: true
-          VALIDATE_JAVASCRIPT_ES: true
-          VALIDATE_MARKDOWN: true
-          VALIDATE_PHP: true
+          #VALIDATE_CSS: true
+          #VALIDATE_GITHUB_ACTIONS: true
+          #VALIDATE_HTML: true
+          #VALIDATE_JAVASCRIPT_ES: true
+          #VALIDATE_MARKDOWN: true
+          #VALIDATE_PHP: true
