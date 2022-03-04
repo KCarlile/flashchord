@@ -1,55 +1,55 @@
 #tempo {
-    margin: 1em 2em 1em 2em;
-    width: 80%;
+  margin: 1em 2em 1em 2em;
+  width: 80%;
 }
 
 #bars {
-    margin: 1em 2em 1em 2em;
-    width: 80%;
+  margin: 1em 2em 1em 2em;
+  width: 80%;
 }
 
 #bars_progress {
-    width: 10em;
-    padding-right: 2px;
+  width: 10em;
+  padding-right: 2px;
 }
 
 #bars_progress .ui-widget-header {
-    background-color: #007BFF;
-    margin: 0 -2px 0 0;
+  background-color: #007bff;
+  margin: 0 -2px 0 0;
 }
 
 #bars_progress .ui-progressbar {
-    background-color: #FF0000;
+  background-color: #ff0000;
 }
 
 #chord_name {
-    font-size: 12em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    margin-bottom: 0.2em;
-    text-align: center;
+  font-size: 12em;
+  margin-top: 0em;
+  margin-bottom: 0.2em;
+  text-align: center;
 }
 
 #next_chord_name {
-    font-size: 4em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    text-align: center;
+  font-size: 4em;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
 }
 
 #visual_metronome {
-    font-size: 5em;
+  font-size: 5em;
 }
 
 #visual_metronome span {
-    margin-top: .2em;
+  margin-top: 0.2em;
 }
 
 .ui-state-active {
-    background-color: #999999;
+  background-color: #999999;
 }
 
-#tempo .ui-slider-handle, #bars .ui-slider-handle {
-    margin-left: -2em;
-    width: 4em;
+#tempo .ui-slider-handle,
+#bars .ui-slider-handle {
+  margin-left: -2em;
+  width: 4em;
 }
