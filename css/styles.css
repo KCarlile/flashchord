@@ -1,51 +1,51 @@
 #tempo {
-  margin: 1em 2em 1em 2em;
+  margin: 1em 2em; /* short-hand for 1em 2em 1em 2em; */
   width: 80%;
 }
 
 #bars {
-  margin: 1em 2em 1em 2em;
+  margin: 1em 2em; /* short-hand for 1em 2em 1em 2em; */
   width: 80%;
 }
 
-#bars_progress {
+#bars-progress {
   width: 10em;
   padding-right: 2px;
 }
 
-#bars_progress .ui-widget-header {
+#bars-progress .ui-widget-header {
   background-color: #007bff;
   margin: 0 -2px 0 0;
 }
 
-#bars_progress .ui-progressbar {
-  background-color: #ff0000;
+#bars-progress .ui-progressbar {
+  background-color: #f00; /* shorthand for #ff0000; */
 }
 
-#chord_name {
+#chord-name {
   font-size: 12em;
-  margin-top: 0em;
+  margin-top: 0;
   margin-bottom: 0.2em;
   text-align: center;
 }
 
-#next_chord_name {
+#next-chord-name {
   font-size: 4em;
   margin-bottom: 0;
   margin-top: 0;
   text-align: center;
 }
 
-#visual_metronome {
+#visual-metronome {
   font-size: 5em;
 }
 
-#visual_metronome span {
+#visual-metronome span {
   margin-top: 0.2em;
 }
 
 .ui-state-active {
-  background-color: #999999;
+  background-color: #999; /* shorthand for #999999 */
 }
 
 #tempo .ui-slider-handle,

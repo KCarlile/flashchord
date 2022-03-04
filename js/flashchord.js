@@ -15,13 +15,13 @@ $(document).ready(function() {
     // Init
     // ------------------------------------------------------------
     // first, make sure we're on the home page before doing any of the chord stuff
-    if ($("#chord_name").length) {
+    if ($("#chord-name").length) {
         $chord = $next_chord ? $next_chord : getChord();
 
         $next_chord = getChord();
         
-        $("#chord_name").html($chord);
-        $("#next_chord_name").html($next_chord);
+        $("#chord-name").html($chord);
+        $("#next-chord-name").html($next_chord);
 
         setupBeatsPerMeasure();
         setupBarsPerChord();
@@ -46,8 +46,8 @@ function startFlashChord() {
                 // change chords
                 $chord = $next_chord ? $next_chord : getChord();
                 $next_chord = getChord();
-                $("#chord_name").html($chord);
-                $("#next_chord_name").html($next_chord);
+                $("#chord-name").html($chord);
+                $("#next-chord-name").html($next_chord);
             }
 
             // metronome beep

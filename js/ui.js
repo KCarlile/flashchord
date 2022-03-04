@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     // bars progress
     $(function() {
-        $("#bars_progress").progressbar({
+        $("#bars-progress").progressbar({
             value: (100 / $bars_per_chord) * $current_bar
         });
     });
@@ -104,12 +104,12 @@ $(document).ready(function() {
             }
 
             if(ui.value == 1) {
-                $("#bars_progress").hide();
-                $("#bars_progress_text").hide();
+                $("#bars-progress").hide();
+                $("#bars-progress-text").hide();
             }
             else {
-                $("#bars_progress").show();
-                $("#bars_progress_text").show();
+                $("#bars-progress").show();
+                $("#bars-progress-text").show();
             }
         }
     });
@@ -191,7 +191,7 @@ $(document).ready(function() {
 
     // hide/show visual metronome
     $('input[name="metronome_visual"]').click(function(){
-        $("#visual_metronome").toggle();
+        $("#visual-metronome").toggle();
     });
 });
 
@@ -203,7 +203,7 @@ function setupBeatsPerMeasure() {
     $time_signature = $('input[name="time_signature"]:checked').val();
 
     // restore all visual beats
-    $("#visual_metronome").children().show();
+    $("#visual-metronome").children().show();
 
     if ($time_signature == "time_44") {
         $beats_per_measure = 4;
@@ -236,7 +236,7 @@ function setupBeatsPerMeasure() {
 // prepares UI elements for bars per chord
 function setupBarsPerChord() {
     $bars_per_chord = $("#bars").slider("value");
-    $("#bars_progress").progressbar({
+    $("#bars-progress").progressbar({
         value: (100 / $bars_per_chord) * $current_bar
     });
 }
