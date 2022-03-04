@@ -19,7 +19,7 @@ on:
     branches-ignore: [master, main]
     # Remove the line above to run when pushing to master
   pull_request:
-    branches: [master, main, develop]
+    branches: [master, main]
 
 ###############
 # Set the Job #
@@ -53,9 +53,9 @@ jobs:
           #VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          #VALIDATE_CSS: true
-          #VALIDATE_GITHUB_ACTIONS: true
-          #VALIDATE_HTML: true
-          #VALIDATE_JAVASCRIPT_ES: true
-          #VALIDATE_MARKDOWN: true
-          #VALIDATE_PHP: true
+          VALIDATE_CSS: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_HTML: true
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_PHP: true
