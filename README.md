@@ -1,5 +1,7 @@
 # FlashChord
 
+[![GitHub Super-Linter](https://github.com/kcarlile/flashchord/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 ## Functional
 Musical chord randomizer with configurable complexity for various skill levels. Used for generating random chords for practicing chords, scales, and arpeggios on any instrument with an unpredictable order.
 
