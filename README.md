@@ -16,7 +16,7 @@ Enable debugging in the browser console by adding `?dbg=1` to the URL. This will
 
 For logging functionality, see the `js/utils.js` file and look at the following functions:
 - `logger($message)`
-  -  Log a message to the browser console if debugging is enabled
+  - Log a message to the browser console if debugging is enabled
 - `function logger_new()`
   - Start a new block of logging with a heavy line if debugging is enabled
 - `function logger_break()`
