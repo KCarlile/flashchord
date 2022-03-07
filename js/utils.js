@@ -1,21 +1,21 @@
 // log a message to the browser console if debugging is enabled
-function logger($message) {
+function logger ($message) {
   if ((typeof DEBUG !== 'undefined') && DEBUG) {
     console.log($message);
   }
 }
 
 // start a new block of logging with a heavy line if debugging is enabled
-function logger_new() {
+function logger_new () {
   if ((typeof DEBUG !== 'undefined') && DEBUG) {
-    console.log("==========");
+    console.log('==========');
   }
 }
 
 // start a new sub-block of logging with a light line if debugging is enabled
-function logger_break() {
+function logger_break () {
   if ((typeof DEBUG !== 'undefined') && DEBUG) {
-    console.log("----------");
+    console.log('----------');
   }
 }
 

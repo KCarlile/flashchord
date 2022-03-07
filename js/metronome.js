@@ -14,12 +14,11 @@ let $current_bar = 1;
 // Metronome utility functions
 // ------------------------------------------------------------
 // increment to the next beat
-function increment_beat() {
+function increment_beat () {
   if ($current_beat >= $beats_per_measure) {
     $current_beat = 1;
     increment_bar();
-  }
-  else {
+  } else {
       $current_beat = $current_beat + 1;
   }
 
@@ -32,11 +31,10 @@ function increment_beat() {
 }
 
 // increment to the next bar
-function increment_bar() {
+function increment_bar () {
   if ($current_bar >= $bars_per_chord) {
     $current_bar = 1;
-  }
-  else {
+  } else {
     $current_bar = $current_bar + 1;
   }
 
@@ -44,7 +42,7 @@ function increment_bar() {
 }
 
 // updat the UI with the current status of the bar count
-function update_bars_progress() {
+function update_bars_progress () {
   $("#bars-progress").progressbar({
     value: (100 / $bars_per_chord) * $current_bar
   });
@@ -54,7 +52,7 @@ function update_bars_progress() {
 }
 
 // get the tempo
-function getTempo() {
+function getTempo () {
   // factor = 1 for all x/4 time signatures
   $factor = 1;
 

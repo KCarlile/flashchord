@@ -90,7 +90,7 @@ function getChord() {
     $slash = getSlash($root, $quality);
 
     $new_chord = $root + $quality + $extension + $slash;
-  } while ($next_chord == $new_chord);
+  } while ($next_chord === $new_chord);
 
   logger_break();
   logger("Root: " + $root);
@@ -114,15 +114,15 @@ function getSlash($root, $quality) {
 
     // if not 1 (root), then determine the note and append it
     if ($slash_degree != 0) {
-      if (($quality == "m") || ($quality == "°")) {
+      if (($quality === "m") || ($quality == "°")) {
         // use minor
         $slash_note = $chord_keys[$root + " Minor"][$slash_degree];
 
         // if diminished and 5 (second inversion)
-        if (($quality == "°") && ($slash_degree == 4)) {
+        if (($quality === "°") && ($slash_degree == 4)) {
           $slash_note = flatten($slash_note);
         }
-      } else if (($quality == "+") && ($slash_degree == 4)) {
+      } else if (($quality === "+") && ($slash_degree == 4)) {
         // if augmented and 5 (second inversion)
         $slash_note = $chord_keys[$root + " Major"][$slash_degree];
         $slash_note = sharpen($slash_note);
@@ -160,7 +160,7 @@ function getKey() {
   let $key = $("#keys").val();
   let $key_notes;
 
-  if (!$key || $key == "any") {
+  if (!$key || $key === "any") {
     $key_notes = $chromatic;
   }
   else {
@@ -220,19 +220,16 @@ function getChordQuality() {
 
 // replace rare enharmonic (e.g. Fb) with a common one (e.g. E)z
 function replaceRareEnharmonic($root) {
-  if ($root == "C♭") {
+  if ($root === "C♭") {
     $root = "B";
     logger("Replacing Cb with B");
-  }
-  else if ($root == "B♯") {
+  } else if ($root === "B♯") {
     $root = "C";
     logger("Replacing B# with C");
-  }
-  else if ($root == "F♭") {
+  } else if ($root === "F♭") {
     $root = "E";
     logger("Replacing Fb with E");
-  }
-  else if ($root == "E♯") {
+  } else if ($root === "E♯") {
     $root = "F";
     logger("Replacing E# with F");
   }
