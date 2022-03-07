@@ -51,13 +51,13 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
+          #ACTIONS_RUNNER_DEBUG: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #VALIDATE_CSS: true
           #VALIDATE_GITHUB_ACTIONS: true
           #VALIDATE_HTML: true
-          #VALIDATE_JAVASCRIPT_ES: true
-          #VALIDATE_JAVASCRIPT_STANDARD: true
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_JAVASCRIPT_STANDARD: true
           #VALIDATE_MARKDOWN: true
-          #VALIDATE_PHP: true
-          #VALIDATE_PHP_PHPCS: true
+          #VALIDATE_PHP_BUILTIN: true
