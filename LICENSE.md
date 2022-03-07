@@ -1,4 +1,4 @@
-### GNU GENERAL PUBLIC LICENSE
+# GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007
 
@@ -532,7 +532,7 @@ Nothing in this License shall be construed as excluding or limiting
 any implied license or other defenses to infringement that may
 otherwise be available to you under applicable patent law.
 
-#### 12. No Surrender of Others' Freedom.
+#### 12. No Surrender of Others' Freedom
 
 If conditions are imposed on you (whether by court order, agreement or
 otherwise) that contradict the conditions of this License, they do not
