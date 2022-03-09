@@ -265,7 +265,7 @@ function getSelectedChordTypes () {
   // remove empty elements
   $selected_chord_types = $selected_chord_types.filter(String);
 
-  logger("Selected chord types: " + $selected_chord_types);
+  logger('Selected chord types: ' + $selected_chord_types);
 
   return $selected_chord_types.filter(String);
 }
