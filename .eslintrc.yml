@@ -1,0 +1,30 @@
+env:
+  browser: true
+  es2021: true
+extends: eslint:recommended
+parserOptions:
+  ecmaVersion: latest
+plugins:
+  jquery
+rules:
+  indent:
+    - error
+    - 4
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - always
+  curly:
+    - error
+    - all
+  no-undef:
+    - error
+  no-unused-vars:
+    - warn
+    vars:
+      - local
