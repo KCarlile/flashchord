@@ -58,6 +58,6 @@ jobs:
           #VALIDATE_GITHUB_ACTIONS: true
           #VALIDATE_HTML: true
           VALIDATE_JAVASCRIPT_ES: true
-          VALIDATE_JAVASCRIPT_STANDARD: true
+          #VALIDATE_JAVASCRIPT_STANDARD: true
           #VALIDATE_MARKDOWN: true
           #VALIDATE_PHP_BUILTIN: true
