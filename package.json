@@ -11,7 +11,7 @@
     "url": "git+https://github.com/KCarlile/flashchord.git"
   },
   "author": "Kenny Carlile",
-  "license": "MIT",
+  "license": "gpl-3.0",
   "bugs": {
     "url": "https://github.com/KCarlile/flashchord/issues"
   },
