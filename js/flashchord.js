@@ -1,3 +1,5 @@
+/* global $current_beat:true, $current_bar:true, $downbeat_beep, $beat_beep, $quality:true, $extensions, $slash:true, $key:true, $keys, $chord_keys:true, $slash_degree:true, $root:true, logger, flatten, sharpen, setupBarsPerChord, setupBarsPerMeasure, setupBeatsPerMeasure, increment_beat, update_bars_progress, logger_new, logger_break, getRandom, $slash_degrees, $slash_note:true, $theoretical_keys, $all_chords, getHarmonicQualityMinor, getHarmonicQualityMajor, $extension:true, $chromatic, replaceRareEnharmonic, getTempo */
+
 // Safari audio lag fix
 // No idea why this works, but someone online said this fixed the problem and it did! :)
 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -80,7 +82,7 @@ function stopFlashChord() {
 // build up a chord based on the selected options
 function getChord() {
     logger_new();
-    $new_chord = "";
+    let $new_chord = "";
 
     // loop to ensure we get a new chord (no repeated chords)
     do {
@@ -101,9 +103,107 @@ function getChord() {
     return $new_chord;
 }
 
+// get root of the chord based on selected settings
+function getRoot() {
+    // get selected key
+    $key = getKey();
+
+    // from key, get a random root
+    $root = getRandom($key);
+
+    // check for rare enharmonics
+    if (!$('input[name="rare_enharmonics"]').is(":checked")) {
+        $root = replaceRareEnharmonic($root);
+    }
+
+    logger("Root (random): " + $root);
+
+    return $root;
+}
+
+// get the available notes based on the selected key
+function getKey() {
+    let $key = $("#keys").val();
+    let $key_notes;
+
+    if (!$key || $key == "any") {
+        $key_notes = $chromatic;
+    }
+    else {
+        $key_notes = $keys[$key];
+    }
+
+    logger("Key: " + $key_notes);
+
+    return $key_notes;
+}
+
+// get the chord quality
+function getChordQuality() {
+    let $quality;
+    let $chord_types;
+
+    // get selected chord types
+    let $selected_chord_types = getSelectedChordTypes();
+
+    // restrict to key
+    if ($("#keys").val().indexOf("Major") >= 0) {
+        // major
+        $chord_types = getHarmonicQualityMajor($key.indexOf($root));
+    } else if ($("#keys").val().indexOf("Minor") >= 0) {
+        // minor
+        $chord_types = getHarmonicQualityMinor($key.indexOf($root));
+    } else {
+        $chord_types = $all_chords;
+    }
+
+    // remove empty elements
+    $chord_types = $chord_types.filter(String);
+
+    logger("Chord types: " + $chord_types);
+
+    // filter out chord types disabled by user
+    $chord_types = $chord_types.filter(function(chord) {
+        return $selected_chord_types.includes(chord);
+    });
+
+    logger("Filtered chord types: " + $chord_types);
+
+    // get chord quality
+    $quality = getRandom($chord_types);
+
+    // if the type returned is undefined because the user has eliminated the type...
+    // just default to major
+    if (!$quality) {
+        $quality = "";
+    }
+
+    logger("Quality (random): " + $quality);
+
+    return $quality;
+}
+
+// if extensions are selected, return one
+function getExtension() {
+    let $ext = "";
+
+    if ($('input[name="extensions"]').is(":checked")) {
+        $ext = getRandom($extensions);
+
+        if ($ext.length > 0) {
+            $ext = "<sup>" + $ext + "</sup>";
+        }
+    }
+
+    logger("Extension (random): " + $ext);
+
+    return $ext;
+}
+
 // get slash chord (bass note, inversion) if enabled
 function getSlash($root, $quality) {
-    $slash = "";
+    let $slash = "";
+
     // check for slash chords
     if ($('input[name="slash_chords"]').is(":checked")) {
         $slash_degree = getRandom($slash_degrees);
@@ -137,129 +237,9 @@ function getSlash($root, $quality) {
     return $slash;
 }
 
-// get root of the chord based on selected settings
-function getRoot() {
-    // get selected key
-    $key = getKey();
-
-    // from key, get a random root
-    $root = getRandom($key);
-
-    // check for rare enharmonics
-    if (!$('input[name="rare_enharmonics"]').is(":checked")) {
-        $root = replaceRareEnharmonic($root);
-    }
-
-    logger("Root (random): " + $root);
-
-    return $root;
-}
-
-// get the available notes based on the selected key
-function getKey() {
-    var $key = $("#keys").val();
-    var $key_notes;
-
-    if (!$key || $key == "any") {
-        $key_notes = $chromatic;
-    }
-    else {
-        $key_notes = $keys[$key];
-    }
-
-    logger("Key: " + $key_notes);
-
-    return $key_notes;
-}
-
-// get the chord quality
-function getChordQuality() {
-    var $quality;
-    var $chord_types;
-
-    // get selected chord types
-    var $selected_chord_types = getSelectedChordTypes();
-
-    // restrict to key
-    if ($("#keys").val().indexOf("Major") >= 0) {
-        // major
-        $chord_types = getHarmonicQualityMajor($key.indexOf($root));;
-    } else if ($("#keys").val().indexOf("Minor") >= 0) {
-        // minor
-        $chord_types = getHarmonicQualityMinor($key.indexOf($root));;
-    }
-    else {
-        $chord_types = $all_chords;
-    }
-
-    // remove empty elements
-    $chord_types = $chord_types.filter(String);
-
-    logger("Chord types: " + $chord_types);
-
-    // filter out chord types disabled by user
-    $chord_types = $chord_types.filter(function(chord) {
-        return $selected_chord_types.includes(chord);
-    });
-
-    logger("Filtered chord types: " + $chord_types);
-
-    // get chord quality
-    $quality = getRandom($chord_types);
-
-    // if the type returned is undefined because the user has eliminated the type...
-    // just default to major
-    if (!$quality) {
-        $quality = ""
-    }
-
-    logger("Quality (random): " + $quality);
-
-    return $quality;
-}
-
-// replace rare enharmonic (e.g. Fb) with a common one (e.g. E)z
-function replaceRareEnharmonic($root) {
-    if ($root == "C♭") {
-        $root = "B";
-        logger("Replacing Cb with B");
-    }
-    else if ($root == "B♯") {
-        $root = "C";
-        logger("Replacing B# with C");
-    }
-    else if ($root == "F♭") {
-        $root = "E";
-        logger("Replacing Fb with E");
-    }
-    else if ($root == "E♯") {
-        $root = "F";
-        logger("Replacing E# with F");
-    }
-
-    return $root;
-}
-
-// if extensions are selected, return one
-function getExtension() {
-    var $ext = "";
-
-    if ($('input[name="extensions"]').is(":checked")) {
-        $ext = getRandom($extensions);
-
-        if ($ext.length > 0) {
-            $ext = '<sup>' + $ext + '</sup>';
-        }
-    }
-
-    logger("Extension (random): " + $ext);
-
-    return $ext;
-}
-
 // get array of specified chord types
 function getSelectedChordTypes() {
-    var $selected_chord_types = [];
+    let $selected_chord_types = [];
 
     // get the values of each selected checkbox
     $(".chord-type-selection").each(function() {
@@ -274,85 +254,4 @@ function getSelectedChordTypes() {
     logger("Selected chord types: " + $selected_chord_types);
 
     return $selected_chord_types.filter(String);
-}
-
-// get the correct type of chords for the scale tone in a major key
-function getHarmonicQualityMajor($scale_tone) {
-    var $chord_types;
-
-    switch($scale_tone) {
-        case 0:
-            // major
-            $chord_types = $major_chords;
-            break;
-        case 1:
-        case 5:
-            // minor
-            $chord_types = $minor_chords;
-            break;
-        case 2:
-        case 5:
-            // minor
-            $chord_types = $minor_chords;
-            break;
-        case 3:
-            // major
-            $chord_types = $major_chords;
-            break;
-        case 4:
-            // dominant
-            $chord_types = $dominant_chords;
-            break;
-        case 5:
-            // minor
-            $chord_types = $minor_chords;
-            break;
-        case 6:
-            // diminished
-            $chord_types = $diminished_chords;
-            break;
-        default:
-            $chord_types = [];
-    }
-
-    return $chord_types;
-}
-
-// get the correct type of chords for the scale tone in a minor key
-function getHarmonicQualityMinor($scale_tone) {
-    var $quality;
-    switch($scale_tone) {
-        case 0:
-            // minor
-            $chord_types = $minor_chords;
-            break;
-        case 1:
-            // diminished
-            $chord_types = $diminished_chords;
-            break;
-        case 2:
-            // minor
-            $chord_types = $augmented_chords;
-            break;
-        case 3:
-            // minor
-            $chord_types = $minor_chords;
-            break;
-        case 4:
-            // minor
-            $chord_types = $dominant_chords;
-            break;
-        case 5:
-            // major
-            $chord_types = $major_chords;
-            break;
-        case 6:
-            // major
-            $chord_types = $major_chords;
-            break;
-        default:
-            $chord_types = [];
-    }
-
-    return $chord_types;
 }

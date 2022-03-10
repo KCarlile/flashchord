@@ -1,3 +1,5 @@
+/* global $keys, $tempo:true, $bars:true, $bars_per_chord:true, $flash_chord_running, $current_bar, $time_signature:true, $beats_per_measure:true, startFlashChord, stopFlashChord, update_bars_progress */
+
 var $beginner_preset = true;
 var $intermediate_preset = false;
 var $advanced_preset = false;
@@ -127,7 +129,7 @@ $(document).ready(function() {
                 $("#beginner_preset").removeClass("btn-outline-success");
                 $("#beginner_preset").addClass("btn-success");
             }
-        })
+        });
 
         $beginner_preset = !$beginner_preset;
     });
@@ -145,7 +147,7 @@ $(document).ready(function() {
                 $("#intermediate_preset").removeClass("btn-outline-warning");
                 $("#intermediate_preset").addClass("btn-warning");
             }
-        })
+        });
 
         $intermediate_preset = !$intermediate_preset;
     });
@@ -163,7 +165,7 @@ $(document).ready(function() {
                 $("#advanced_preset").removeClass("btn-outline-danger");
                 $("#advanced_preset").addClass("btn-danger");
             }
-        })
+        });
 
         $advanced_preset = !$advanced_preset;
     });

@@ -1,3 +1,9 @@
+/* global DEBUG */
+
+// ------------------------------------------------------------
+// Logging
+// ------------------------------------------------------------
+
 // log a message to the browser console if debugging is enabled
 function logger($message) {
     if ((typeof DEBUG !== "undefined") && DEBUG) {
