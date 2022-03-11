@@ -9,9 +9,9 @@ var $advanced_preset = false;
 // ------------------------------------------------------------
 $(document).ready(function() {
     // setup keys dropdown
-    var option = '';
+    var option = "";
     for (var $key in $keys) {
-        option += '<option value="'+ $key + '">' + $key + '</option>';
+        option += "<option value=\"" + $key + "\">" + $key + "</option>";
     }
     $("#keys").append(option);
     $("#keys").val("C Major"); // set C Major as the default
@@ -73,7 +73,7 @@ $(document).ready(function() {
     });
 
     // time signature radio button change
-    $('input[type=radio][name=time_signature]').change(function() {
+    $("input[type=radio][name=time_signature]").change(function() {
         if ($flash_chord_running) {
             stopFlashChord();
             startFlashChord();
@@ -84,7 +84,7 @@ $(document).ready(function() {
 
     // tempo slider change
     $("#tempo").slider({
-        change: function(event, ui) {
+        change: function(event, ui) { // eslint-disable-line no-unused-vars
             if ($flash_chord_running) {
                 stopFlashChord();
                 startFlashChord();
@@ -171,7 +171,7 @@ $(document).ready(function() {
     });
 
     // chord type change
-    $('.chord-type-selection').click(function() {
+    $(".chord-type-selection").click(function() {
         if ($flash_chord_running) {
             stopFlashChord();
             startFlashChord();
@@ -179,7 +179,7 @@ $(document).ready(function() {
     });
 
     // chord type change
-    $('.chord-type-preset').click(function() {
+    $(".chord-type-preset").click(function() {
         if ($flash_chord_running) {
             stopFlashChord();
             startFlashChord();
@@ -187,12 +187,12 @@ $(document).ready(function() {
     });
 
     // hide/show next chord
-    $('input[name="hide_next_chord"]').click(function(){
+    $("input[name=hide_next_chord]").click(function(){
         $("#next_chord").toggle();
     });
 
     // hide/show visual metronome
-    $('input[name="metronome_visual"]').click(function(){
+    $("input[name=metronome_visual]").click(function(){
         $("#visual_metronome").toggle();
     });
 });
@@ -202,7 +202,7 @@ $(document).ready(function() {
 // ------------------------------------------------------------
 // converts dropdown setting to beats per measure for time signature
 function setupBeatsPerMeasure() {
-    $time_signature = $('input[name="time_signature"]:checked').val();
+    $time_signature = $("input[name=time_signature]:checked").val();
 
     // restore all visual beats
     $("#visual_metronome").children().show();

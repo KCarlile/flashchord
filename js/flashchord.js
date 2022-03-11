@@ -2,7 +2,7 @@
 
 // Safari audio lag fix
 // No idea why this works, but someone online said this fixed the problem and it did! :)
-const AudioContext = window.AudioContext || window.webkitAudioContext;
+const AudioContext = window.AudioContext || window.webkitAudioContext; // eslint-disable-line no-redeclare
 const audioCtx = new AudioContext();
 
 var $intervalId;
@@ -53,7 +53,7 @@ function startFlashChord() {
             }
 
             // metronome beep
-            if ($('input[name="metronome_audio"]').is(":checked")) {
+            if ($("input[name=metronome_audio]").is(":checked")) {
                 if ($current_beat == 1) {
                     $downbeat_beep.play();
                 }
@@ -112,7 +112,7 @@ function getRoot() {
     $root = getRandom($key);
 
     // check for rare enharmonics
-    if (!$('input[name="rare_enharmonics"]').is(":checked")) {
+    if (!$("input[name=rare_enharmonics]").is(":checked")) {
         $root = replaceRareEnharmonic($root);
     }
 
@@ -187,7 +187,7 @@ function getChordQuality() {
 function getExtension() {
     let $ext = "";
 
-    if ($('input[name="extensions"]').is(":checked")) {
+    if ($("input[name=extensions]").is(":checked")) {
         $ext = getRandom($extensions);
 
         if ($ext.length > 0) {
@@ -205,7 +205,7 @@ function getSlash($root, $quality) {
     let $slash = "";
 
     // check for slash chords
-    if ($('input[name="slash_chords"]').is(":checked")) {
+    if ($("input[name=slash_chords]").is(":checked")) {
         $slash_degree = getRandom($slash_degrees);
         $slash_note = $root;
 
