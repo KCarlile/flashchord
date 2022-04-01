@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/KCarlile/flashchord/issues"
   },
-  "homepage": "https://github.com/KCarlile/flashchord#readme",
-  "devDependencies": {
-    "eslint": "^8.10.0",
-    "htmlhint": "^1.1.2"
-  }
+  "homepage": "https://github.com/KCarlile/flashchord#readme"
 }
