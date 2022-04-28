@@ -5,7 +5,7 @@
 ## Release 1.7
 
 Tag: v1.7  
-Date: Month ##, 2022  
+Date: April 28, 2022  
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.7>  
 Commit:
 
