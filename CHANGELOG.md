@@ -2,12 +2,21 @@
 
 ---
 
+## Release 1.8
+
+Tag: v1.8  
+Date: Month DD, 2022  
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.8>  
+Commit: <>
+
+- ...next change.
+
 ## Release 1.7
 
 Tag: v1.7  
 Date: April 28, 2022  
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.7>  
-Commit:
+Commit: <https://github.com/KCarlile/flashchord/commit/602cbe1cb30dafcae8985f32e45bb599c3825901>
 
 - Add the option to display inversions/slash chords with bass notes.
 - Added debug mode and logging.
