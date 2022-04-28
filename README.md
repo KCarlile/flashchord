@@ -8,8 +8,6 @@ Visit [http://www.flashchord.com/](http://www.flashchord.com/) to see it in acti
 
 Preview new features and test new development at [http://dev.flashchord.com](http://dev.flashchord.com).
 
-[Follow @Flash_Chord on Twitter](https://twitter.com/flash_chord) for news and updates.
-
 ### Logging and Debugging
 
 Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flashchord to send logged messages to the console for viewing. Then, use the brower's console to view logging statements.

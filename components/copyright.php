@@ -1,1 +1,1 @@
-<small class="d-block mb-3 text-muted">©<?php echo date("Y"); ?> FlashChord.com | <a href="http://www.kennycarlile.com/">Kenny Carlile</a> | <a href="/donate">Support Flash Chord</a> | <a href="https://twitter.com/flash_chord"><i class="fab fa-twitter"></i> @Flash_Chord</a></small>
+<small class="d-block mb-3 text-muted">©<?php echo date("Y"); ?> FlashChord.com | <a href="http://www.kennycarlile.com/">Kenny Carlile</a> | <a href="/donate">Support Flash Chord</a>

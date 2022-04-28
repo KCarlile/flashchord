@@ -4,7 +4,7 @@ Thank you for your interest in contributing to Flash Chord! Please read this doc
 
 ## Getting Involved
 
-If you want to try out Flash Chord, feel free to checkout the repository to your local or fork the main project into your own GitHub repo. If you'd like to get involved on a social level, please contact the project lead through an Issue in the GitHub project, through [Twitter/@Flash_Chord](https://twitter.com/flash_chord), or via email at [info@flashchord.com](mailto:info@flashchord.com).
+If you want to try out Flash Chord, feel free to checkout the repository to your local or fork the main project into your own GitHub repo. If you'd like to get involved on a social level, please contact the project lead through an Issue in the GitHub project or via email at [info@flashchord.com](mailto:info@flashchord.com).
 
 ## Finding Bugs
 
