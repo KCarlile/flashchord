@@ -7,6 +7,19 @@
         gtag('config', 'UA-2437704-21');
     </script>
 
+<?php
+    // check for ?dbg=1 for debugging flag
+    if (isset($_GET['name']) && $_GET["dbg"]) {
+        if (htmlspecialchars($_GET["dbg"]) == 1) {
+?>
+    <script>
+        const DEBUG = true;
+    </script>
+<?php
+        }
+    }
+?>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,8 +35,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
     <!-- Flash Chord -->
+    <script src="/js/utils.js"></script>
     <script src="/js/ui.js"></script>
     <script src="/js/flashchord.js"></script>
+    <script src="/js/theory-utils.js"></script>
     <script src="/js/metronome.js"></script>
     <script src="/data/data.js"></script>
 

@@ -1,0 +1,19 @@
+{
+  "name": "flashchord",
+  "version": "1.6.0",
+  "description": "Musical chord randomizer with configurable complexity for various skill levels. Used for generating random chords for practicing chords, scales, and arpeggios on any instrument with an unpredictable order.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KCarlile/flashchord.git"
+  },
+  "author": "Kenny Carlile",
+  "license": "gpl-3.0",
+  "bugs": {
+    "url": "https://github.com/KCarlile/flashchord/issues"
+  },
+  "homepage": "https://github.com/KCarlile/flashchord#readme"
+}
