@@ -14,7 +14,7 @@ Commit:
 - Data cleanup for fewer bugs/glitches in rendering chords.
 - Prevented repeated chords (repeated chords of different types/extensions still okay).
 - Changes to refactor JS code for linting compatibility.
-- Removing Twitter links.
+- Removing Twitter links and references.
 
 ## Release 1.6
 
