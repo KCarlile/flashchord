@@ -17,7 +17,7 @@ $(document).ready(function() {
     // Init
     // ------------------------------------------------------------
     // first, make sure we're on the home page before doing any of the chord stuff
-    if (PAGE_NAME == "homepage") {
+    if ((typeof PAGE_NAME !== "undefined") && (PAGE_NAME == "homepage")) {   
         $chord = $next_chord ? $next_chord : getChord();
 
         $next_chord = getChord();
