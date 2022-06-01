@@ -15,6 +15,7 @@ Commit: <>
 - Issue [#69](https://github.com/KCarlile/flashchord/issues/69): Fix logging redundancy.
 - Issue [#60](https://github.com/KCarlile/flashchord/issues/60): Add changelog to About page.
 - About page updates: adding new tech and adding donors.
+- Issue [#80](https://github.com/KCarlile/flashchord/issues/80): Updated to Twitter Bootstrap 5.2-beta.
 
 ## Release 1.7
 
