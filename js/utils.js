@@ -13,16 +13,12 @@ function logger($message) {
 
 // start a new block of logging with a heavy line if debugging is enabled
 function logger_new() {
-    if ((typeof DEBUG !== "undefined") && DEBUG) {
-        console.log("==========");
-    }
+    logger("==========");
 }
 
 // start a new sub-block of logging with a light line if debugging is enabled
 function logger_break() {
-    if ((typeof DEBUG !== "undefined") && DEBUG) {
-        console.log("----------");
-    }
+    logger("----------");
 }
 
 // get a random value from an array

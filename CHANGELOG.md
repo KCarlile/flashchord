@@ -2,15 +2,15 @@
 
 ---
 
-## Release 1.8
+## Release 2.0
 
-Tag: v1.8  
+Tag: v2.0  
 Date: Month DD, 2022  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.8>  
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v2.0>  
 Commit: <>
 
 - Fixed bug in debugging-enabled check (no issue).
-- 
+- Issue [#69](https://github.com/KCarlile/flashchord/issues/69): Fix logging redundancy
 
 ## Release 1.7
 
