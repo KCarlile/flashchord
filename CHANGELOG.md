@@ -12,8 +12,9 @@ URL: <https://github.com/KCarlile/flashchord/releases/tag/v2.0>
 Commit: <>
 
 - Fixed bug in debugging-enabled check (no issue).
-- Issue [#69](https://github.com/KCarlile/flashchord/issues/69): Fix logging redundancy
-- Issue [#60](https://github.com/KCarlile/flashchord/issues/60): Add changelog to About page
+- Issue [#69](https://github.com/KCarlile/flashchord/issues/69): Fix logging redundancy.
+- Issue [#60](https://github.com/KCarlile/flashchord/issues/60): Add changelog to About page.
+- About page updates: adding new tech and adding donors.
 
 ## Release 1.7
 
