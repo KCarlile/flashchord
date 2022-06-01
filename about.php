@@ -43,7 +43,7 @@
                 <h4 class="text-secondary mt-1 mb-2">How you can help</h4>
             </div>
         </div>
-        <p>So you like Flash Chord, but you wanna help make it even better? Great! Flash Chord is an <a href="https://github.com/KCarlile/flashchord">open source project hosted on GitHub</a>. If you want to help contribute, please reach out to the maintainer through the GitHub project page.</p>
+        <p>So you like Flash Chord, but you want to help make it even better? Great! Flash Chord is an <a href="https://github.com/KCarlile/flashchord">open source project hosted on GitHub</a>. If you'd like to help contribute, please reach out to the maintainer through the GitHub project page.</p>
         <h5>Technical</h5>
         <p>Flash Chord uses the following technologies:</p>
         <ul>
@@ -53,6 +53,8 @@
             <li><a href="https://jquery.com/">jQuery</a></li>
             <li><a href="https://www.w3.org/Style/CSS/">CSS</a></li>
             <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a href="https://parsedown.org/">Parsedown</a></li>
+            <li><a href="https://getcomposer.org/">Composer</a></li>
             <li><a href="https://git-scm.com/">Git</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
         </ul>
@@ -62,6 +64,10 @@
             </div>
         </div>
         <p>If helping with code or testing isn't your thing, that's okay. You can always show your appreciate and support Flash Chord by making a donation to offset hosting and domain costs or fuel further development for bug fixes and enhancements. To learn more about making a <a href="donate.php">donation in support Flash Chord, check out the Donate page</a>.</p>
+        <h5>Supporters/Donors</h5>
+        <ul>
+            <li>Matt Godwin</li>
+        </ul>
         <div class="row bg-light mb-2 mt-5">
             <div class="col border-top border-bottom">
                 <h4 class="text-secondary mt-1 mb-2">Changelog</h4>
