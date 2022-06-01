@@ -53,14 +53,6 @@
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
             <div class="row">
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-12 col-md">
                     <?php require 'components/copyright.php'; ?>
                 </div>

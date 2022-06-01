@@ -70,12 +70,8 @@
             </div>
         </div>
         <p>To see the changes for each version of FlashChord, you can <a href="https://github.com/KCarlile/flashchord/blob/master/CHANGELOG.md">view the changelog on GitHub</a> or you can click the "Show Changelog" button below to view the changelog on this page.</p>
-        <p>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Show Changelog
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
+        <p><button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChangelog" aria-expanded="false" aria-controls="collapseExample">Show Changelog</button></p>
+        <div class="collapse" id="collapseChangelog">
             <div class="card card-body">
                 <?php
                     $changelog = file_get_contents('CHANGELOG.md');
@@ -87,14 +83,6 @@
     </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-            </div>
             <div class="row">
                 <div class="col-12 col-md">
                     <?php require 'components/copyright.php'; ?>

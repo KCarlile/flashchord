@@ -32,8 +32,8 @@
         </div>
         <p>If you'd like to make a donation to say thanks and to help support Flash Chord, you can do so below. Any amount would be greatly appreciated. Even if you choose to not make a donation, your use of Flash Chord is still appreciated. :)</p>
         <div class="row justify-content-center">
-            <div class="text-left">
-                <p><a href="https://paypal.me/kennycarlile" class="h3">paypal.me/kennycarlile</a></p>
+            <div class="text-center">
+                <p><a href="https://paypal.me/kennycarlile" class="h3 link-primary">paypal.me/kennycarlile</a></p>
                 <p><a href="https://paypal.me/kennycarlile"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal" title="Donate via PayPal" /></a></p>
             </div>
         </div>
@@ -48,14 +48,6 @@
     </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-            </div>
             <div class="row">
                 <div class="col-12 col-md">
                     <?php require 'components/copyright.php'; ?>

@@ -13,10 +13,10 @@
         <p class="lead text-muted">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
     </div>
     <div class="container">
-        <h2 id="chord_name">Chord</h2>
+        <h2 id="chord_name"></h2>
         <div id="next_chord">
             <h3 class="text-center">Up next...</h3>
-            <h2 id="next_chord_name">Next Chord</h2>
+            <h2 id="next_chord_name"></h2>
         </div>
         <div class="btn-group-lg text-center mt-4" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-success" id="start">Start</button>
@@ -28,8 +28,8 @@
                 <span id="beat2" class="text-secondary">&bull;</span>
                 <span id="beat3" class="text-secondary">&bull;</span>
                 <span id="beat4" class="text-secondary">&bull;</span>
-                <span id="beat5" class="text-secondary">&bull;</span>
-                <span id="beat6" class="text-secondary">&bull;</span>
+                <span id="beat5" class="text-secondary" style="display: none;">&bull;</span>
+                <span id="beat6" class="text-secondary" style="display: none;">&bull;</span>
             </div>
         </div>
         <div class="text-center">
@@ -37,7 +37,7 @@
             <div id="bars_progress_text"><span id="current_bar_text">1</span> of <span id="bar_count_text">1</span></div>
         </div>
         <div class="text-center mt-4">
-            <div class="d-inline-block text-left">
+            <div class="d-inline-block text-start">
                 <input type="checkbox" name="metronome_audio" checked />
                 <label for="metronome_audio">Metronome audio</label>
                 <br />
