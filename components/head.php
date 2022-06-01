@@ -9,7 +9,7 @@
 
 <?php
     // check for ?dbg=1 for debugging flag
-    if (isset($_GET['name']) && $_GET["dbg"]) {
+    if (isset($_GET["dbg"]) && $_GET["dbg"]) {
         if (htmlspecialchars($_GET["dbg"]) == 1) {
 ?>
     <script>

@@ -1,4 +1,4 @@
-/* global $current_beat:true, $current_bar:true, $downbeat_beep, $beat_beep, $quality:true, $extensions, $slash:true, $key:true, $keys, $chord_keys:true, $slash_degree:true, $root:true, logger, flatten, sharpen, setupBarsPerChord, setupBarsPerMeasure, setupBeatsPerMeasure, increment_beat, update_bars_progress, logger_new, logger_break, getRandom, $slash_degrees, $slash_note:true, $theoretical_keys, $all_chords, getHarmonicQualityMinor, getHarmonicQualityMajor, $extension:true, $chromatic, replaceRareEnharmonic, getTempo */
+/* global $current_beat:true, $current_bar:true, $downbeat_beep, $beat_beep, $quality:true, $extensions, $slash:true, $key:true, $keys, $chord_keys:true, $slash_degree:true, $root:true, logger, flatten, sharpen, setupBarsPerChord, setupBarsPerMeasure, setupBeatsPerMeasure, increment_beat, update_bars_progress, logger_new, logger_break, getRandom, $slash_degrees, $slash_note:true, $theoretical_keys, $all_chords, getHarmonicQualityMinor, getHarmonicQualityMajor, $extension:true, $chromatic, replaceRareEnharmonic, getTempo, $major_chords, $minor_chords, $dominant_chords, $diminished_chords, $augmented_chords, logger, PAGE_NAME */
 
 // Safari audio lag fix
 // No idea why this works, but someone online said this fixed the problem and it did! :)
@@ -17,7 +17,7 @@ $(document).ready(function() {
     // Init
     // ------------------------------------------------------------
     // first, make sure we're on the home page before doing any of the chord stuff
-    if ($("#chord_name").length) {
+    if (PAGE_NAME == "homepage") {
         $chord = $next_chord ? $next_chord : getChord();
 
         $next_chord = getChord();
@@ -91,7 +91,7 @@ function getChord() {
         $extension = getExtension();
         $slash = getSlash($root, $quality);
 
-        $new_chord = $root + $quality + $extension + $slash;
+        $new_chord = buildChord($root, $quality, $extension, $slash);
     } while($next_chord == $new_chord);
 
     logger_break();
@@ -101,6 +101,22 @@ function getChord() {
     logger("Slash: " + $slash);
 
     return $new_chord;
+}
+
+// assemble the chord for display, handling any special situations
+function buildChord($root, $quality, $extension, $slash) {
+    // handle simplified qualities for °, °7, and m7♭5
+    if ($diminished_chords.includes($quality)) {
+        if (
+            ( ($quality == "°") && ($("input[name=chord_type_dim]").is(":not(:checked)")) ) || 
+            ( ($quality == "°7") && ($("input[name=chord_type_dim7]").is(":not(:checked)")) ) || 
+            ( ($quality == "m7♭5") && ($("input[name=chord_type_m7b5]").is(":not(:checked)")) ) )
+        {
+            $quality = "m";
+        }
+    }
+
+    return $root + $quality + $extension + $slash;
 }
 
 // get root of the chord based on selected settings
@@ -154,7 +170,7 @@ function getChordQuality() {
         // minor
         $chord_types = getHarmonicQualityMinor($key.indexOf($root));
     } else {
-        $chord_types = $all_chords;
+        $chord_types = $selected_chord_types;
     }
 
     // remove empty elements
@@ -163,6 +179,7 @@ function getChordQuality() {
     logger("Chord types: " + $chord_types);
 
     // filter out chord types disabled by user
+    // FIX THIS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     $chord_types = $chord_types.filter(function(chord) {
         return $selected_chord_types.includes(chord);
     });
@@ -172,9 +189,9 @@ function getChordQuality() {
     // get chord quality
     $quality = getRandom($chord_types);
 
-    // if the type returned is undefined because the user has eliminated the type...
-    // just default to major
-    if (!$quality) {
+    // if the type returned is undefined because the user has eliminated the type, just default to major
+    // also, if you get "M" as in major, just wipe the symbol (this is necessary as an empty value causes other problems)
+    if (!$quality || $quality == "M") {
         $quality = "";
     }
 
