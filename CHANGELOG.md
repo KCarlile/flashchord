@@ -1,5 +1,7 @@
 # Flash Chord Changelog
 
+**Current production release:** 1.7
+
 ---
 
 ## Release 2.0
@@ -11,6 +13,7 @@ Commit: <>
 
 - Fixed bug in debugging-enabled check (no issue).
 - Issue [#69](https://github.com/KCarlile/flashchord/issues/69): Fix logging redundancy
+- Issue [#60](https://github.com/KCarlile/flashchord/issues/60): Add changelog to About page
 
 ## Release 1.7
 

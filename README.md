@@ -1,4 +1,4 @@
-# FlashChord
+# Flash Chord
 
 ## Functional
 
@@ -10,7 +10,7 @@ Preview new features and test new development at [http://dev.flashchord.com](htt
 
 ### Logging and Debugging
 
-Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flashchord to send logged messages to the console for viewing. Then, use the brower's console to view logging statements.
+Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flash Chord to send logged messages to the console for viewing. Then, use the browser's console to view logging statements.
 
 For logging functionality, see the `js/utils.js` file and look at the following functions:
 
@@ -23,17 +23,19 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 
 ## Technical
 
-- Twitter Bootstrap HTML/CSS theme
-- Javascript
+- Twitter Bootstrap HTML/CSS theme (4.5)
+- JavaScript
 - jQuery
 - PHP
+- [Parsedown for Markdown parsing](https://parsedown.org/)
+  - Composer for dependency management
 
 ## Creator
 
 Kenny Carlile
 
 - GitHub: @KCarlile
-- [http://www.kennycarlile.com/](http://www.kennycarlile.com/)
+- [http://www.kcarlile.com/](http://www.kcarlile.com/)
 
 ## Contributions
 
@@ -42,3 +44,9 @@ If you'd like to contribute, please contact Kenny Carlile through GitHub or his 
 ## Contributors
 
 - _Your name here!_
+
+## Supporters
+
+Thank you to those who have supported Flash Chord!
+
+- Matt Godwin (donation)
