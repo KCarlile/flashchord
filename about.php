@@ -64,10 +64,6 @@
             </div>
         </div>
         <p>If helping with code or testing isn't your thing, that's okay. You can always show your appreciate and support Flash Chord by making a donation to offset hosting and domain costs or fuel further development for bug fixes and enhancements. To learn more about making a <a href="donate.php">donation in support Flash Chord, check out the Donate page</a>.</p>
-        <h5>Supporters/Donors</h5>
-        <ul>
-            <li>Matt Godwin</li>
-        </ul>
         <div class="row bg-light mb-2 mt-5">
             <div class="col border-top border-bottom">
                 <h4 class="text-secondary mt-1 mb-2">Changelog</h4>

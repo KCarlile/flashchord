@@ -33,11 +33,18 @@
         <p>If you'd like to make a donation to say thanks and to help support Flash Chord, you can do so below. Any amount would be greatly appreciated. Even if you choose to not make a donation, your use of Flash Chord is still appreciated. :)</p>
         <div class="row justify-content-center">
             <div class="text-left">
-                <p><a href="https://paypal.me/kennycarlile">paypal.me/kennycarlile</a></p>
+                <p><a href="https://paypal.me/kennycarlile" class="h3">paypal.me/kennycarlile</a></p>
                 <p><a href="https://paypal.me/kennycarlile"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate via PayPal" title="Donate via PayPal" /></a></p>
             </div>
         </div>
-
+        <div class="row bg-light mb-2">
+            <div class="col border-top border-bottom">
+                <h4 class="text-secondary mt-1 mb-2">Supporters/Donors</h4>
+            </div>
+        </div>
+        <ul>
+            <li>Matt Godwin</li>
+        </ul>
     </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
