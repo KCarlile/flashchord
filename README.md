@@ -29,6 +29,8 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 - PHP
 - [Parsedown for Markdown parsing](https://parsedown.org/)
   - Composer for dependency management
+- Jest for unit testing of JavaScript
+  - Run Jest using `./test` from the command line
 
 ## Creator
 

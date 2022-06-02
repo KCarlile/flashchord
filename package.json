@@ -4,7 +4,7 @@
   "description": "Musical chord randomizer with configurable complexity for various skill levels. Used for generating random chords for practicing chords, scales, and arpeggios on any instrument with an unpredictable order.",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/KCarlile/flashchord/issues"
   },
-  "homepage": "https://github.com/KCarlile/flashchord#readme"
+  "homepage": "https://github.com/KCarlile/flashchord#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
 }

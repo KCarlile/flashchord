@@ -54,6 +54,7 @@
             <li><a href="https://www.w3.org/Style/CSS/">CSS</a></li>
             <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
             <li><a href="https://parsedown.org/">Parsedown</a></li>
+            <li><a href="https://jestjs.io/">Jest JS</a></li>
             <li><a href="https://getcomposer.org/">Composer</a></li>
             <li><a href="https://git-scm.com/">Git</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
