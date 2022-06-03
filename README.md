@@ -52,3 +52,4 @@ If you'd like to contribute, please contact Kenny Carlile through GitHub or his 
 Thank you to those who have supported Flash Chord!
 
 - Matt Godwin (donation)
+- Marco Valenti (donation)
