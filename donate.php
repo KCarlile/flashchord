@@ -44,6 +44,7 @@
         </div>
         <ul>
             <li>Matt Godwin</li>
+            <li>Marco Valenti</li>
         </ul>
     </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
