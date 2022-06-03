@@ -17,6 +17,7 @@ Commit: <>
 - About page updates: adding new tech and adding donors.
 - Issue [#80](https://github.com/KCarlile/flashchord/issues/80): Updated to Twitter Bootstrap 5.2-beta.
 - Issue [#73](https://github.com/KCarlile/flashchord/issues/73): Add Jest test suite for unit/regression testing.
+- Issue [#83](https://github.com/KCarlile/flashchord/issues/83): Rearchitect Flash Chord.
 
 ## Release 1.7
 
@@ -70,7 +71,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/e2ecec32ca1f8fcf2b220aaa3
 
 - Fixing page titles for h2.
 - Changing to .htaccess with removing .php from paths. Link fixes.
-- Moving flashchord js includes back to head.php.
+- Moving Flash Chord JS includes back to head.php.
 - Changing donate link from anchor to direct link.
 - Making FAQ accordion start collapsed.
 

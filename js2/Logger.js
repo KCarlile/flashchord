@@ -73,8 +73,6 @@ module.exports = class Logger {
         return this.logger("==========", override);
     }
 
-    // start a new sub-block of logging with a light line if logging is enabled
-
     /**
      * Prints a sub-block divider line to the console if logging is enabled.
      * @param {boolean} override    Overrides the instance-level setting for logging enabled.
