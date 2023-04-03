@@ -32,6 +32,18 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 - Jest for unit testing of JavaScript
   - Run Jest using `./test` from the command line
 
+### Docker
+
+Docker is used for local development, although you're welcome to setup your own development hosting stack yourself using Apache and PHP. The `/Dockerfile` and `/docker-composer.yml` files define the images and behaviors required to launch the local development containers.
+
+You'll need to modify your `/etc/localhost` file to include: `127.0.0.1	flashchord.com.local` to `/etc/hosts`
+
+To run this container (i.e. launch the "server"), follow these steps:
+
+- `$ docker compose up --build` rebuilds and launches the container
+  - Or run `$ ./server` from the root of the project folder
+- <flashchord.com.local> to access
+
 ## Creator
 
 Kenny Carlile
