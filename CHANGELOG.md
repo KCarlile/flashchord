@@ -5,12 +5,12 @@
 ## Release 1.8
 
 Tag: v1.8  
-Date: Month DD, 2022  
+Date: May 2, 2023
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.8>  
 Commit: <>
 
 - Fixed bug in debugging-enabled check (no issue).
-- 
+- Updated Google Analytics code to GA4.
 
 ## Release 1.7
 
