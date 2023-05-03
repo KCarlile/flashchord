@@ -2,12 +2,21 @@
 
 ---
 
+## Release 1.9
+
+Tag: v1.9  
+Date: May 2, 2023  
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
+Commit: <>
+
+- (TBD)
+
 ## Release 1.8
 
 Tag: v1.8  
-Date: May 2, 2023
+Date: May 2, 2023  
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.8>  
-Commit: <>
+Commit: <https://github.com/KCarlile/flashchord/commit/1e1792e55216da47a2c6d92a8252e86b37bdf01c>
 
 - Fixed bug in debugging-enabled check (no issue).
 - Updated Google Analytics code to GA4.
