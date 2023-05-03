@@ -9,7 +9,7 @@ Date: May 2, 2023
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
 Commit: <>
 
-- (TBD)
+- Renamed master branch to main (no issue).
 
 ## Release 1.8
 
