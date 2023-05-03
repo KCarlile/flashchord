@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <?php require 'components/head.php'; ?>
+    <script>
+        const PAGE_NAME = "homepage";
+    </script>
     <title>Practice chords, scales, or arpeggios with an endless stream of randomized chords | Flash Chord</title>
 </head>
 <body>
@@ -92,7 +95,7 @@
                     <div class="col">
                         <button type="button" id="beginner_preset" class="btn btn-success chord-type-preset btn-sm mb-3">Beginner</button>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input difficulty_beginner chord-type-selection" id="chord_type_major" name="chord_type_major" value="" checked />
+                            <input type="checkbox" class="custom-control-input difficulty_beginner chord-type-selection" id="chord_type_major" name="chord_type_major" value="M" checked />
                             <label for="chord_type_major" class="custom-control-label">Major</label>
                         </div>
                         <div class="custom-control custom-checkbox">

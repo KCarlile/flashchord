@@ -1,4 +1,4 @@
-# FlashChord
+# Flash Chord
 
 ## Functional
 
@@ -10,7 +10,7 @@ Preview new features and test new development at [http://dev.flashchord.com](htt
 
 ### Logging and Debugging
 
-Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flashchord to send logged messages to the console for viewing. Then, use the brower's console to view logging statements.
+Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flash Chord to send logged messages to the console for viewing. Then, use the browser's console to view logging statements.
 
 For logging functionality, see the `js/utils.js` file and look at the following functions:
 
@@ -28,17 +28,39 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 - jQuery
 - PHP
 
+### Docker
+
+Docker is used for local development, although you're welcome to setup your own development hosting stack yourself using Apache and PHP. The `/Dockerfile` and `/docker-composer.yml` files define the images and behaviors required to launch the local development containers.
+
+You'll need to modify your `/etc/localhost` file to include: `127.0.0.1	flashchord.com.local` to `/etc/hosts`
+
+To run this container (i.e. launch the "server"), follow these steps:
+
+- `$ docker compose up --build` rebuilds and launches the container
+  - Or run `$ ./server` from the root of the project folder
+- <flashchord.com.local> to access
+
 ## Creator
 
 Kenny Carlile
 
 - GitHub: @KCarlile
-- [http://www.kennycarlile.com/](http://www.kennycarlile.com/)
+- [http://www.kcarlile.com/](http://www.kcarlile.com/)
 
-## Contributions
+## Code Contributions
 
-If you'd like to contribute, please contact Kenny Carlile through GitHub or his website. Forks and PRs are welcome, but planned contributions are preferred.
+If you'd like to contribute code to Flash Chord, please contact Kenny Carlile through GitHub or his website. Forks and PRs are welcome, but planned contributions are preferred.
 
-## Contributors
+### Code Contributors
 
 - _Your name here!_
+
+## Supporters
+
+Flash Chord would like to extend a special thanks to our supporters who have made kind and generous donations.
+
+- Matt Godwin
+- Marco Valenti
+- Yohaan Pissurlenker
+- Michael Jacobson
+- Andrew Hawkes

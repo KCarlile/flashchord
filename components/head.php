@@ -1,15 +1,16 @@
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2437704-21"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YLESD45YY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-2437704-21');
+
+        gtag('config', 'G-1YLESD45YY');
     </script>
 
 <?php
     // check for ?dbg=1 for debugging flag
-    if (isset($_GET['name']) && $_GET["dbg"]) {
+    if (isset($_GET["dbg"]) && $_GET["dbg"]) {
         if (htmlspecialchars($_GET["dbg"]) == 1) {
 ?>
     <script>
