@@ -11,6 +11,7 @@ Commit: <>
 
 - Fixed bug in debugging-enabled check (no issue).
 - Updated Google Analytics code to GA4.
+- Added Docker support for local development.
 
 ## Release 1.7
 
