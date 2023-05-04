@@ -1,3 +1,18 @@
 RewriteEngine On
+
+RewriteBase /
+
+# rewrite /something.php to /something
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule (.*) $1.php [L]
+
+# redirect http to https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^flashchord\.com\.local [NC]
+RewriteCond %{HTTP_HOST} !^dev\. [NC]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} !^dev\. [NC]
+RewriteCond %{HTTP_HOST} !^flashchord\.com\.local [NC]
+RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

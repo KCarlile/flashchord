@@ -1,3 +1,9 @@
 #!/bin/bash
 
+echo ""
+echo "========================================"
+echo "URL: http://flashchord.com.local"
+echo "========================================"
+echo ""
+echo ""
 docker compose up --build
