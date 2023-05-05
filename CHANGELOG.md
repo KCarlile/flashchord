@@ -10,6 +10,7 @@ URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>
 Commit: <>
 
 - Renamed master branch to main (no issue).
+- Redirect from HTTP to HTTPS and bare domain to www.flashchord.com.
 
 ## Release 1.8
 
