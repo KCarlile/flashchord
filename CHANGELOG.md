@@ -11,6 +11,7 @@ Commit: <>
 
 - Renamed master branch to main (no issue).
 - Redirect from HTTP to HTTPS and bare domain to www.flashchord.com.
+- Simplify support message on home page.
 
 ## Release 1.8
 
