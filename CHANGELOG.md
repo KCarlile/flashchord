@@ -1,11 +1,16 @@
 # Flash Chord Changelog
 
+Current versions:
+
+- [Production](https://www.flashchord.com/): 1.8
+- [Dev](http://dev.flashchord.com/): 1.9
+
 ---
 
 ## Release 1.9
 
 Tag: v1.9  
-Date: May 2, 2023  
+Date: MM DD, YYYY  
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
 Commit: <>
 
