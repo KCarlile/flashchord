@@ -12,7 +12,7 @@ Current versions:
 Tag: v1.9  
 Date: August 16, 2023
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
-Commit: <>
+Commit: <https://github.com/KCarlile/flashchord/commit/6381b4cb17e04d9c038ec053da68b13c960d4fbb>
 
 - Renamed master branch to main (no issue).
 - Redirect from HTTP to HTTPS and bare domain to www.flashchord.com.
