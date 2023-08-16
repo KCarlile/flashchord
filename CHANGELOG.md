@@ -2,7 +2,7 @@
 
 Current versions:
 
-- [Production](https://www.flashchord.com/): 1.8
+- [Production](https://www.flashchord.com/): 1.9
 - [Dev](http://dev.flashchord.com/): 1.9
 
 ---
@@ -10,7 +10,7 @@ Current versions:
 ## Release 1.9
 
 Tag: v1.9  
-Date: MM DD, YYYY  
+Date: August 16, 2023
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
 Commit: <>
 
