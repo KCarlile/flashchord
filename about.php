@@ -1,3 +1,6 @@
+<?php
+    require_once("utilities.php");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,7 +19,7 @@
             </div>
         </div>
         <p>Flash Chord is a free online tool for musicians who want to practice chords, scales, or arpeggios with an endless stream of randomized chords. Learning a song or practicing to a backing track is great, but if you really want to learn your instrument, you need to be ready for the unexpected. With Flash Chord, you can specify the speed and complexity of the chords being presented and you'll never know more than one chord in advance.</p>
-        <div class="row bg-light mb-2">
+        <div class="row bg-light mb-2 mt-5">
             <div class="col border-top border-bottom">
                 <h4 class="text-secondary mt-1 mb-2">Details</h4>
             </div>
@@ -35,9 +38,9 @@
                 You can also specify if you want additional extensions (♯5, ♭5, ♯9, ♭9, ♯11, ♭13) added to the chords by checking the <em>Add extensions</em> checkbox.<br />If you really want to kick it up a notch, check the <em>Hide next chord</em> checkbox to get the next chord without any warning!
             </li>
         </ol>
-        <div class="row bg-light mb-2">
+        <div class="row bg-light mb-2 mt-5">
             <div class="col border-top border-bottom">
-                <h4 class="text-secondary mt-1 mb-2">How you can help</h4>
+                <h4 class="text-secondary mt-1 mb-2">How You Can Help</h4>
             </div>
         </div>
         <p>So you like Flash Chord, but you wanna help make it even better? Great! Flash Chord is an <a href="https://github.com/KCarlile/flashchord">open source project hosted on GitHub</a>. If you want to help contribute, please reach out to the maintainer through the GitHub project page.</p>
@@ -53,7 +56,11 @@
             <li><a href="https://git-scm.com/">Git</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
         </ul>
-        <div class="row bg-light mb-2">
+        <h5>Contributors</h5>
+        <?php
+            require_once("components/contributors.php");
+        ?>
+        <div class="row bg-light mb-2 mt-5">
             <div class="col border-top border-bottom">
                 <h4 class="text-secondary mt-1 mb-2">Donate</h4>
             </div>

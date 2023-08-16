@@ -1,15 +1,26 @@
 # Flash Chord Changelog
 
+Current versions:
+
+- [Production](https://www.flashchord.com/): 1.9
+- [Dev](http://dev.flashchord.com/): 1.9
+
 ---
 
 ## Release 1.9
 
 Tag: v1.9  
-Date: May 2, 2023  
+Date: August 16, 2023
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
 Commit: <>
 
 - Renamed master branch to main (no issue).
+- Redirect from HTTP to HTTPS and bare domain to www.flashchord.com.
+- Simplify support message on home page.
+- Block public web access to certain files with .htaccess.
+- Added Contributors to About page.
+- Added Supporters to Donate page.
+- Minor UI/UX tweaks.
 
 ## Release 1.8
 

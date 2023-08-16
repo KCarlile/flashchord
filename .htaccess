@@ -1,3 +1,23 @@
 RewriteEngine On
+
+RewriteBase /
+
+# rewrite /something.php to /something
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule (.*) $1.php [L]
+
+# redirect http to https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^flashchord\.com\.local [NC]
+RewriteCond %{HTTP_HOST} !^dev\. [NC]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} !^dev\. [NC]
+RewriteCond %{HTTP_HOST} !^flashchord\.com\.local [NC]
+RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# block access to specific files
+<FilesMatch "(\.eslintrc\.yml|\.git.*|CHANGELOG\.md|CODE_OF_CONDUCT\.md|collateral|CONTRIBUTING\.md|docker-compose\.yml|Dockerfile|LICENSE\.md|lint\.sh|node_modules|package\.json|package-lock\.json|README\.md|server)$">
+    Deny from all
+</FilesMatch>

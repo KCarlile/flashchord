@@ -1,3 +1,15 @@
 #!/bin/bash
 
+echo ""
+echo "======================================================================"
+echo "URL: http://flashchord.com.local"
+echo ""
+echo "To use this URL rather than the default Docker URL,"
+echo "add the following line to your /etc/hosts file:"
+echo ""
+echo "127.0.0.1 flashchord.com.local"
+echo "======================================================================"
+echo ""
+echo ""
+
 docker compose up --build
