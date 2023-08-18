@@ -1,1 +1,8 @@
-<small class="d-block mb-3 text-muted">©<?php echo date("Y"); ?> FlashChord.com | <a href="https://www.kcarlile.com/">Kenny Carlile</a> | <a href="/donate">Support Flash Chord</a>
+<?php
+    /**
+     * @file components/copyright.php
+     * 
+     * This include file prints the copyright information in the bottom of the page.
+     */
+?>
+© 2020&ndash;<?php echo date("Y"); ?>

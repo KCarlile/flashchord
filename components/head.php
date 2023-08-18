@@ -1,4 +1,14 @@
-    <!-- Google tag (gtag.js) -->
+<?php
+    /**
+     * @file components/head.php
+     * 
+     * This include file prints head content in the top of the page.
+     */
+
+    // page title is set at the page level
+    global $page_title;
+?>
+    <!-- START Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YLESD45YY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -7,18 +17,21 @@
 
         gtag('config', 'G-1YLESD45YY');
     </script>
+    <!-- END Google tag (gtag.js) -->
 
 <?php
     // check for ?dbg=1 for debugging flag
     if (isset($_GET["dbg"]) && $_GET["dbg"]) {
         if (htmlspecialchars($_GET["dbg"]) == 1) {
-?>
+            $debug_element = <<<END
     <script>
+        // debugging enabled
         const DEBUG = true;
     </script>
-<?php
-        }
-    }
+END;
+            print($debug_element);
+        } // end if test
+    } // end if test
 ?>
 
     <!-- Required meta tags -->
@@ -34,7 +47,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
 
     <!-- Flash Chord -->
     <script src="/js/utils.js"></script>
@@ -55,3 +67,5 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a744f5988e.js" crossorigin="anonymous"></script>
+
+    <title><?php print($page_title); ?> | Flash Chord</title>
