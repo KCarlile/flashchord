@@ -28,6 +28,11 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 - jQuery
 - PHP
 
+### Dependencies
+
+- [jQuery UI Touch Punch]](https://github.com/furf/jquery-ui-touch-punch)
+  - Needed for touch screen interaction with jQuery.
+
 ### Docker
 
 Docker is used for local development, although you're welcome to setup your own development hosting stack yourself using Apache and PHP. The `/Dockerfile` and `/docker-composer.yml` files define the images and behaviors required to launch the local development containers.
