@@ -5,8 +5,12 @@
      * This include file prints navigation content in the top of the page.
      */
 
-    // page name is set at the page level
-    global $page_name;
+
+    $page_name = "";
+
+    if (defined('PAGE_NAME')) {
+        $page_name = PAGE_NAME;
+    } // end if test
 ?>
 <nav>
     <ul class="nav nav-pills">

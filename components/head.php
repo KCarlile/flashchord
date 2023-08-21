@@ -5,8 +5,11 @@
      * This include file prints head content in the top of the page.
      */
 
-    // page title is set at the page level
-    global $page_title;
+    $page_title = "Flash Chord";
+
+    if (defined('PAGE_TITLE')) {
+        $page_title = PAGE_TITLE;
+    } // end if test
 ?>
     <!-- START Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YLESD45YY"></script>

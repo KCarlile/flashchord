@@ -3,10 +3,10 @@
 <head>
     <?php
         // set the current page name for conditional formatting/content used by components
-        $page_name = 'donate';
+        DEFINE("PAGE_NAME", "donate");
 
         // set the page-specific part of the page title used in components/head.php
-        $page_title = 'Donate to Support Flash Chord';
+        DEFINE("PAGE_TITLE", "Donate to Support Flash Chord");
 
         // include the global head component
         require 'components/head.php';

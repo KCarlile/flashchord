@@ -1,6 +1,6 @@
 <?php
     /**
-     * @file components/foot.php
+     * @file components/header.php
      * 
      * This include file prints header content in the top of the page.
      */

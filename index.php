@@ -3,10 +3,10 @@
 <head>
     <?php
         // set the current page name for conditional formatting/content used by components
-        $page_name = 'home';
+        DEFINE("PAGE_NAME", "home");
 
         // set the page-specific part of the page title used in components/head.php
-        $page_title = 'Practice chords, scales, or arpeggios with an endless stream of randomized chords';
+        DEFINE("PAGE_TITLE", "Practice chords, scales, or arpeggios with an endless stream of randomized chords");
 
         // include the global head component
         require 'components/head.php';
