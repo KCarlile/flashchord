@@ -1,15 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <?php require 'components/head.php'; ?>
-    <title>About | Flash Chord</title>
+    <?php
+        // set the current page name for conditional formatting/content used by components
+        $page_name = 'faq';
+
+        // set the page-specific part of the page title used in components/head.php
+        $page_title = 'FAQ - Frequently Asked Questions';
+
+        // include the global head component
+        require 'components/head.php';
+
+        // include utilities file to load contents from JSON file
+        require_once("utilities.php");
+    ?>
 </head>
 <body>
-    <?php require 'components/header.php'; ?>
     <div class="container">
+        <?php require 'components/header.php'; ?>
+        <!-- BEGIN page content -->
         <h2>Frequently Asked Questions (FAQ)</h2>
-    </div>
-    <div class="container">
         <div id="accordion">
             <h3>Why doesn't Flash Chord work for me?</h3>
             <div>
@@ -49,16 +59,9 @@
                 <p>Don't be afraid. :) We can always use help, even if you're not a coder. There are lots of ways to help make open source software better. Check out how you can contribute on the <a href="/about">About</a> page. You can also <a href="/donate">make a donation to support Flash Chord</a>.</p>
             </div>
         </div>
+        <!-- END page content -->
+        <?php require 'components/footer.php'; ?>
     </div>
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <?php require 'components/copyright.php'; ?>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <?php require 'components/footer.php'; ?>
+    <?php require 'components/foot.php'; ?>
 </body>
 </html>

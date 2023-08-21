@@ -15,7 +15,11 @@
 <body>
     <div class="container">
         <?php require 'components/header.php'; ?>
-
+        <!-- BEGIN page content -->
+        <div>
+            <p>Welcome to Flash Chord!</p>
+        </div>
+        <!-- END page content -->
         <?php require 'components/footer.php'; ?>
     </div>
     <?php require 'components/foot.php'; ?>

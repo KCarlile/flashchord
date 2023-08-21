@@ -9,9 +9,11 @@
             $list_type = $ordered_list ? "ol" : "ul";
 
             print("\t\t<$list_type>\n");
+
             foreach ($data_arr as $element) {
                 print("\t\t\t" . '<li>' . $element . '</li>' . "\n");
-            }
+            } // end foreach loop
+
             print("\t\t</$list_type>\n");
-        }
-    }
+        } // end if test
+    } // end print_list_from_json_file function
