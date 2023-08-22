@@ -5,7 +5,6 @@
      * This include file prints navigation content in the top of the page.
      */
 
-
     $page_name = "";
 
     if (defined('PAGE_NAME')) {
