@@ -1,32 +1,35 @@
 # Flash Chord
 
-## Functional
+## About
 
-Musical chord randomizer with configurable complexity for various skill levels. Used for generating random chords for practicing chords, scales, and arpeggios on any instrument with an unpredictable order.
+Flash Chord is a musical chord randomizer with configurable complexity for various skill levels that generates random chords for practicing chords, scales, and arpeggios on any instrument. Having a randomized stream of chords allows you to improve your reaction time and memory by breaking the habit of memorizing chord progressions in a recurring order.
 
-Visit [http://www.flashchord.com/](http://www.flashchord.com/) to see it in action!
+Visit [https://www.flashchord.com/](https://www.flashchord.com/) to see it in action!
 
 Preview new features and test new development at [http://dev.flashchord.com](http://dev.flashchord.com).
 
-### Logging and Debugging
+### Creator
 
-Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flash Chord to send logged messages to the console for viewing. Then, use the browser's console to view logging statements.
+Kenny Carlile
 
-For logging functionality, see the `js/utils.js` file and look at the following functions:
+- GitHub: @KCarlile
+- [http://www.kcarlile.com/](http://www.kcarlile.com/)
 
-- `logger($message)`
-  - Log a message to the browser console if debugging is enabled
-- `function logger_new()`
-  - Start a new block of logging with a heavy line if debugging is enabled
-- `function logger_break()`
-  - Start a new sub-block of logging with a light line if debugging is enabled
+## Contributing and Supporting
+
+### Contributing
+
+If you'd like to contribute code to Flash Chord, please contact Kenny Carlile through GitHub or his website. Forks and PRs are welcome, but planned contributions are preferred.
+
+See [/data/supporters.json](/data/supporters.json) for a list of contributors. This is also displayed on the [About page](/about).
+
+### Supporters
+
+Flash Chord would like to extend a special thanks to our supporters who have made kind and generous donations.
+
+See [/data/contributors.json](/data/contributors.json) for a list of supporters. This is also displayed on the [Donate page](/donate).
 
 ## Technical
-
-- Twitter Bootstrap HTML/CSS theme
-- Javascript
-- jQuery
-- PHP
 
 ### Dependencies
 
@@ -72,33 +75,23 @@ Docker is used for local development, although you're welcome to setup your own 
 
 You'll need to modify your `/etc/localhost` file to include: `127.0.0.1	flashchord.com.local` to `/etc/hosts`
 
+> (In Windows or in Linux in WSL2 on Windows, you'll need to modify the `hosts` file in `C:\Windows\System32\Drivers\etc\` as administrator.)
+
 To run this container (i.e. launch the "server"), follow these steps:
 
 - `$ docker compose up --build` rebuilds and launches the container
   - Or run `$ ./server` from the root of the project folder
-- <flashchord.com.local> to access
+- Visit [flashchord.com.local](flashchord.com.local) to access
 
-## Creator
+### Logging and Debugging
 
-Kenny Carlile
+Enable debugging in the browser console by adding `?dbg=1` to the URL. This will tell Flash Chord to send logged messages to the console for viewing. Then, use the browser's console to view logging statements.
 
-- GitHub: @KCarlile
-- [http://www.kcarlile.com/](http://www.kcarlile.com/)
+For logging functionality, see the `js/utils.js` file and look at the following functions:
 
-## Code Contributions
-
-If you'd like to contribute code to Flash Chord, please contact Kenny Carlile through GitHub or his website. Forks and PRs are welcome, but planned contributions are preferred.
-
-### Code Contributors
-
-- _Your name here!_
-
-## Supporters
-
-Flash Chord would like to extend a special thanks to our supporters who have made kind and generous donations.
-
-- Matt Godwin
-- Marco Valenti
-- Yohaan Pissurlenker
-- Michael Jacobson
-- Andrew Hawkes
+- `logger($message)`
+  - Log a message to the browser console if debugging is enabled
+- `function logger_new()`
+  - Start a new block of logging with a heavy line if debugging is enabled
+- `function logger_break()`
+  - Start a new sub-block of logging with a light line if debugging is enabled
