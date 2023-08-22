@@ -4,7 +4,6 @@
 
 - Look into utilities.php
 - Consider pulling global constant checks from components/head.php and components/navigation.php into utilities.php
-- Pull GA code into its own component
 - Pull debugging code into its own component and/or object
 
 ## Docs

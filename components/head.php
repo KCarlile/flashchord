@@ -10,17 +10,10 @@
     if (defined('PAGE_TITLE')) {
         $page_title = PAGE_TITLE;
     } // end if test
-?>
-    <!-- START Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YLESD45YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-1YLESD45YY');
-    </script>
-    <!-- END Google tag (gtag.js) -->
+    // include Google Analytics 4 component
+    require 'components/ga4.php';
+?>
 
 <?php
     // check for ?dbg=1 for debugging flag
