@@ -5,7 +5,7 @@
      * This include file prints content for the About page (about.php).
      */
 ?>
-<h2>About</h2>
+<h2 class="mb-4">About</h2>
 <div class="bg-light mb-2 border-top border-bottom">
     <h4 class="text-secondary mt-1 mb-2">Overview</h4>
 </div>

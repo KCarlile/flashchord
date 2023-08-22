@@ -6,5 +6,5 @@
      */
 ?>
 <div>
-    <p>Welcome to Flash Chord!</p>
+    <p class="lead text-muted">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
 </div>

@@ -35,6 +35,9 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 - [Twitter Bootstrap](https://getbootstrap.com/)
   - Version: 5.3.0
   - Needed for base theming.
+- [Twitter Bootstrap Icons](https://icons.getbootstrap.com/)
+  - Version: 1.10.5
+  - Needed for icons.
 - [jQuery](https://jquery.com/)
   - Version: 3.7.0
   - Needed for enhanced JavaScript functionality.
@@ -47,9 +50,6 @@ For logging functionality, see the `js/utils.js` file and look at the following 
 - [jQuery UI Touch Punch](https://github.com/furf/jquery-ui-touch-punch)
   - Version: N/A
   - Needed for touch screen interaction with jQuery.
-- [FontAwesome](https://fontawesome.com/)
-  - Version: 5.15.4
-  - Needed for icons.
 - [HTML5](https://dev.w3.org/html5/spec-LC/)
   - Version: 5
   - Needed for markup and formatting.

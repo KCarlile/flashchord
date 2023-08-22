@@ -1,3 +1,14 @@
+/**
+  * @file css/styles.css
+  *
+  * This file contains the Flash Chord custom styling.
+  */
+
+.fs-small {
+    font-size: .8em;
+}
+
+/*
 #tempo {
     margin: 1em 2em 1em 2em;
     width: 80%;
@@ -53,3 +64,4 @@
     margin-left: -2em;
     width: 4em;
 }
+*/

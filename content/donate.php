@@ -5,7 +5,7 @@
      * This include file prints content for the Donate page (donate.php).
      */
 ?>
-<h2>Donate</h2>
+<h2 class="mb-4">Donate</h2>
 <div class="bg-light mb-2 border-top border-bottom">
     <h4 class="text-secondary mt-1 mb-2">Support Flash Chord</h4>
 </div>

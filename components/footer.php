@@ -6,7 +6,7 @@
      */
 ?>
 <div class="mt-5 pt-3 border-top">
-    <p><?php require 'components/copyright.php'; ?> <a href="/">FlashChord.com</a> |
+    <p class="fs-small"><?php require 'components/copyright.php'; ?> <a href="/">FlashChord.com</a> |
         <a href="https://www.kcarlile.com/">Kenny Carlile</a> |
         <a href="/donate">Support Flash Chord</a>
     </p>
