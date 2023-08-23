@@ -9,8 +9,11 @@
 }
 
 .offcanvas-start {
-    /*width: 800px !important;*/
     width: 100% !important;
+}
+
+.btn-close {
+    background-size: 2.5em;
 }
 
 /*
