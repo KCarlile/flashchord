@@ -8,4 +8,4 @@
 
 ## Docs
 
-- Consider removing list of supporters in README.md and just point to the data/supporters.json file that renders on the Donate page
+- Update instructions once v2 is done

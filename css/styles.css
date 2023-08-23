@@ -8,6 +8,10 @@
     font-size: .8em;
 }
 
+.offcanvas-start {
+    width: 800px !important;
+}
+
 /*
 #tempo {
     margin: 1em 2em 1em 2em;
