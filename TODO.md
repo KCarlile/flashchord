@@ -9,3 +9,4 @@
 ## Docs
 
 - Update instructions once v2 is done
+  - Make sure that all public-facing docs and internal docs (comments, ect.) are updated
