@@ -8,18 +8,31 @@
     font-size: .8em;
 }
 
+/* BEGIN configuration and instructions flyout styling */
 .offcanvas-start {
     width: 100% !important;
+}
+
+.offcanvas-body {
+    /*flex-grow: 1;
+    padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
+    */
+    overflow-y: auto;
 }
 
 .btn-close {
     background-size: 2.5em;
 }
+/* END configuration and instructions flyout styling */
 
-/*
 #tempo {
     margin: 1em 2em 1em 2em;
     width: 80%;
+}
+
+#tempo .ui-slider-handle, #bars .ui-slider-handle {
+    margin-left: -2em;
+    width: 4em;
 }
 
 #bars {
@@ -67,9 +80,3 @@
 .ui-state-active {
     background-color: #999999;
 }
-
-#tempo .ui-slider-handle, #bars .ui-slider-handle {
-    margin-left: -2em;
-    width: 4em;
-}
-*/
