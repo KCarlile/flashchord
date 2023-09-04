@@ -6,6 +6,10 @@
 - Consider pulling global constant checks from components/head.php and components/navigation.php into utilities.php
 - Pull debugging code into its own component and/or object
 
+## UI
+
+- Redo heading formatting on secondary pages for more modern appearance
+
 ## Docs
 
 - Update instructions once v2 is done
