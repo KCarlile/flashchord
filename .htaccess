@@ -18,6 +18,6 @@ RewriteCond %{HTTP_HOST} !^flashchord\.com\.local [NC]
 RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # block access to specific files
-<FilesMatch "(\.eslintrc\.yml|\.git.*|CHANGELOG\.md|CODE_OF_CONDUCT\.md|collateral|CONTRIBUTING\.md|docker-compose\.yml|Dockerfile|LICENSE\.md|lint\.sh|node_modules|package\.json|package-lock\.json|README\.md|server)$">
+<FilesMatch "(\.eslintrc\.yml|\.git.*|CHANGELOG\.md|CODE_OF_CONDUCT\.md|collateral|CONTRIBUTING\.md|docker-compose\.yml|Dockerfile|LICENSE\.md|lint\.sh|node_modules|package\.json|package-lock\.json|README\.md|TODO\.md|server)$">
     Deny from all
 </FilesMatch>
