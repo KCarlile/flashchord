@@ -9,6 +9,7 @@
 ## UI
 
 - Redo heading formatting on secondary pages for more modern appearance
+- Enable darkmode theme and switching
 
 ## Docs
 

@@ -6,14 +6,26 @@
      */
 ?>
 <h2 class="mb-4">Donate</h2>
-<div class="bg-light mb-2 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Support Flash Chord</h4>
+<div class="mb-3">
+    <h3><i class="bi bi-chat-heart-fill me-3 text-bg-secondary p-2 fs-5"></i>Support</h3>
 </div>
 <div class="row">
     <div class="col-12 col-lg-8">
-        <p>Flash Chord is free and it will always be free. It's free to use ("free as in beer") and it's free to use ("free as in freedom"). <a href="https://en.wikipedia.org/wiki/Gratis_versus_libre#%22Free_beer%22_vs_%22freedom_of_speech%22_distinction">What does that mean?</a> It means that you won't ever pay a dime to use Flash Chord <em>and</em> it's an open source tool, so you're free to see what Flash Chord is doing and how it's being done.</p>
-        <p>That being said, Flash Chord is not "free" in the sense that it takes time to build and maintain. It also costs actual money to host and renew the domain each year, and while these costs are not a lot, everything adds up.</p>
-        <p>If you use Flash Chord, if you find it useful, and if you'd like to help support it, <a href="https://paypal.me/kennycarlile">please consider making a donation</a>. Any amount would be greatly appreciated. Even if you choose to not make a donation, your use of Flash Chord is still appreciated. :)</p>
+        <p>As a website, Flash Chord is free and it will always be free. It's
+            free to use ("free as in beer") and it's free to use ("free as
+            in freedom"). <a href="https://en.wikipedia.org/wiki/Gratis_versus_libre#%22Free_beer%22_vs_%22freedom_of_speech%22_distinction">What
+            does that mean?</a> It means that you won't ever pay a dime to
+            use Flash Chord <em>and</em> it's an open source tool, so you're
+            free to see what Flash Chord is doing and how it's being done.</p>
+        <p>That being said, Flash Chord is not "free" in the sense that it
+            takes time to build and maintain. It also costs actual money to
+            host and renew the domain each year, and while these costs are not
+            a lot, everything adds up.</p>
+        <p>If you use Flash Chord, if you find it useful, and if you'd like to
+            help support it, <a href="https://paypal.me/kennycarlile">please
+                consider making a donation</a>. Any amount would be greatly
+                appreciated. Even if you choose to not make a donation, your
+                use of Flash Chord is still appreciated. :)</p>
     </div>
     <div class="col-12 col-lg-4 justify-content-center mb-2">
         <div class="text-center">
@@ -31,8 +43,8 @@
         </div>
     </div>
 </div>
-<div class="bg-light mb-2 mt-5 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Why not advertise?</h4>
+<div class="mb-3 mt-5">
+    <h3><i class="bi bi-ban me-3 text-bg-secondary p-2 fs-5"></i>Why not advertise?</h3>
 </div>
 <div>
     <p>Google AdSense for contextual advertisements wouldn't approve this site
@@ -46,11 +58,12 @@
     <p>If a business would like to help sponsor Flash Chord, it would be
         greatly appreciated. :)</p>
 </div>
-<div class="bg-light mb-2 mt-5 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Supporters</h4>
+<div class="mb-3 mt-5">
+    <h3><i class="bi bi-person-arms-up me-3 text-bg-secondary p-2 fs-5"></i>Supporters</h3>
 </div>
 <div>
-    <p><strong>Thank you</strong> to the following people their kind and generous support of Flash Chord!</p>
+    <p><strong>Thank you</strong> to the following people for their kind and
+        generous support of Flash Chord!</p>
 </div>
 <div>
     <div>

@@ -33,41 +33,7 @@ See [/data/contributors.json](/data/contributors.json) for a list of supporters.
 
 ### Dependencies
 
-#### Frontend
-
-- [Twitter Bootstrap](https://getbootstrap.com/)
-  - Version: 5.3.0
-  - Needed for base theming.
-- [Twitter Bootstrap Icons](https://icons.getbootstrap.com/)
-  - Version: 1.10.5
-  - Needed for icons.
-- [jQuery](https://jquery.com/)
-  - Version: 3.7.0
-  - Needed for enhanced JavaScript functionality.
-- [jQuery UI](https://jqueryui.com/)
-  - Version: 1.13.2
-  - Needed for jQuery's visual components.
-- [jQuery UI Base Theme CSS](https://jquery.com/)
-  - Version: 1.13.2
-  - Needed for base theme styling of jQuery components.
-- [jQuery UI Touch Punch](https://github.com/furf/jquery-ui-touch-punch)
-  - Version: N/A
-  - Needed for touch screen interaction with jQuery.
-- [HTML5](https://dev.w3.org/html5/spec-LC/)
-  - Version: 5
-  - Needed for markup and formatting.
-- [CSS3](https://www.w3.org/Style/CSS/)
-  - Version: 3
-  - Needed for styling.
-- [JavaScript / ECMAScript 2015](https://262.ecma-international.org/6.0/)
-  - Version: ECMAScript 2015 (ES6)
-  - Needed for dynamic client-side (browser) functionality.
-
-#### Backend
-
-- [PHP](https://www.php.net/)
-  - Version: 8.1.9+
-  - Needed for dynamic backend functionality.
+See [/content/about-technical.php](/content/about-technical.php) for a list of dependent technologies. This is also displayed on the [About page](/about).
 
 ### Docker
 

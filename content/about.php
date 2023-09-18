@@ -6,8 +6,8 @@
      */
 ?>
 <h2 class="mb-4">About</h2>
-<div class="bg-light mb-2 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Overview</h4>
+<div class="mb-3">
+    <h3><i class="bi bi-easel me-3 text-bg-secondary p-2 fs-5"></i>Overview</h3>
 </div>
 <div>
     <p>Flash Chord is a free online tool for musicians who want to
@@ -19,8 +19,8 @@
         chords being presented and you'll never know more than one
         chord in advance.</p>
 </div>
-<div class="bg-light mb-2 mt-5 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Details</h4>
+<div class="mb-3 mt-5">
+    <h3><i class="bi bi-zoom-in me-3 text-bg-secondary p-2 fs-5"></i>Details</h3>
 </div>
 <div>
     <p>Now that you've got the idea, let's setup your Flash Chord
@@ -51,35 +51,29 @@
         </li>
     </ol>
 </div>
-<div class="bg-light mb-2 mt-5 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">How You Can Help</h4>
+<div class="mb-3 mt-5">
+    <h3><i class="bi bi-chat-heart-fill me-3 text-bg-secondary p-2 fs-5"></i>How <em>You</em> Can Help</h3>
 </div>
 <div>
-    <p>So you like Flash Chord, but you wanna help make it even better?
+    <p>So you like Flash Chord, but you want to help make it even better?
         Great! Flash Chord is an
         <a href="https://github.com/KCarlile/flashchord">open source
             project hosted on GitHub</a>. If you want to help contribute,
             please reach out to the maintainer through the GitHub project
             page.</p>
-    <h5>Technical</h5>
+    <h4>Technical</h4>
     <p>Flash Chord uses the following technologies:</p>
-    <ul>
-        <li><a href="https://html.spec.whatwg.org/multipage/">HTML5</a></li>
-        <li><a href="https://www.php.net/">PHP</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
-        <li><a href="https://jquery.com/">jQuery</a></li>
-        <li><a href="https://www.w3.org/Style/CSS/">CSS</a></li>
-        <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
-        <li><a href="https://git-scm.com/">Git</a></li>
-        <li><a href="https://github.com/">GitHub</a></li>
-    </ul>
-    <h5>Contributors</h5>
+    <?php
+        // include content for technical details
+        require_once("content/about-technical.php");
+    ?>
+    <h4>Contributors</h4>
     <?php
         require_once("components/contributors.php");
     ?>
 </div>
-<div class="bg-light mb-2 mt-5 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Donate</h4>
+<div class="mb-3 mt-5">
+    <h3><i class="bi bi-paypal me-3 text-bg-secondary p-2 fs-5"></i>Donate</h3>
 </div>
 <div>
     <p>If helping with code or testing isn't your thing, that's
@@ -87,6 +81,6 @@
         Flash Chord by making a donation to offset hosting and
         domain costs or fuel further development for bug fixes
         and enhancements. To learn more about making a
-        <a href="donate.php">donation in support Flash Chord,
+        <a href="donate">donation in support Flash Chord,
             check out the Donate page</a>.</p>
 </div>
