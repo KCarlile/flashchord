@@ -5,10 +5,25 @@
      * This include file prints head content in the top of the page.
      */
 
+    // capture page title for use later in the page
     $page_title = "Flash Chord";
 
     if (defined('PAGE_TITLE')) {
         $page_title = PAGE_TITLE;
+    } // end if test
+
+    // save the page name as a JS variable for client-side triggeringS
+    if (defined('PAGE_NAME')) {
+        $page_name = PAGE_NAME;
+
+        $page_name_js_block = <<<END
+    <script>
+        // page name enabled
+        const pageName = "$page_name";
+    </script>
+
+END;
+        print($page_name_js_block);
     } // end if test
 
     // include Google Analytics 4 component
@@ -24,6 +39,7 @@
         // debugging enabled
         const DEBUG = true;
     </script>
+
 END;
             print($debug_element);
         } // end if test
