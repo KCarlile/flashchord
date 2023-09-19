@@ -3,7 +3,7 @@
 <head>
     <?php require 'components/head.php'; ?>
     <script>
-        const PAGE_NAME = "homepage";
+        const pageTitle = "homepage";
     </script>
     <title>Practice chords, scales, or arpeggios with an endless stream of randomized chords | Flash Chord</title>
 </head>

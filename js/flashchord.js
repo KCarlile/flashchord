@@ -1,4 +1,4 @@
-/* global $current_beat:true, $current_bar:true, $downbeat_beep, $beat_beep, $quality:true, $extensions, $slash:true, $key:true, $keys, $chord_keys:true, $slash_degree:true, $root:true, logger, flatten, sharpen, setupBarsPerChord, setupBarsPerMeasure, setupBeatsPerMeasure, increment_beat, update_bars_progress, logger_new, logger_break, getRandom, $slash_degrees, $slash_note:true, $theoretical_keys, $all_chords, getHarmonicQualityMinor, getHarmonicQualityMajor, $extension:true, $chromatic, replaceRareEnharmonic, getTempo, $major_chords, $minor_chords, $dominant_chords, $diminished_chords, $augmented_chords, logger, PAGE_NAME */
+/* global $current_beat:true, $current_bar:true, $downbeat_beep, $beat_beep, $quality:true, $extensions, $slash:true, $key:true, $keys, $chord_keys:true, $slash_degree:true, $root:true, logger, flatten, sharpen, setupBarsPerChord, setupBarsPerMeasure, setupBeatsPerMeasure, increment_beat, update_bars_progress, logger_new, logger_break, getRandom, $slash_degrees, $slash_note:true, $theoretical_keys, $all_chords, getHarmonicQualityMinor, getHarmonicQualityMajor, $extension:true, $chromatic, replaceRareEnharmonic, getTempo, $major_chords, $minor_chords, $dominant_chords, $diminished_chords, $augmented_chords, logger, pageTitle */
 
 // Safari audio lag fix
 // No idea why this works, but someone online said this fixed the problem and it did! :)
@@ -17,7 +17,7 @@ $(document).ready(function() {
     // Init
     // ------------------------------------------------------------
     // first, make sure we're on the home page before doing any of the chord stuff
-    if (PAGE_NAME == "homepage") {
+    if (pageName == "home") {
         $chord = $next_chord ? $next_chord : getChord();
 
         $next_chord = getChord();
