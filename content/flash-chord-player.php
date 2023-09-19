@@ -28,6 +28,6 @@
     <div id="bars_progress" class="mx-auto"></div>
     <div id="bars_progress_text"><span id="current_bar_text">1</span> of <span id="bar_count_text">1</span></div>
 </div>
-<div class="text-center alert alert-info mt-2" role="alert">
+<div class="text-center alert alert-primary mt-2" role="alert">
     <a href="/donate">&hearts; Click here if you love Flash Chord and want to help support it! &hearts;</a>
 </div>

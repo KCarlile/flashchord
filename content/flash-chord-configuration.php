@@ -5,10 +5,10 @@
      * This include file prints Flash Chord configuration form content for the home page (index.php).
      */
 ?>
-<div class="bg-light mb-2 border-top border-bottom">
-    <h4 class="text-secondary mt-1 mb-2">Settings</h4>
+<div class="mb-3">
+    <h3><i class="bi bi-gear-fill me-3 text-bg-secondary p-2 fs-5"></i>Settings</h3>
 </div>
-<div class="row mb-5">
+<div class="row">
     <div class="col-md">
         <div class="mb-5">
             <h4>Tempo</h4>

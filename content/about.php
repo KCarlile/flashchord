@@ -18,38 +18,8 @@
         Flash Chord, you can specify the speed and complexity of the
         chords being presented and you'll never know more than one
         chord in advance.</p>
-</div>
-<div class="mb-3 mt-5">
-    <h3><i class="bi bi-zoom-in me-3 text-bg-secondary p-2 fs-5"></i>Details</h3>
-</div>
-<div>
-    <p>Now that you've got the idea, let's setup your Flash Chord
-        practice session for success!</p>
-    <ol>
-        <li><strong>Tempo</strong> - Use the slider to adjust the speed
-            of the incoming chords. Slower tempos mean slower chord
-            changes.</li>
-        <li><strong>Time Signature</strong> - Set the time signature to
-            specify the beats per measure.</li>
-        <li><strong>Key</strong> - Select the key in which you'd like
-            to practice your chords or, for a real challenge, leave the
-            key set to <em>Any</em> to see chords from <em>any
-            key</em>.</li>
-        <li><strong>Difficulty</strong> - Select the complexity of the
-            chords being generated:
-            <ol>
-                <li>Beginner: major, minor, 7, minor 7</li>
-                <li>Intermediate: maj7, 6, m6, sus2, sus4, 9, m9</li>
-                <li>Advanced: +, °, m7♭5, 7alt, 6/9, 11, 13</li>
-            </ol>
-            You can also specify if you want additional extensions (♯5,
-                ♭5, ♯9, ♭9, ♯11, ♭13) added to the chords by checking
-                the <em>Add extensions</em> checkbox.<br />If you
-                really want to kick it up a notch, check the <em>Hide
-                next chord</em> checkbox to get the next chord without
-                any warning!
-        </li>
-    </ol>
+    <p>See the <a href="/help">Help</a> and <a href="/faq">FAQ</a>
+        pages for more information about using Flash Chord.</p>
 </div>
 <div class="mb-3 mt-5">
     <h3><i class="bi bi-chat-heart-fill me-3 text-bg-secondary p-2 fs-5"></i>How <em>You</em> Can Help</h3>

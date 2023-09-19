@@ -25,7 +25,8 @@
             help support it, <a href="https://paypal.me/kennycarlile">please
                 consider making a donation</a>. Any amount would be greatly
                 appreciated. Even if you choose to not make a donation, your
-                use of Flash Chord is still appreciated. :)</p>
+                use of Flash Chord is still appreciated.
+                <i class="bi bi-emoji-smile"></i></p>
     </div>
     <div class="col-12 col-lg-4 justify-content-center mb-2">
         <div class="text-center">
@@ -56,7 +57,7 @@
         tool, there's not a lot of content here for Google to mine for
         advertising context.</p>
     <p>If a business would like to help sponsor Flash Chord, it would be
-        greatly appreciated. :)</p>
+        greatly appreciated. <i class="bi bi-emoji-smile"></i></p>
 </div>
 <div class="mb-3 mt-5">
     <h3><i class="bi bi-person-arms-up me-3 text-bg-secondary p-2 fs-5"></i>Supporters</h3>
@@ -66,9 +67,7 @@
         generous support of Flash Chord!</p>
 </div>
 <div>
-    <div>
-        <?php
-            require_once("components/supporters.php");
-        ?>
-    </div>
+    <?php
+        require_once("components/supporters.php");
+    ?>
 </div>
