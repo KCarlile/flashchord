@@ -8,6 +8,12 @@
 <div class="mb-3">
     <h3><i class="bi bi-gear-fill me-3 text-bg-secondary p-2 fs-5"></i>Settings</h3>
 </div>
+<div class="alert alert-primary" role="alert">
+    <p class="my-0">See the <a href="/help">Help</a> page for instructions.</p>
+    <p class="my-0 small">Also see the <a href="/faq">Frequently Asked Questions
+        (FAQ)</a> and <a href="/about">About</a> pages for more information and
+        to learn about how you can help support Flash Chord.</p>
+</div>
 <div class="row">
     <div class="col-md">
         <div class="mb-5">
@@ -44,8 +50,8 @@
                 <label for="metronome_visual">Metronome visuals</label>
             </div>
             <div class="custom-control custom-checkbox mt-3">
-                <input type="checkbox" class="custom-control-input" id="hide_next_chord" name="hide_next_chord" />
-                <label for="hide_next_chord" class="custom-control-label">Hide next chord</label>
+                <input type="checkbox" class="custom-control-input" id="show_next_chord" name="show_next_chord" checked />
+                <label for="show_next_chord" class="custom-control-label">Show next chord</label>
             </div>
         </div>
     </div>

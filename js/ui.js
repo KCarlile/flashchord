@@ -187,7 +187,7 @@ $(document).ready(function() {
     });
 
     // hide/show next chord
-    $("input[name=hide_next_chord]").click(function(){
+    $("input[name=show_next_chord]").click(function(){
         $("#next_chord").toggle();
     });
 

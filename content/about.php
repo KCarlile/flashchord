@@ -39,6 +39,7 @@
     ?>
     <h4>Contributors</h4>
     <?php
+        // include content for contributors
         require_once("components/contributors.php");
     ?>
 </div>
