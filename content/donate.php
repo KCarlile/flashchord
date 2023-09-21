@@ -29,8 +29,8 @@
                 <i class="bi bi-emoji-smile"></i></p>
     </div>
     <div class="col-12 col-lg-4 justify-content-center mb-2">
-        <div class="text-center">
-            <p><a href="https://www.paypal.com/donate/?business=QYYKN7YS3CDJN&no_recurring=0&item_name=Support+Flash+Chord+%28FlashChord.com%29&currency_code=USD" class="font-weight-bold">Donate via PayPal</a></p>
+        <div class="text-center border border-primary-subtle bg-primary-subtle py-5">
+            <p><a href="https://www.paypal.com/donate/?business=QYYKN7YS3CDJN&no_recurring=0&item_name=Support+Flash+Chord+%28FlashChord.com%29&currency_code=USD" class="font-weight-bold fs-4">Donate via PayPal</a></p>
             <p>
                 <form action="https://www.paypal.com/donate" method="post" target="_top">
                     <input type="hidden" name="business" value="QYYKN7YS3CDJN" />
