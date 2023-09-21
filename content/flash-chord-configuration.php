@@ -14,6 +14,9 @@
         (FAQ)</a> and <a href="/about">About</a> pages for more information and
         to learn about how you can help support Flash Chord.</p>
 </div>
+<div class="text-primary fst-italic fs-5">
+    <p class="my-3 p-0"><i class="bi bi-info-circle-fill me-2"></i>Settings are saved automatically. Simply click the <i class="bi bi-x-lg"></i> or hit escape to return to practicing.</p>
+</div>
 <div class="row">
     <div class="col-md">
         <div class="mb-5">
