@@ -69,3 +69,7 @@
 .ui-state-active {
     background-color: #999999;
 }
+
+.display-inline-block {
+    display: inline-block;
+}
