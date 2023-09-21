@@ -14,9 +14,6 @@
 }
 
 .offcanvas-body {
-    /*flex-grow: 1;
-    padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
-    */
     overflow-y: auto;
 }
 
@@ -40,41 +37,33 @@
     width: 80%;
 }
 
-#bars_progress {
+#bars-progress {
     width: 10em;
     padding-right: 2px;
 }
 
-#bars_progress .ui-widget-header {
+#bars-progress .ui-widget-header {
     background-color: #007BFF;
     margin: 0 -2px 0 0;
 }
 
-#bars_progress .ui-progressbar {
+#bars-progress .ui-progressbar {
     background-color: #FF0000;
 }
 
-#chord_name {
+#chord-name {
     font-size: 12em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    margin-bottom: 0.2em;
-    text-align: center;
+    line-height: 1;
+    margin: 0 0 .2em 0;
 }
 
-#next_chord_name {
+#next-chord-name {
     font-size: 4em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    text-align: center;
+    margin: 0 0 .6em 0;
 }
 
-#visual_metronome {
-    font-size: 5em;
-}
-
-#visual_metronome span {
-    margin-top: .2em;
+#visual-metronome {
+    font-size: 2em;
 }
 
 .ui-state-active {

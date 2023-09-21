@@ -26,8 +26,8 @@ function increment_beat() {
     }
 
     // reset classes for beats
-    $("#visual_metronome").children().removeClass();
-    $("#visual_metronome").children().addClass("text-secondary");
+    $("#visual-metronome").children().removeClass();
+    $("#visual-metronome").children().addClass("text-secondary");
     // set correct beat
     $("#beat" + $current_beat).removeClass("text-secondary");
     $("#beat" + $current_beat).addClass("text-primary");
@@ -47,12 +47,12 @@ function increment_bar() {
 
 // updat the UI with the current status of the bar count
 function update_bars_progress() {
-    $("#bars_progress").progressbar({
+    $("#bars-progress").progressbar({
         value: (100 / $bars_per_chord) * $current_bar
     });
 
-    $("#current_bar_text").text($current_bar);
-    $("#bar_count_text").text($bars_per_chord);
+    $("#current-bar-text").text($current_bar);
+    $("#bar-count-text").text($bars_per_chord);
 }
 
 // get the tempo

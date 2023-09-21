@@ -22,8 +22,8 @@ $(document).ready(function() {
 
         $next_chord = getChord();
         
-        $("#chord_name").html($chord);
-        $("#next_chord_name").html($next_chord);
+        $("#chord-name").html($chord);
+        $("#next-chord-name").html($next_chord);
 
         setupBeatsPerMeasure();
         setupBarsPerChord();
@@ -48,12 +48,12 @@ function startFlashChord() {
                 // change chords
                 $chord = $next_chord ? $next_chord : getChord();
                 $next_chord = getChord();
-                $("#chord_name").html($chord);
-                $("#next_chord_name").html($next_chord);
+                $("#chord-name").html($chord);
+                $("#next-chord-name").html($next_chord);
             }
 
             // metronome beep
-            if ($("input[name=metronome_audio]").is(":checked")) {
+            if ($("input[name=metronome-audio]").is(":checked")) {
                 if ($current_beat == 1) {
                     $downbeat_beep.play();
                 }
@@ -108,9 +108,9 @@ function buildChord($root, $quality, $extension, $slash) {
     // handle simplified qualities for °, °7, and m7♭5
     if ($diminished_chords.includes($quality)) {
         if (
-            ( ($quality == "°") && ($("input[name=chord_type_dim]").is(":not(:checked)")) ) || 
-            ( ($quality == "°7") && ($("input[name=chord_type_dim7]").is(":not(:checked)")) ) || 
-            ( ($quality == "m7♭5") && ($("input[name=chord_type_m7b5]").is(":not(:checked)")) ) )
+            ( ($quality == "°") && ($("input[name=chord-type-dim]").is(":not(:checked)")) ) || 
+            ( ($quality == "°7") && ($("input[name=chord-type-dim7]").is(":not(:checked)")) ) || 
+            ( ($quality == "m7♭5") && ($("input[name=chord-type-m7b5]").is(":not(:checked)")) ) )
         {
             $quality = "m";
         }
@@ -128,7 +128,7 @@ function getRoot() {
     $root = getRandom($key);
 
     // check for rare enharmonics
-    if (!$("input[name=rare_enharmonics]").is(":checked")) {
+    if (!$("input[name=rare-enharmonics]").is(":checked")) {
         $root = replaceRareEnharmonic($root);
     }
 
@@ -222,7 +222,7 @@ function getSlash($root, $quality) {
     let $slash = "";
 
     // check for slash chords
-    if ($("input[name=slash_chords]").is(":checked")) {
+    if ($("input[name=slash-chords]").is(":checked")) {
         $slash_degree = getRandom($slash_degrees);
         $slash_note = $root;
 

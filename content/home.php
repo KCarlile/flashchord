@@ -6,8 +6,7 @@
      */
 ?>
 <div>
-    <p class="lead text-muted">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
-    <button class="btn btn-secondary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#flash-chord-settings" aria-controls="flash-chord-settings"><i class="bi bi-gear me-2"></i>Settings</button>
+    <p class="lead text-muted text-center">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
 </div>
 <?php require 'content/flash-chord-player.php'; ?>
 <div class="offcanvas offcanvas-start" data-bs-backdrop="static" data-bs-scroll="true" tabindex="-1" id="flash-chord-settings" aria-labelledby="flash-chord-settings-label">
