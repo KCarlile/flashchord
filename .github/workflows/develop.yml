@@ -22,10 +22,11 @@ jobs:
         exclude: |
           **/.git*
           **/.git*/**
-          .eslintrc
+          .eslintrc.yml
           .gitattributes
-          .getignore
-          collateral/*
+          .gitignore
+          collateral
+          collateral/**
           CONTRIBUTING.md
           CODE_OF_CONDUCT.md
           CHANGELOG.md
@@ -33,6 +34,8 @@ jobs:
           Dockerfile
           LICENSE.md
           lint.sh
+          package-lock.json
+          package.json
           README.md
           server
           TODO.md
