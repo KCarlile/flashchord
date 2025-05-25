@@ -7,6 +7,14 @@ Current versions:
 
 ---
 
+## Release 1.10
+
+Date: May 25, 2025
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.10>  
+Commit: (COMMIT URL)
+
+- Fixed G# in Gb key. (Issue [#107](https://github.com/KCarlile/flashchord/issues/107))
+
 ## Release 1.9
 
 Tag: v1.9  
@@ -21,6 +29,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/6381b4cb17e04d9c038ec053d
 - Added Contributors to About page.
 - Added Supporters to Donate page.
 - Minor UI/UX tweaks.
+- Fixed G# in Gb key.
 
 ## Release 1.8
 
