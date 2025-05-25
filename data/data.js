@@ -10,7 +10,7 @@ var $all_chords = [].concat($major_chords, $minor_chords, $diminished_chords, $a
 var $extensions = ["", "(♯5)", "(♭5)", "(♯9)", "(♭9)", "(♯11)", "(♭13)"];
 
 var $keys = {
-    "G♭ Major":   ["G♯", "A♭", "B♭", "C♭", "D♭", "E♭", "F"],
+    "G♭ Major":   ["G♭", "A♭", "B♭", "C♭", "D♭", "E♭", "F"],
     "D♭ Major":   ["D♭", "E♭", "F", "G♭", "A♭", "B♭", "C"],
     "A♭ Major":   ["A♭", "B♭", "C", "D♭", "E♭", "F", "G"],
     "E♭ Major":   ["E♭", "F", "G", "A♭", "B♭", "C", "D"],
