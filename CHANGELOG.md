@@ -16,6 +16,7 @@ Commit: (COMMIT URL)
 
 - Fixed G# in Gb key. (Issue [#107](https://github.com/KCarlile/flashchord/issues/107))
 - Added News page and support for Bootstrap icons. (Issue [#110](https://github.com/KCarlile/flashchord/issues/110))
+- Adding GitHub actions workflow to deploy pushes to develop branch to dev.flashchord.com. (Issue [#81](https://github.com/KCarlile/flashchord/issues/81))
 
 ## Release 1.9
 
