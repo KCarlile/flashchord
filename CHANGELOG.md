@@ -3,22 +3,24 @@
 Current versions:
 
 - [Production](https://www.flashchord.com/): 1.9
-- [Dev](http://dev.flashchord.com/): 1.9
+- [Dev](http://dev.flashchord.com/): 1.10
 
 ---
 
 ## Release 1.10
 
-Date: May 25, 2025
+Tag: v1.10  
+Date: May 25, 2025  
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.10>  
 Commit: (COMMIT URL)
 
 - Fixed G# in Gb key. (Issue [#107](https://github.com/KCarlile/flashchord/issues/107))
+- Added News page and support for Bootstrap icons. (Issue [#110](https://github.com/KCarlile/flashchord/issues/110))
 
 ## Release 1.9
 
 Tag: v1.9  
-Date: August 16, 2023
+Date: August 16, 2023  
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
 Commit: <https://github.com/KCarlile/flashchord/commit/6381b4cb17e04d9c038ec053da68b13c960d4fbb>
 
