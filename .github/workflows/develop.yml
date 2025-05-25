@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - develop
+
+name: 🚀 Deploy website to DEV on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      with:
+        server: 107.180.58.30
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        server-dir: dev/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          .eslintrc
+          .gitattributes
+          .getignore
+          collateral/*
+          CONTRIBUTING.md
+          CODE_OF_CONDUCT.md
+          CHANGELOG.md
+          docker-compose.yml
+          Dockerfile
+          LICENSE.md
+          lint.sh
+          README.md
+          server
+          TODO.md
