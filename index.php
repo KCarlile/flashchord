@@ -10,6 +10,9 @@
 <body>
     <?php require 'components/header.php'; ?>
     <div class="container">
+        <div class="alert alert-primary" role="alert">
+            <i class="bi bi-exclamation-square-fill mr-1 text-primary"></i>Check out the <i class="bi bi-patch-exclamation-fill mr-1 text-primary"></i><a href="/news">News</a> page for updates!
+        </div>
         <p class="lead text-muted">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
     </div>
     <div class="container">
@@ -45,7 +48,7 @@
                 <label for="metronome_visual">Metronome visuals</label>
             </div>
         </div>
-        <div class="text-center alert alert-info mt-2" role="alert">
+        <div class="text-center alert alert-danger mt-2" role="alert">
             <a href="/donate">&hearts; Click here if you love Flash Chord and want to help support it! &hearts;</a>
         </div>
     </div>

@@ -27,10 +27,15 @@
                         following recent updates in the latest release:
                     </p>
                     <p>
-                        <strong>Release 1.9</strong>
+                        <strong>Release 1.10</strong>
                         <ul>
-                            <li>Fixed G# in Gb key. (Issue <a href="https://github.com/KCarlile/flashchord/issues/107">#107</a>)</li>
-                            <li>Added News page and support for Bootstrap icons. (Issue <a href="https://github.com/KCarlile/flashchord/issues/110">#110</a>)</li>
+                            <li>Fixed G# in Gb key. (Issue
+                                <a href="https://github.com/KCarlile/flashchord/issues/107">#107</a>)</li>
+                            <li>Added News page and support for Bootstrap icons. (Issue
+                                <a href="https://github.com/KCarlile/flashchord/issues/110">#110</a>)</li>
+                            <li>GitHub Actions now automatically deploy to
+                                <a href="http://dev.flashchord.com/">dev.flashchord.com</a> any changes pushed to the
+                                <code>develop</code> branch. (Issue <a href="https://github.com/KCarlile/flashchord/issues/81">#81</a>)</li>
                         </ul>
                     </p>
                     <p>In addition, be sure to check out the list of people who have provided generous contributions to
