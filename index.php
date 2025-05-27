@@ -10,6 +10,9 @@
 <body>
     <?php require 'components/header.php'; ?>
     <div class="container">
+        <div class="alert alert-primary" role="alert">
+            <i class="bi bi-exclamation-square-fill mr-1 text-primary"></i>Check out the <i class="bi bi-patch-exclamation-fill mr-1 text-primary"></i><a href="/news">News</a> page for updates!
+        </div>
         <p class="lead text-muted">Practice chords, scales, or arpeggios with an endless stream of randomized chords!</p>
     </div>
     <div class="container">
@@ -45,7 +48,7 @@
                 <label for="metronome_visual">Metronome visuals</label>
             </div>
         </div>
-        <div class="text-center alert alert-info mt-2" role="alert">
+        <div class="text-center alert alert-danger mt-2" role="alert">
             <a href="/donate">&hearts; Click here if you love Flash Chord and want to help support it! &hearts;</a>
         </div>
     </div>
@@ -126,8 +129,20 @@
                             <label for="chord_type_maj7" class="custom-control-label">Maj7</label>
                         </div>
                         <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_maj9" name="chord_type_maj9" value="maj9" />
+                            <label for="chord_type_maj9" class="custom-control-label">Maj9</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_6" name="chord_type_6" value="6" />
                             <label for="chord_type_6" class="custom-control-label">6</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_m6" name="chord_type_m6" value="m6" />
+                            <label for="chord_type_m6" class="custom-control-label">m6</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_m6" name="chord_type_m6" value="m6" />
+                            <label for="chord_type_m6" class="custom-control-label">m6</label>
                         </div>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_sus2" name="chord_type_sus2" value="sus2" />

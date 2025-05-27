@@ -3,6 +3,7 @@
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark" href="/">Flash Chord</a>
             <a class="p-2 text-dark" href="/donate">Donate</a>
+            <a class="p-2 text-dark" href="/news"><i class="bi bi-patch-exclamation-fill mr-1 text-primary"></i>News</a>
             <a class="p-2 text-dark" href="/faq">FAQ</a>
             <a class="p-2 text-dark" href="/about">About</a>
         </nav>
