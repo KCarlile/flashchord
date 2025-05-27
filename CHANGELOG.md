@@ -17,6 +17,7 @@ URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.10>
 - Added News page and support for Bootstrap icons. (Issue [#110](https://github.com/KCarlile/flashchord/issues/110))
 - Adding GitHub actions workflow to deploy pushes to develop branch to dev.flashchord.com. (Issue [#81](https://github.com/KCarlile/flashchord/issues/81))
 - Adding maj9 chord type. (Issue [#108](https://github.com/KCarlile/flashchord/issues/108))
+- Adding m9 chord type. (Issue [#106](https://github.com/KCarlile/flashchord/issues/106))
 
 ## Release 1.9
 
