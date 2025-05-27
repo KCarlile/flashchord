@@ -32,6 +32,7 @@
                             <li>Fixed G# in Gb key. (Issue
                                 <a href="https://github.com/KCarlile/flashchord/issues/107">#107</a>)</li>
                             <li>Added maj9 chord type. (Issue <a href="https://github.com/KCarlile/flashchord/issues/108">#108</a>)</li>
+                            <li>Added m6 chord type. (Issue <a href="https://github.com/KCarlile/flashchord/issues/106">#106</a>)</li>
                             <li>Added News page and support for Bootstrap icons. (Issue
                                 <a href="https://github.com/KCarlile/flashchord/issues/110">#110</a>)</li>
                             <li>GitHub Actions now automatically deploy to

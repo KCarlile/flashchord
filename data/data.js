@@ -1,7 +1,7 @@
 var $chromatic = ["A♭", "A", "A♯", "B♭", "B", "B♯", "C♭", "C", "C♯", "D♭", "D", "D♯", "E♭", "E", "E♯", "F♭", "F", "F♯", "G♭", "G", "G♯"];
 
 var $major_chords = ["", "maj7", "maj9", "6", "sus2", "sus4", "6/9"];
-var $minor_chords = ["m", "m7", "m9", "m11"];
+var $minor_chords = ["m", "m7", "m6", "m9", "m11"];
 var $diminished_chords = ["°", "°7", "m7♭5"];
 var $augmented_chords = ["+", "7alt"];
 var $dominant_chords = ["7", "9", "11", "13"];
