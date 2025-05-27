@@ -129,6 +129,10 @@
                             <label for="chord_type_maj7" class="custom-control-label">Maj7</label>
                         </div>
                         <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_maj9" name="chord_type_maj9" value="maj9" />
+                            <label for="chord_type_maj9" class="custom-control-label">Maj9</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input difficulty_intermediate chord-type-selection" id="chord_type_6" name="chord_type_6" value="6" />
                             <label for="chord_type_6" class="custom-control-label">6</label>
                         </div>

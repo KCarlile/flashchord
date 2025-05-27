@@ -11,19 +11,18 @@ Current versions:
 
 Tag: v1.10  
 Date: May 25, 2025  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.10>  
-Commit: (COMMIT URL)
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.10>
 
 - Fixed G# in Gb key. (Issue [#107](https://github.com/KCarlile/flashchord/issues/107))
 - Added News page and support for Bootstrap icons. (Issue [#110](https://github.com/KCarlile/flashchord/issues/110))
 - Adding GitHub actions workflow to deploy pushes to develop branch to dev.flashchord.com. (Issue [#81](https://github.com/KCarlile/flashchord/issues/81))
+- Adding maj9 chord type. (Issue [#108](https://github.com/KCarlile/flashchord/issues/108))
 
 ## Release 1.9
 
 Tag: v1.9  
 Date: August 16, 2023  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>  
-Commit: <https://github.com/KCarlile/flashchord/commit/6381b4cb17e04d9c038ec053da68b13c960d4fbb>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>
 
 - Renamed master branch to main (no issue).
 - Redirect from HTTP to HTTPS and bare domain to www.flashchord.com.
@@ -38,8 +37,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/6381b4cb17e04d9c038ec053d
 
 Tag: v1.8  
 Date: May 2, 2023  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.8>  
-Commit: <https://github.com/KCarlile/flashchord/commit/1e1792e55216da47a2c6d92a8252e86b37bdf01c>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.8>
 
 - Fixed bug in debugging-enabled check (no issue).
 - Updated Google Analytics code to GA4.
@@ -49,8 +47,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/1e1792e55216da47a2c6d92a8
 
 Tag: v1.7  
 Date: April 28, 2022  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.7>  
-Commit: <https://github.com/KCarlile/flashchord/commit/602cbe1cb30dafcae8985f32e45bb599c3825901>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.7>
 
 - Add the option to display inversions/slash chords with bass notes.
 - Added debug mode and logging.
@@ -63,8 +60,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/602cbe1cb30dafcae8985f32e
 
 Tag: v1.6  
 Date: March 18, 2021  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.6>  
-Commit: <https://github.com/KCarlile/flashchord/commit/530a068eeebed75405fed6ffff5946cfc6dd549f>  
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.6>
 
 - Removing #13 as a chord extension because it's invalid/redundant.
 - Updating typo in support message on homepage.
@@ -73,8 +69,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/530a068eeebed75405fed6fff
 
 Tag: v1.5  
 Date: July 15, 2020  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.5>  
-Commit: <https://github.com/KCarlile/flashchord/commit/a429e91931ff06f56a3585b4b91b3364dda08fc8>  
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.5>
 
 - Adding Twitter link to copyright footer and about page.
 - Added .gitattributes file to associate .php files with PHP so GitHub doesn't identify them as Hacklang.
@@ -92,8 +87,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/a429e91931ff06f56a3585b4b
 
 Tag: v1.4  
 Date: June 18, 2020  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.4>  
-Commit: <https://github.com/KCarlile/flashchord/commit/e2ecec32ca1f8fcf2b220aaa35f8acf5093b9be6>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.4>
 
 - Fixing page titles for h2.
 - Changing to .htaccess with removing .php from paths. Link fixes.
@@ -105,8 +99,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/e2ecec32ca1f8fcf2b220aaa3
 
 Tag: v1.3  
 Date: June 18, 2020  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.3>  
-Commit: <https://github.com/KCarlile/flashchord/commit/db7feb9cc4785ae0936958207f2d50ccded872ef>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.3>
 
 - Adding FC logo.
 - Adding donate page and text/links throughout.
@@ -118,8 +111,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/db7feb9cc4785ae0936958207
 
 Tag: v1.2  
 Date: June 17, 2020  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.2>  
-Commit: <https://github.com/KCarlile/flashchord/commit/dc2df6aa94e7af233f27aaaf6b72af95edc040c0>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.2>
 
 - Text fixes.
 - Adding visual metronome.
@@ -129,8 +121,7 @@ Commit: <https://github.com/KCarlile/flashchord/commit/dc2df6aa94e7af233f27aaaf6
 
 Tag: v1.1  
 Date: June 16, 2020  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.1>  
-Commit: <https://github.com/KCarlile/flashchord/commit/8e248ff9b81e288a310c312c6e4b9a47e951e337>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.1>
 
 - Fixing metronome's audio lag issue for iOS (Safari, Chrome) and Mac (Safari only).
 
@@ -138,7 +129,6 @@ Commit: <https://github.com/KCarlile/flashchord/commit/8e248ff9b81e288a310c312c6
 
 Tag: v1.0  
 Date: June 13, 2020  
-URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.0>  
-Commit: <https://github.com/KCarlile/flashchord/commit/103b50a35c060583136e58930f749d4ef20a4999>
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.0>
 
 - Metronome and all of the major features are now in place. While some adjustments remain, this is good enough for a full release.
