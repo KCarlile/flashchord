@@ -18,6 +18,7 @@ URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.10>
 - Adding GitHub actions workflow to deploy pushes to develop branch to dev.flashchord.com. (Issue [#81](https://github.com/KCarlile/flashchord/issues/81))
 - Adding maj9 chord type. (Issue [#108](https://github.com/KCarlile/flashchord/issues/108))
 - Adding m9 chord type. (Issue [#106](https://github.com/KCarlile/flashchord/issues/106))
+- Paths are now forced to lowercase (e.g., `/News` becomes `/news`). (Issue [#116](https://github.com/KCarlile/flashchord/issues/116))
 
 ## Release 1.9
 
@@ -26,13 +27,12 @@ Date: August 16, 2023
 URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.9>
 
 - Renamed master branch to main (no issue).
-- Redirect from HTTP to HTTPS and bare domain to www.flashchord.com.
+- Redirect from HTTP to HTTPS and bare domain to `www.flashchord.com`.
 - Simplify support message on home page.
 - Block public web access to certain files with .htaccess.
 - Added Contributors to About page.
 - Added Supporters to Donate page.
 - Minor UI/UX tweaks.
-- Fixed G# in Gb key.
 
 ## Release 1.8
 

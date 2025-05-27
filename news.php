@@ -38,10 +38,12 @@
                             <li>GitHub Actions now automatically deploy to
                                 <a href="http://dev.flashchord.com/">dev.flashchord.com</a> any changes pushed to the
                                 <code>develop</code> branch. (Issue <a href="https://github.com/KCarlile/flashchord/issues/81">#81</a>)</li>
+                            <li>Paths are now forced to lowercase (e.g., <code>/News</code> becomes <code>/news</code>).
+                                (Issue <a href="https://github.com/KCarlile/flashchord/issues/116">#116</a>)</li>
                         </ul>
                     </p>
-                    <p>In addition, be sure to check out the list of people who have provided generous contributions to
-                        help support the hosting and development of Flash Chord. You can find the names of supporters open
+                    <p>Also, be sure to check out the list of people who have provided generous contributions to help
+                        support the hosting and development of Flash Chord. You can find the names of supporters open
                         the <a href="/donate">Donate</a> page.</p>
                 </div>
             </div>

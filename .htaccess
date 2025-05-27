@@ -2,6 +2,10 @@ RewriteEngine On
 
 RewriteBase /
 
+# rewrite /SOMETHING to /something
+RewriteCond expr "tolower(%{REQUEST_URI}) =~ /(.*)/"
+RewriteRule [A-Z] %1 [R=301,L]
+
 # rewrite /something.php to /something
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule (.*) $1.php [L]
