@@ -50,7 +50,7 @@ Any pushes to the `develop` branch are automatically deployed to `http://dev.fla
 
 The deployment process for production is manual and involves:
 
-- Create a release with a tag
+- In GitHub, create a release with a tag
 - Login to the web host and navigate to `public_html/flashchord.com/www`
 - Checkout the `main` branch and pull
 - Checkout the desired tag
@@ -64,8 +64,8 @@ script.
 
 Kenny Carlile
 
-- GitHub: @KCarlile
-- [http://www.kcarlile.com/](http://www.kcarlile.com/)
+- GitHub: [@KCarlile](https://github.com/KCarlile)
+- Professional: [http://www.kcarlile.com/](http://www.kcarlile.com/)
 
 ## Code Contributions
 
@@ -84,3 +84,12 @@ Flash Chord would like to extend a special thanks to our supporters who have mad
 - Yohaan Pissurlenker
 - Michael Jacobson
 - Andrew Hawkes
+- Michelle O.
+- Matteo Pigni
+- Zachary McIvor
+- Michael Junkins
+- OneSolutions
+- Chris Beatty
+- George Kuntz
+- Ian Blacker (2)
+- Lucas Mulkey
