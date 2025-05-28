@@ -2,7 +2,7 @@
 
 Current versions:
 
-- [Production](https://www.flashchord.com/): 1.9
+- [Production](https://www.flashchord.com/): 1.10
 - [Dev](http://dev.flashchord.com/): 1.10
 
 ---
