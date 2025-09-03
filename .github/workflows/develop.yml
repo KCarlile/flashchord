@@ -19,6 +19,7 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         protocol: ftps
+        timeout: 190000
         server-dir: public_html/
         exclude: |
           **/.git*
