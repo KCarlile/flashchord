@@ -42,23 +42,22 @@ To run this container (i.e. launch the "server"), follow these steps:
 
 ### Deployment to Dev
 
-Any pushes to the `develop` branch are automatically deployed to `http://dev.flashchord.com/` at `public_html/flashchord.com/dev/` via the GitHub action defined in `.github/workflows/develop.yml`.
+Any pushes to the `develop` branch are automatically deployed to `http://dev.flashchord.com/` at `public_html/` via the GitHub action defined in `.github/workflows/develop.yml`.
 
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with SFTP Deploy Action" src="https://img.shields.io/badge/Deployed With-SFTP_DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/wlixcc/SFTP-Deploy-Action)
 
 ### Deployment to Production
 
 The deployment process for production is manual and involves:
 
 - In GitHub, create a release with a tag
-- Login to the web host and navigate to `public_html/flashchord.com/www`
+- Login to the web host and navigate to `public_html/`
 - Checkout the `main` branch and pull
 - Checkout the desired tag
 
 ### SSL/HTTPS
 
-The HTTPS certificate is managed via [Let's Encrypt](https://letsencrypt.org/) and is updated every ~90 days via a local
-script.
+The HTTPS certificate is managed via [Let's Encrypt](https://letsencrypt.org/) and is automatically updated every ~90 days via the host.
 
 ## Creator
 
