@@ -3,7 +3,7 @@ on:
     branches:
       - develop
 
-name: 🚀 Deploy website to DEV on push
+name: 🚀 Deploy website to DEV.flashchord.com on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
