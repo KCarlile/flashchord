@@ -3,7 +3,7 @@ on:
     branches:
       - develop
 
-name: 🚀 Deploy website to DEV on push
+name: 🚀 Deploy website to DEV.flashchord.com on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -13,29 +13,13 @@ jobs:
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.6
       with:
-        server: 107.180.58.30
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: dev/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          .eslintrc.yml
-          .gitattributes
-          .gitignore
-          collateral
-          collateral/**
-          CONTRIBUTING.md
-          CODE_OF_CONDUCT.md
-          CHANGELOG.md
-          docker-compose.yml
-          Dockerfile
-          LICENSE.md
-          lint.sh
-          package-lock.json
-          package.json
-          README.md
-          server
-          TODO.md
+        server: ${{ secrets.ftp_server }}
+        port: 22
+        local_path: './*'
+        remote_path: '/public_html/'
+        sftp_only: true
+        rsyncArgs: '--exclude=.git --exclude=.github --exclude=.eslintrc.yml --exclude=.gitattributes --exclude=.gitignore --exclude=collateral --exclude=CHANGELOG.md --exclude=CODE_OF_CONDUCT.md --exclude=CONTRIBUTING.md --exclude=docker-compose.yml --exclude=Dockerfile --exclude=LICENSE.md --exclude=lint.sh --exclude=package-lock.json --exclude=package.json --exclude=README.md --exclude=server'
