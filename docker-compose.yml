@@ -1,7 +1,7 @@
 services:
     flashchord-php-apache:
         build: .
-        image: php:8.1.9-apache
+        image: php:8.5-apache
         volumes:
             - ./:/var/www/html/
         container_name: flashchord-php-apache
