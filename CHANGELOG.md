@@ -3,9 +3,17 @@
 Current versions:
 
 - [Production](https://www.flashchord.com/): 1.10
-- [Dev](http://dev.flashchord.com/): 1.10
+- [Dev](http://dev.flashchord.com/): 1.11
 
 ---
+
+## Release 1.11
+
+Tag: v1.11  
+Date: TBD, 2025  
+URL: <https://github.com/KCarlile/flashchord/releases/tag/v1.11>
+
+- Add privacy policy for GDPR. (Issue [#125](https://github.com/KCarlile/flashchord/issues/125))
 
 ## Release 1.10
 

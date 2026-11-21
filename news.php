@@ -12,12 +12,34 @@
         <div class="container">
             <h2>News</h2>
         </div>
-        <div class="container">
+        < class="container">
             <!-- BEGIN: News post -->
             <div>
                 <div class="row bg-light mb-2">
                     <div class="col border-top border-bottom">
-                        <h4 class="text-secondary mt-1 mb-2">May 25, 2025</h4>
+                        <h4 class="text-secondary mt-1 mb-2">June X, 2025 - Release 1.11</h4>
+                    </div>
+                </div>
+                <div>
+                    <p>Flash Chord's latest release includes the following changes:</p>
+                    <p>
+                        <strong>Release 1.11</strong>
+                        <ul>
+                            <li>Add privacy policy for GDPR. (Issue
+                                <a href="https://github.com/KCarlile/flashchord/issues/125">#125</a>)</li>
+                        </ul>
+                    </p>
+                    <p>Also, be sure to check out the list of people who have provided generous contributions to help
+                        support the hosting and development of Flash Chord. You can find the names of supporters open
+                        the <a href="/donate">Donate</a> page.</p>
+                </div>
+            </div>
+            <!-- BEGIN: News post -->
+            <!-- END: News post -->
+            <div>
+                <div class="row bg-light mb-2">
+                    <div class="col border-top border-bottom">
+                        <h4 class="text-secondary mt-1 mb-2">May 25, 2025 - Release 1.10</h4>
                     </div>
                 </div>
                 <div>
@@ -51,14 +73,6 @@
         </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-            </div>
             <div class="row">
                 <div class="col-12 col-md">
                     <?php require 'components/copyright.php'; ?>

@@ -55,6 +55,7 @@
             <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
             <li><a href="https://git-scm.com/">Git</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
+            <li><a href="https://silktide.com/consent-manager/">Silktide Consent Manager</a>
         </ul>
         <h5>Contributors</h5>
         <?php
@@ -66,17 +67,15 @@
             </div>
         </div>
         <p>If helping with code or testing isn't your thing, that's okay. You can always show your appreciate and support Flash Chord by making a donation to offset hosting and domain costs or fuel further development for bug fixes and enhancements. To learn more about making a <a href="donate.php">donation in support Flash Chord, check out the Donate page</a>.</p>
+        <div class="row bg-light mb-2 mt-5">
+            <div class="col border-top border-bottom">
+                <h4 class="text-secondary mt-1 mb-2">Privacy</h4>
+            </div>
+        </div>
+        <p>To learn about Flash Chord's privacy policy, <a href="/privacy">click here</a>.</p>
     </div>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-                <div class="col-md">
-                </div>
-            </div>
             <div class="row">
                 <div class="col-12 col-md">
                     <?php require 'components/copyright.php'; ?>

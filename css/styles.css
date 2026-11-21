@@ -53,3 +53,12 @@
     margin-left: -2em;
     width: 4em;
 }
+
+/* silktide consent manager */
+#silktide-backdrop {
+    display: none;
+}
+
+#silktide-cookie-icon svg {
+    display: none;
+}

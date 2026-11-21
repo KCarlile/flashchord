@@ -49,8 +49,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <!-- Flash Chord CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
-
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a744f5988e.js" crossorigin="anonymous"></script>
+
+    <!-- Silktide Cookie Consent Manager -->
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="/css/silktide-consent-manager.css">
+    <script src="/js/silktide-consent-manager.js"></script>
+    <script src="/js/silktide-consent-manager-flashchord.js"></script>
+
+    <!-- Flash Chord CSS -->
+    <link rel="stylesheet" href="/css/styles.css">

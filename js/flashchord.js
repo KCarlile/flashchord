@@ -17,7 +17,7 @@ $(document).ready(function() {
     // Init
     // ------------------------------------------------------------
     // first, make sure we're on the home page before doing any of the chord stuff
-    if (PAGE_NAME == "homepage") {
+    if ((typeof myVariable !== "undefined") && (PAGE_NAME === "homepage")) {
         $chord = $next_chord ? $next_chord : getChord();
 
         $next_chord = getChord();
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
         setupBeatsPerMeasure();
         setupBarsPerChord();
-    }
+    } // end if test
 });
 
 // ------------------------------------------------------------
@@ -50,20 +50,20 @@ function startFlashChord() {
                 $next_chord = getChord();
                 $("#chord_name").html($chord);
                 $("#next_chord_name").html($next_chord);
-            }
+            } // end if test
 
             // metronome beep
             if ($("input[name=metronome_audio]").is(":checked")) {
                 if ($current_beat == 1) {
                     $downbeat_beep.play();
-                }
+                } // end if test
                 else {
                     $beat_beep.play();
-                }
-            }
+                } // end else test
+            } // end if test
         }, getTempo());
-    }
-}
+    } // end if test
+} // end startFlashChord function
 
 // stop Flash Chord functionality
 function stopFlashChord() {
@@ -72,8 +72,8 @@ function stopFlashChord() {
         clearInterval($intervalId);
         $current_beat = 0;
         $current_bar = 1;
-    }
-}
+    } // end if test
+} // end stopFlashChord function
 
 // ------------------------------------------------------------
 // Flash Chord utility functions
@@ -101,7 +101,7 @@ function getChord() {
     logger("Slash: " + $slash);
 
     return $new_chord;
-}
+} // end getChord function
 
 // assemble the chord for display, handling any special situations
 function buildChord($root, $quality, $extension, $slash) {
@@ -113,11 +113,11 @@ function buildChord($root, $quality, $extension, $slash) {
             ( ($quality == "m7♭5") && ($("input[name=chord_type_m7b5]").is(":not(:checked)")) ) )
         {
             $quality = "m";
-        }
-    }
+        } // end if test
+    } // end if test
 
     return $root + $quality + $extension + $slash;
-}
+} // end buildChord function
 
 // get root of the chord based on selected settings
 function getRoot() {
@@ -130,12 +130,12 @@ function getRoot() {
     // check for rare enharmonics
     if (!$("input[name=rare_enharmonics]").is(":checked")) {
         $root = replaceRareEnharmonic($root);
-    }
+    } // end if test
 
     logger("Root (random): " + $root);
 
     return $root;
-}
+} // end getRoot function
 
 // get the available notes based on the selected key
 function getKey() {
@@ -144,15 +144,15 @@ function getKey() {
 
     if (!$key || $key == "any") {
         $key_notes = $chromatic;
-    }
+    } // end if test
     else {
         $key_notes = $keys[$key];
-    }
+    } // end else test
 
     logger("Key: " + $key_notes);
 
     return $key_notes;
-}
+} // end getKey function
 
 // get the chord quality
 function getChordQuality() {
@@ -171,7 +171,7 @@ function getChordQuality() {
         $chord_types = getHarmonicQualityMinor($key.indexOf($root));
     } else {
         $chord_types = $selected_chord_types;
-    }
+    } // end else test
 
     // remove empty elements
     $chord_types = $chord_types.filter(String);
@@ -193,12 +193,12 @@ function getChordQuality() {
     // also, if you get "M" as in major, just wipe the symbol (this is necessary as an empty value causes other problems)
     if (!$quality || $quality == "M") {
         $quality = "";
-    }
+    } // end if test
 
     logger("Quality (random): " + $quality);
 
     return $quality;
-}
+} // end getChordQuality function
 
 // if extensions are selected, return one
 function getExtension() {
@@ -209,13 +209,13 @@ function getExtension() {
 
         if ($ext.length > 0) {
             $ext = "<sup>" + $ext + "</sup>";
-        }
-    }
+        } // end if test
+    } // end if test
 
     logger("Extension (random): " + $ext);
 
     return $ext;
-}
+} // end getExtension function
 
 // get slash chord (bass note, inversion) if enabled
 function getSlash($root, $quality) {
@@ -238,21 +238,21 @@ function getSlash($root, $quality) {
                 // if diminished and 5 (second inversion)
                 if (($quality == "°") && ($slash_degree == 4)) {
                     $slash_note = flatten($slash_note);
-                }
+                } // end if test
             } else if (($quality == "+") && ($slash_degree == 4)) {
                 // if augmented and 5 (second inversion)
                 $slash_note = $chord_keys[$root + " Major"][$slash_degree];
                 $slash_note = sharpen($slash_note);
             } else {
                 $slash_note = $chord_keys[$root + " Major"][$slash_degree];
-            }
+            } // end else test
 
             $slash = "<sub>/" + $slash_note + "</sub>";
         }
-    }
+    } // end if test
 
     return $slash;
-}
+} // end getSlash function
 
 // get array of specified chord types
 function getSelectedChordTypes() {
@@ -262,7 +262,7 @@ function getSelectedChordTypes() {
     $(".chord-type-selection").each(function() {
         if ($(this).is(":checked")) {
             $selected_chord_types.push($(this).attr("value"));
-        }
+        } // end if test
     });
 
     // remove empty elements
@@ -271,4 +271,4 @@ function getSelectedChordTypes() {
     logger("Selected chord types: " + $selected_chord_types);
 
     return $selected_chord_types.filter(String);
-}
+} // end getSelectedChordTypes function
